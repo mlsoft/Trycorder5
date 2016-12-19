@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!-- This layout is used to display a single mailing address for a contact. In the case of multiple
+     mailing addresses it could be inflated multiple times and displayed in a ScrollView container
+     to let the user more easily scroll over all addresses. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/contact_email_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="Email" />
+
+        <TextView
+            android:id="@+id/contact_email_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:hint="jos@chose.com"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:text="" />
+
+        <ImageButton
+            android:id="@+id/button_edit_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/email_button_description"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_dialog_email" />
+
+    </LinearLayout>
+
+</LinearLayout>

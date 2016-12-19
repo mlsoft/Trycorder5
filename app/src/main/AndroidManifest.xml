@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.ddns.mlsoftlaberge.trycorder">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/trycorder_icon"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        <activity
+            android:name=".TrycorderActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".TrycorderService" />
+
+        <receiver android:name=".TrycorderReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".tryclient.TryclientActivity"
+            android:label="Tryclient"
+            android:parentActivityName=".TrycorderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TrycorderActivity" />
+        </activity>
+
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".TrycorderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TrycorderActivity" />
+        </activity>
+
+        <activity
+            android:name=".contacts.ContactsListActivity"
+            android:label="Settings"
+            android:parentActivityName=".TrycorderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TrycorderActivity" />
+        </activity>
+
+        <activity
+            android:name=".contacts.ContactsBudgetActivity"
+            android:label="@string/activity_contact_budget"
+            android:parentActivityName=".contacts.ContactsListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".contacts.ContactsListActivity" />
+        </activity>
+        <activity
+            android:name=".contacts.ContactAdminActivity"
+            android:label="@string/activity_contact_admin"
+            android:parentActivityName=".contacts.ContactsListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".contacts.ContactsListActivity" />
+        </activity>
+        <activity
+            android:name=".contacts.ContactEditMemoActivity"
+            android:label="@string/activity_contact_editmemo"
+            android:parentActivityName=".contacts.ContactAdminActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".contacts.ContactAdminActivity" />
+        </activity>
+        <activity
+            android:name=".contacts.ContactEditTransActivity"
+            android:label="@string/activity_contact_edittrans"
+            android:parentActivityName=".contacts.ContactAdminActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".contacts.ContactAdminActivity" />
+        </activity>
+
+        <activity
+            android:name=".products.ProductsListActivity"
+            android:label="Products List"
+            android:parentActivityName=".TrycorderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TrycorderActivity" />
+        </activity>
+        <activity
+            android:name=".products.ProductDetailActivity"
+            android:label="Product Detail"
+            android:parentActivityName=".products.ProductsListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".products.ProductsListActivity" />
+        </activity>
+
+        <provider
+            android:name=".products.MyProductContentProvider"
+            android:authorities="net.ddns.mlsoftlaberge.trycorder.products">
+        </provider>
+
+
+    </application>
+
+</manifest>

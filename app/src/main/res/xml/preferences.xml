@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Trycorder"
+        android:key="pref_key_main_settings">
+        <CheckBoxPreference
+            android:key="pref_key_auto_listen"
+            android:summary="Determine if the listen function is looping"
+            android:title="Automatic loop"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="pref_key_ischatty"
+            android:summary="Determine if the speak function is chatty"
+            android:title="Speak more often"
+            android:defaultValue="false" />
+        <ListPreference
+            android:key="pref_key_display_language"
+            android:entries="@array/language_array_entries"
+            android:entryValues="@array/language_array_entryvalues"
+            android:summary="Language used to display to the user"
+            android:title="Display Language"
+            android:defaultValue="EN"/>
+        <ListPreference
+            android:key="pref_key_listen_language"
+            android:entries="@array/language_array_entries"
+            android:entryValues="@array/language_array_entryvalues"
+            android:summary="Language used to listen to the user"
+            android:title="Listen Language"
+            android:defaultValue="EN"/>
+        <ListPreference
+            android:key="pref_key_speak_language"
+            android:entries="@array/language_array_entries"
+            android:entryValues="@array/language_array_entryvalues"
+            android:summary="Language used to pronounce text to speak"
+            android:title="Speak Language"
+            android:defaultValue="EN"/>
+        <EditTextPreference
+            android:key="pref_key_device_name"
+            android:summary="Device name used in walkie-talkie"
+            android:title="Device Name"
+            android:defaultValue="Trycorder"/>
+        <CheckBoxPreference
+            android:key="pref_key_ismaster"
+            android:summary="Determine if we are master of commands with the others trycorders"
+            android:title="Is Master"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="pref_key_send_local"
+            android:summary="Determine if we send to Local Net"
+            android:title="Send Local"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="pref_key_send_remote"
+            android:summary="Determine if we send to Remote Net"
+            android:title="Send Remote"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="pref_key_replay_sent"
+            android:summary="Determine if we replay the sent text locally"
+            android:title="Replay Sent"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="pref_key_auto_boot"
+            android:summary="Determine if we start talk server at boot"
+            android:title="Auto Boot"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="pref_key_auto_stop"
+            android:summary="Determine if we stop the server at exit"
+            android:title="Auto Stop"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="pref_key_debug_mode"
+            android:summary="Enable to debug locally"
+            android:title="Debug Mode"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="pref_key_debug_addr"
+            android:summary="Debug server address"
+            android:title="Debug Server Address"
+            android:defaultValue="192.168.0.184"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,133 @@
+2016-11-11: - version 3.9.2 added the fire control sliders
+
+2016-11-08: - version 3.9.0 transporter controls refined
+
+2016-11-08: - version 2.8.5 transporter beamout/in controls
+
+2016-10-31: - added a seekbar (alpha)
+
+2016-10-23: - version 3.8.2 new camera2-api module with cam effects
+
+2016-10-19: - version 3.8 Camera2 module in tryviscam.
+
+2016-10-16: - version 3.7 added 9 view modes to night vision works well in 4.4.4 only
+
+2016-10-11: - version 3.6 new modes for night/day vision
+
+2016-10-06: - Version 3.4 Added a local button in mode mode, to access the tryclient activity
+
+2016-10-04: - version 3.3 added a fast-talk-mode client to the notification action few minor adjustments to sensors
+
+2016-09-20: - version 3.2 added the sensor mode on the mode layout fragment sensor mode contains 6 sensors on the same page reusability of sensor views verified
+
+2016-09-19: - added sensor fragment readying for 3.2
+
+2016-09-15: - small enhancements
+
+2016-08-24: - saved a copy of the 3.1 sources
+
+2016-08-24: - cleaned the unused or obsolete tests modules removed Tryclient activity test removed Gallery activity test removed Trywalkie fragment test removed Speak and Listen utilities test moved them all to source directory for future consultation we are now version 3.1
+
+2016-08-23: - getting out the 3.0 version
+
+2016-08-22: - on road to 3.0 versionb 2.9.8, containing a full trycorder service on the groath
+
+2016-08-19: - server / client activities for communicator/walkie centralization of server-list in the Service with sticky bindings Test client for walkie /communication only mode Notification with extended list of servers found version 2.9.7
+
+2016-08-09: - 2.9.4 send more buttons commands
+
+2016-08-09: - 2.9.3 added some animation on the views added more remote controls of other trycorders many little ajustments
+
+2016-08-04: - 2.9.1 auto-start of talk server at boot of phone options to control auto-boot and auto-close of server auto recognition of device-name on first launch
+
+2016-08-02: - 2.9.0 probably the best version ever trycorder / communicator / remote control of other trycorders speech recognition, and speech transmission in separate channels UDP talk channel, and TCP command channel, on port 1701
+
+2016-07-30: - added a running background service for talk server
+
+2016-07-25: - version 2.7 stabilized the inter-trycorder operations added 2 walkie-talkie methods (voicerec-tts / audiorec-play) added a package-info section in info panel
+
+2016-07-22: - added the voice transfer mode refined some functions
+
+2016-07-18: - corrected a bug with device name in discovery
+
+2016-07-17: - finalized the mechanic for trywalkie working walkie-talkie with all other trycorders on the local net version 2.3
+
+2016-07-10: - modified .gitignore
+
+2016-07-10: - added a NSD to the network for peers discovery switched to 2.2 reorganized the files extracted the speak functionnality in a class ready to extract listen functionnality
+
+2016-07-05: - this is the first operationnal network version of the trycorder added the net conversation with walkie talkie
+
+2016-06-29: - splitted the trycorder class in 10 different classes added a trywalkie module (walkie-talkie) in alpha experimental stage refined some inputs to take care of the enter button isolated the animations in standalone classes
+
+2016-06-25: - changed min sdk to 11 instead of 15 finally switched to 2.0
+
+2016-06-25: - solved the send photo problem by reformulating the uri integrated the gifview class in trycorder setup gene rodenberry as the default photo-view straightened some things (lol)
+
+2016-06-24: - published 1.9.7
+
+2016-06-24: - added the photo and video viewers and gallery extended the mode button for a full buttons layout with external fragments/activities lightened the logs layout by transferring external activities to mode layout !!! Preparing for a 2.0 release soon.
+
+2016-06-22: - added the list of videos in page 2 videos names are clickables
+
+2016-06-22: - added a video viewer and a list in the tryviewer fragment
+
+2016-06-20: - added a second page, with a full empty space for contents solved the simple gif animation. (remember to share) refined some views in motor mode implemented the multi-fragment operation with the coming of page 2 solved the gif viewing problem ( it was twice as hard as the rest) really refined the warp-core animation rodenberry is buried somewhere inside
+
+2016-06-17: - added more chatty option in preference, and made the app more chatty added the motor system remote control and animation... to finish preparing to switch to a new class distribution (split trycorder fragment) refined some comments
+
+2016-06-15: - added a gallery activity to handle photo viewing in trekky mode the original gallery application is still accessible from the trek-gallery
+
+2016-06-14: - version 1.9.2 finalized with inventory module fully adapted in trekky style contacts module fully adapted in trekky style, and refined isolation of extra modules in other activities
+
+2016-06-13: - added the inventory module version 1.9.2
+
+2016-06-11: - added the crew information and evaluation module for captains only. version 1.9.0
+
+2016-06-09: - removed the diff file
+
+2016-06-09: - added the crew list of the starship (contacts) switched to version 1.9.0 adjusted the crew list to look startrek like prepared the way for integration of crew evaluation and details
+
+2016-06-08: - moved initialization of TTS and Recognizer to later in application this should solve the FC on opening
+
+2016-06-07: - added permission management for android 6.0.1 finalized some animation ajustments ready for mass distribution
+
+2016-06-05: - added a tractor beam control added tractor beam animation updated the transporter animation
+
+2016-06-05: - added a tractor beam panel to the buttons added a tractor beam animation ready to animate tractor push and pull capabilities reordered the buttons positions in code for viewer and logs
+added many other images in plans
+updated the icon
+
+2016-06-04: - ajusted few settings switched to 1.4
+
+2016-06-04: - updated the screenshot adjusted some parameters
+
+2016-06-03: - switched to version 1.1 added network information in info window added phaser and torpedo viewer animated
+
+2016-06-03: - added internet information added some more talking
+
+2016-06-02: - Merge branch 'master' of https://github.com/mlsoft/Trycorder
+
+2016-06-02: - added a new screenshot switched to version 1.1, last commit was 1.0
+
+2016-06-02: - updated the screenshots
+
+2016-06-02: - last ajustments in logs info little ajustments in user interface
+
+2016-06-01: - many little corrections in logic
+
+2016-06-01: - added another sensor refined the buttons added front camera view
+
+2016-05-31: - added preferences saving of last screen configuration
+
+2016-05-29: - added the longitude/latitude values in orientation sensor
+
+2016-05-27: - added a logs button and functionnality
+
+2016-05-25: - half rounded the buttons at left complementarized the buttons in the center added lots of status messages
+
+2016-05-23: - added round cornered buttons added new trek fonts
+
+2016-05-17: - initial commit of the trycorder code
+
+2016-05-17: - first commit

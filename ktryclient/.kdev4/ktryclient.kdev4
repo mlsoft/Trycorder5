@@ -1,0 +1,38 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x14\x00k\x00t\x00r\x00y\x00c\x00l\x00i\x00e\x00n\x00t)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index=0
+ProjectRootRelative=./
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=file:///home/mlsoft/AndroidStudioProjects/Trycorder4/ktryclient/build
+Build Type=Release
+CMake Binary=file:///usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=file:///usr/local
+
+[Defines And Includes][Compiler]
+Name=GCC
+Path=gcc
+Type=GCC
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=ktryclient
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Configured from ProjectItem=ktryclient,ktryclient
+Project Target=ktryclient,ktryclient
+Working Directory=file:///home/mlsoft/AndroidStudioProjects/Trycorder4/ktryclient/build/
+isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!-- This layout is used to display a single mailing address for a contact. In the case of multiple
+     mailing addresses it could be inflated multiple times and displayed in a ScrollView container
+     to let the user more easily scroll over all addresses. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/padding"
+    android:paddingTop="2dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contact_transaction_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/admin_date_texthint" />
+
+        <TextView
+            android:id="@+id/contact_transaction_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="16dp"
+            android:hint="@string/admin_description_texthint" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contact_transaction_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:gravity="right"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:hint="0.00" />
+
+    <ImageButton
+        android:id="@+id/button_edit_transaction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/transaction_button_description"
+        android:layout_weight="2"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:background="@android:color/black"
+        android:src="@drawable/ic_menu_edit" />
+
+</LinearLayout>
+

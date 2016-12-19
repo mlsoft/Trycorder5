@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="language_array_entries">
+        <item>French</item>
+        <item>English</item>
+        <item>Auto</item>
+    </string-array>
+
+    <string-array name="language_array_entryvalues">
+        <item>FR</item>
+        <item>EN</item>
+        <item>Auto</item>
+    </string-array>
+
+    <string-array name="sensor2_array_entries">
+        <item>None</item>
+        <item>Sensors</item>
+        <item>Communication</item>
+        <item>Shields</item>
+        <item>Fire</item>
+        <item>Transporter</item>
+        <item>Viewer</item>
+        <item>Logs</item>
+    </string-array>
+
+    <string-array name="sensor2_array_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="sensor_array_entries">
+        <item>None</item>
+        <item>Magnetic</item>
+        <item>Orientation</item>
+        <item>Gravity</item>
+    </string-array>
+
+    <string-array name="sensor_array_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="viewer_array_entries">
+        <item>Logo</item>
+        <item>Video</item>
+        <item>Console</item>
+        <item>Info</item>
+    </string-array>
+
+    <string-array name="viewer_array_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="prodtype">
+        <item>Product</item>
+        <item>Service</item>
+    </string-array>
+
+</resources>

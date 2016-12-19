@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="pref_key_sensor2_mode"
+        android:entries="@array/sensor2_array_entries"
+        android:entryValues="@array/sensor2_array_entryvalues"
+        android:summary="Buttons set pre-selected"
+        android:title="Buttons mode"
+        android:defaultValue="0"/>
+    <ListPreference
+        android:key="pref_key_sensor_mode"
+        android:entries="@array/sensor_array_entries"
+        android:entryValues="@array/sensor_array_entryvalues"
+        android:summary="Sensor selected"
+        android:title="Sensors mode"
+        android:defaultValue="0"/>
+    <ListPreference
+        android:key="pref_key_viewer_mode"
+        android:entries="@array/viewer_array_entries"
+        android:entryValues="@array/viewer_array_entryvalues"
+        android:summary="Viewer selected"
+        android:title="Viewer mode"
+        android:defaultValue="0"/>
+
+</PreferenceScreen>

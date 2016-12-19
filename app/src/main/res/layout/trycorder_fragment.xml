@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@android:color/black"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageButton
+            android:id="@+id/talk_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_weight="4"
+            android:background="@android:color/black"
+            android:scaleType="fitXY"
+            android:src="@drawable/trek_topleft"
+            android:text="TALK" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@android:color/black"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <Button
+                    android:id="@+id/sound_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/trekbutton_gray_center"
+                    android:maxLines="1"
+                    android:text="Sound"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/start_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/trekbutton_green_center"
+                    android:maxLines="1"
+                    android:text="Start"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/stop_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/trekbutton_red_center"
+                    android:maxLines="1"
+                    android:text="Stop"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/settings_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/trekbutton_blue_right"
+                    android:maxLines="1"
+                    android:text="Setup"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <TextView
+                    android:id="@+id/textstatus_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="top status"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:background="@android:color/black"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_marginTop="@dimen/button_margin"
+            android:layout_weight="2"
+            android:background="@android:color/black"
+            android:orientation="vertical"
+            android:weightSum="12">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15"
+                android:ellipsize="middle" />
+
+            <Button
+                android:id="@+id/sensor_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_yellow_right"
+                android:maxLines="1"
+                android:text="SENSORS"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+
+            <Button
+                android:id="@+id/comm_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_green_right"
+                android:maxLines="1"
+                android:text="COMM"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+
+            <Button
+                android:id="@+id/shield_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_orange_right"
+                android:maxLines="1"
+                android:text="SHIELD"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+
+            <Button
+                android:id="@+id/fire_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_red_right"
+                android:maxLines="1"
+                android:text="FIRE"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+
+            <Button
+                android:id="@+id/transporter_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_pink_right"
+                android:maxLines="1"
+                android:text="TRANSP"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+
+            <Button
+                android:id="@+id/tractor_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_indigo_right"
+                android:maxLines="1"
+                android:text="TRACTOR"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25" />
+
+            <Button
+                android:id="@+id/motor_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_vert_right"
+                android:maxLines="1"
+                android:text="MOTOR"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25" />
+
+            <Button
+                android:id="@+id/viewer_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_mauve_right"
+                android:maxLines="1"
+                android:text="VIEWER"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+
+            <Button
+                android:id="@+id/logs_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_blue_right"
+                android:maxLines="1"
+                android:text="LOGS"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:ellipsize="middle" />
+
+            <Button
+                android:id="@+id/mode_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/trekbutton_gray_right"
+                android:maxLines="1"
+                android:text="MODE"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.10"
+                android:ellipsize="middle" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_marginTop="@dimen/button_margin"
+            android:layout_weight="8"
+            android:background="@android:color/black"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <!-- ================== layout no 1 ============== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="33"
+                android:background="@android:color/black"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_topleft" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_weight="80"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_horizontalline" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_topright" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:background="@android:color/black"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_verticalline" />
+
+                    <LinearLayout
+                        android:id="@+id/sensor_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="94"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/earth_still"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/earth_still"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/startrek_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/startrek_logo"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/chat_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/chat_send_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:background="@drawable/trekbutton_green"
+                                android:maxLines="1"
+                                android:text="Send Command/Message"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/chat_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="top"
+                                android:imeOptions="actionDone|actionSend"
+                                android:hint="Command/Message"
+                                android:background="@android:color/white"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:id="@+id/walkie_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <Button
+                                    android:id="@+id/walkie_speak_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_indigo"
+                                    android:maxLines="1"
+                                    android:text="SPEAK"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/walkie_talk_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/trekbutton_red"
+                                    android:text="Push To Talk"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/walkie_cmd_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_green"
+                                    android:maxLines="1"
+                                    android:text="CMD"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <Button
+                                    android:id="@+id/walkie_speaklist_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_indigo"
+                                    android:maxLines="1"
+                                    android:text="LIST"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/walkie_serveron_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_orange"
+                                    android:maxLines="1"
+                                    android:text="Srv-On"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/walkie_serveroff_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_orange"
+                                    android:maxLines="1"
+                                    android:text="Srv-Off"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/walkie_logslist_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_green"
+                                    android:maxLines="1"
+                                    android:text="LOGS"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/walkie_iplist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollHorizontally="true"
+                                    android:text="192.168.0.0"
+                                    android:textColor="@android:color/holo_green_light"
+                                    android:textSize="18sp" />
+                            </ScrollView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_verticalline" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_bottomleft" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="80"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_horizontalline" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_bottomright" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ================== layout no 2 ============== -->
+
+            <LinearLayout
+                android:id="@+id/buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="17"
+                android:background="@android:color/black"
+                android:orientation="vertical">
+
+                <!-- ========== button layout for sensors ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_sensor_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/magnetic_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_yellow_left"
+                        android:text="Magn"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/orientation_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_yellow_center"
+                        android:text="Orient"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/gravity_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_yellow_center"
+                        android:text="Grav"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/temperature_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_yellow_center"
+                        android:text="Temp"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/sensoroff_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_yellow_right"
+                        android:text="OFF"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <!-- ========== button layout for comm ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_comm_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/opencomm_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_green_left"
+                        android:text="OPEN COMM" />
+
+                    <Button
+                        android:id="@+id/closecomm_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_green_center"
+                        android:text="CLOSE COMM" />
+
+                    <Button
+                        android:id="@+id/intercomm_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_green_center"
+                        android:text="INTER COMM" />
+
+                    <Button
+                        android:id="@+id/chatcomm_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_green_right"
+                        android:text="CHAT" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for shield ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_shield_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/shield_up_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/trekbutton_orange_left"
+                        android:text="SHIELDS UP" />
+
+                    <Button
+                        android:id="@+id/shield_down_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/trekbutton_orange_right"
+                        android:text="SHIELDS DOWN" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for fire ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_fire_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/phaser_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_red_left"
+                        android:text="PHASER" />
+
+                    <Button
+                        android:id="@+id/yellowalert_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_yellow_center"
+                        android:text="Yellow Alert" />
+
+                    <Button
+                        android:id="@+id/redalert_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_pink_center"
+                        android:text="RED ALERT" />
+
+                    <Button
+                        android:id="@+id/torpedo_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_red_right"
+                        android:text="TORPEDO" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for transporter ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_transporter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/transport_out_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/trekbutton_pink_left"
+                        android:text="TRANSPORT OUT" />
+
+                    <Button
+                        android:id="@+id/transport_in_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/trekbutton_pink_right"
+                        android:text="TRANSPORT IN" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for tractor beam ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_tractor_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/tractor_push_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="33"
+                        android:background="@drawable/trekbutton_indigo_left"
+                        android:text="TRACTOR PUSH" />
+
+                    <Button
+                        android:id="@+id/tractor_off_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="34"
+                        android:background="@drawable/trekbutton_indigo_center"
+                        android:text="TRACTOR OFF" />
+
+                    <Button
+                        android:id="@+id/tractor_pull_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="33"
+                        android:background="@drawable/trekbutton_indigo_right"
+                        android:text="TRACTOR PULL" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for motors ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_motor_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/motor_impulse_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="33"
+                        android:background="@drawable/trekbutton_vert_left"
+                        android:text="MOTOR IMPULSE" />
+
+                    <Button
+                        android:id="@+id/motor_off_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="34"
+                        android:background="@drawable/trekbutton_vert_center"
+                        android:text="MOTOR OFF" />
+
+                    <Button
+                        android:id="@+id/motor_warp_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="33"
+                        android:background="@drawable/trekbutton_vert_right"
+                        android:text="MOTOR WARP" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for viewer ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_viewer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/vieweron_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_mauve_left"
+                        android:text="Main Viewer"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/viewerfront_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_mauve_center"
+                        android:text="Local Viewer"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/vieweroff_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_mauve_right"
+                        android:text="Viewer Off"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/viewerphoto_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="25"
+                        android:background="@drawable/trekbutton_mauve"
+                        android:text="Viewer Photo"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for logs ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_logs_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/logsconsole_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_blue_left"
+                        android:text="Logs"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/logsinfo_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_blue_center"
+                        android:text="Info"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/logsplans_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_blue_center"
+                        android:text="Plan"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/logssys_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_blue_center"
+                        android:text="Sys"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/logsstat_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/trekbutton_blue_right"
+                        android:text="Stat"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!-- ========== button layout for mode ============== -->
+                <LinearLayout
+                    android:id="@+id/buttons_mode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <Button
+                        android:id="@+id/mode_contact_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/trekbutton_gray_left"
+                        android:text="Crew Info / Evaluation"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/mode_product_button"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/trekbutton_gray_right"
+                        android:text="Ship Inventory"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ================== layout no 3 ============== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="50"
+                android:background="@android:color/black"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_topleft" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_weight="8"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_horizontalline" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_topright" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="8"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/federation_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/federation_logo"
+                        android:visibility="gone" />
+
+                    <TextureView
+                        android:id="@+id/viewer_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/viewer_animate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_earthstill"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/earth_still"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/logs_console"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Console log"
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </ScrollView>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollIndicators="right">
+
+                        <TextView
+                            android:id="@+id/logs_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Information log\n------------------\n"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </ScrollView>
+
+                    <ImageView
+                        android:id="@+id/starship_plans"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        android:clickable="true"
+                        android:src="@drawable/starship_view"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/photo_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/roddenberry_stillwell"
+                        android:visibility="gone" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollIndicators="right">
+
+                        <TextView
+                            android:id="@+id/logs_sys"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="System log\n------------------\n"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </ScrollView>
+
+                    <!-- COMMAND CONTROL WINDOW -->
+
+                    <LinearLayout
+                        android:id="@+id/commandcontrol_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="10">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:scrollIndicators="right">
+
+                            <TextView
+                                android:id="@+id/logs_command"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Command log\n------------------\n"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </ScrollView>
+
+                        <Button
+                            android:id="@+id/command_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/button_margin"
+                            android:layout_marginEnd="@dimen/button_margin"
+                            android:layout_marginStart="@dimen/button_margin"
+                            android:layout_marginTop="@dimen/button_margin"
+                            android:background="@drawable/trekbutton_green"
+                            android:maxLines="1"
+                            android:text="Send Command/Message"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/command_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="top"
+                            android:imeOptions="actionDone"
+                            android:hint="Command/Message"
+                            android:background="@android:color/white"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- FIRE CONTROL WINDOW -->
+
+                    <LinearLayout
+                        android:id="@+id/firecontrol_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="Direction"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/firedirection_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/firedirection_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:background="@drawable/trekbutton_green"
+                            android:max="100"
+                            style="@android:style/Widget.DeviceDefault.SeekBar"
+                            android:thumb="@android:drawable/btn_default"
+                            android:thumbTint="@android:color/holo_blue_dark" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="Left"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Center"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="Right"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/trek_horizontalline" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="Force"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/fireforce_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/fireforce_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:background="@drawable/trekbutton_orange"
+                            android:max="100"
+                            style="@android:style/Widget.DeviceDefault.SeekBar"
+                            android:thumb="@android:drawable/btn_default"
+                            android:thumbTint="@android:color/holo_red_dark" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="Low"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Medium"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="Max"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/trek_horizontalline" />
+
+
+                    </LinearLayout>
+
+                    <!-- TRANSPORTER SEEK WINDOW -->
+
+                    <LinearLayout
+                        android:id="@+id/transpseek_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/transpseek_textup"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Beam"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="8"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <net.ddns.mlsoftlaberge.trycorder.trycorder.VerticalSeekBar
+                                android:id="@+id/transpseek1_button"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/trekbutton_yellow"
+                                android:max="255"
+                                android:thumb="@android:drawable/btn_default"
+                                style="@android:style/Widget.DeviceDefault.SeekBar"
+                                android:thumbTint="@android:color/holo_red_light" />
+
+                            <net.ddns.mlsoftlaberge.trycorder.trycorder.VerticalSeekBar
+                                android:id="@+id/transpseek2_button"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/trekbutton_yellow"
+                                android:max="255"
+                                style="@android:style/Widget.DeviceDefault.SeekBar"
+                                android:thumb="@android:drawable/btn_default"
+                                android:thumbTint="@android:color/holo_red_light" />
+
+                            <net.ddns.mlsoftlaberge.trycorder.trycorder.VerticalSeekBar
+                                android:id="@+id/transpseek3_button"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/trekbutton_yellow"
+                                android:max="255"
+                                style="@android:style/Widget.DeviceDefault.SeekBar"
+                                android:thumb="@android:drawable/btn_default"
+                                android:thumbTint="@android:color/holo_red_light" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/transpseek_textdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Ready"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <!-- TRACTOR BEAM WINDOW -->
+                    <!-- and SHIELD WINDOW -->
+
+                    <LinearLayout
+                        android:id="@+id/tractorbeam_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/tractorrotate_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Rotating Freq."
+                            android:checked="false"
+                            android:textColor="@android:color/holo_green_light" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Freq Control"
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="18sp" />
+
+                        <SeekBar
+                            android:id="@+id/tractorfreq_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:background="@drawable/trekbutton_indigo"
+                            android:max="10"
+                            android:thumb="@android:drawable/btn_default"
+                            android:thumbTint="@android:color/holo_blue_bright"
+                            style="@android:style/Widget.DeviceDefault.SeekBar" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Strength Control"
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="18sp" />
+
+                        <SeekBar
+                            android:id="@+id/tractorforce_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:background="@drawable/trekbutton_orange"
+                            android:max="5"
+                            android:thumb="@android:drawable/btn_default"
+                            android:thumbTint="@android:color/holo_red_dark"
+                            style="@android:style/Widget.DeviceDefault.SeekBar" />
+
+                    </LinearLayout>
+
+                    <!-- MODE MODE WINDOW -->
+
+                    <LinearLayout
+                        android:id="@+id/mode_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <Button
+                                android:id="@+id/mode_photogal_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_green"
+                                android:maxLines="1"
+                                android:text="Photo Gal."
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/mode_videogal_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_red"
+                                android:text="Video Gal."
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <Button
+                                android:id="@+id/mode_sensor_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_yellow"
+                                android:maxLines="1"
+                                android:text="MultiSensor"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/mode_client_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_indigo"
+                                android:text="Client Mode"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <Button
+                                android:id="@+id/mode_vision_night_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_green"
+                                android:maxLines="1"
+                                android:text="Vision Cam1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/mode_vision_day_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_green"
+                                android:text="Vision Cam2"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <Button
+                                android:id="@+id/mode_desktop_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_indigo"
+                                android:maxLines="1"
+                                android:text="Desktop"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/mode_spare_button"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/button_margin"
+                                android:layout_marginEnd="@dimen/button_margin"
+                                android:layout_marginStart="@dimen/button_margin"
+                                android:layout_marginTop="@dimen/button_margin"
+                                android:layout_weight="2"
+                                android:background="@drawable/trekbutton_indigo"
+                                android:text=""
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_bottomleft" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="8"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_horizontalline" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trek_bottomright" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@android:color/black"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageButton
+            android:id="@+id/ask_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_weight="4"
+            android:background="@android:color/black"
+            android:scaleType="fitXY"
+            android:src="@drawable/trek_bottomleft"
+            android:text="ASK" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@android:color/black"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <TextView
+                    android:id="@+id/textstatus_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="bottom status"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+                <Button
+                    android:id="@+id/snap_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="2"
+                    android:background="@drawable/trekbutton_gray_center"
+                    android:maxLines="1"
+                    android:text="Snap"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/photo_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="2"
+                    android:background="@drawable/trekbutton_green_center"
+                    android:maxLines="1"
+                    android:text="Photo"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/record_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="2"
+                    android:background="@drawable/trekbutton_red_center"
+                    android:maxLines="1"
+                    android:text="Record"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gallery_button"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:layout_marginStart="@dimen/button_margin"
+                    android:layout_weight="2"
+                    android:background="@drawable/trekbutton_blue_right"
+                    android:maxLines="1"
+                    android:text="Gallery"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

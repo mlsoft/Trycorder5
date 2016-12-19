@@ -1,0 +1,22 @@
+2016-12-18: - version 4.4.5 fully connected around the planet thru the server initial working version of an international chat room and command sharing between trycorders
+
+2016-12-11: - version 4.4.3 stabilisation of the messenger interface
+
+2016-12-07: - Version 4.4.2 new chat function between all planetary trycorders
+
+2016-12-02: - Version 4.3.141592
+this is the first version (4.Pi) who connects to a central server
+
+The tryserver directory contains the main central server who responds to the trycorders activity with a server-ok message
+
+This tryserver also logs in tryserver.log, the totality of messages received from trycorders and their ip-address
+
+2016-11-23: - version 4.2.0 added a desktop fragment, for use with universal communicator/translator
+
+2016-11-18: - version 4.1.3 added a global red alert to the system
+
+2016-11-14: - version 4.1 new controls for the tractor-beam styles ajustments
+
+2016-11-12: - Version 4.0 of the Famous Trycorder By Martin Laberge.
+
+2016-11-12: - first commit
