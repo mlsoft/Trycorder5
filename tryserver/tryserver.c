@@ -175,7 +175,7 @@ void publishlist() {
     sprintf(mach,"%s,%s:",connclient[i]->ipaddr,connclient[i]->tryname);
     strcat(buf,mach);
   }
-  //strcat(buf,"\n");
+  strcat(buf,"\n");
   sendall(buf);
 }
 

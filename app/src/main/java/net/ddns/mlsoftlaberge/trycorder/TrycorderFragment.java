@@ -1714,6 +1714,8 @@ public class TrycorderFragment extends Fragment
         if(mBound) {
             mIpList = mTrycorderService.getiplist();
             mNameList = mTrycorderService.getnamelist();
+            mIpRemote = mTrycorderService.getipremote();
+            mNameRemote = mTrycorderService.getnameremote();
             saylist();
         }
     }
@@ -3269,11 +3271,17 @@ public class TrycorderFragment extends Fragment
     private List<String> mIpList = new ArrayList<String>();
     private List<String> mNameList = new ArrayList<String>();
 
+    private List<String> mIpRemote = new ArrayList<String>();
+    private List<String> mNameRemote = new ArrayList<String>();
+
 
     public void saylist() {
         StringBuffer str = new StringBuffer("");
         for (int i = 0; i < mIpList.size(); ++i) {
             str.append(mIpList.get(i) + " - " + mNameList.get(i) + "\n");
+        }
+        for (int i = 0; i < mIpRemote.size(); ++i) {
+            str.append(mIpRemote.get(i) + " - " + mNameRemote.get(i) + "\n");
         }
         mWalkieIpList.setText(str.toString());
     }

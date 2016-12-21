@@ -86,6 +86,14 @@ public class TrycorderService extends Service implements RecognitionListener {
         return(mNameList);
     }
 
+    public List<String> getipremote() {
+        return(mIpRemote);
+    }
+
+    public List<String> getnameremote() {
+        return(mNameRemote);
+    }
+
     @Override
     public IBinder onBind(Intent arg0) {
         return mBinder;
@@ -729,6 +737,8 @@ public class TrycorderService extends Service implements RecognitionListener {
     public void displaytext(String msg) {
         if(msg.contains("trycorders:")) {
             playsound(R.raw.computerbeep_29);
+            decodetrycorders(msg);
+            informActivity("iplist","");
             return;
         }
         if(msg.contains("server ok")) {
@@ -751,6 +761,31 @@ public class TrycorderService extends Service implements RecognitionListener {
         informActivity("text", msg);
     }
 
+    // ========================================================================================
+    // decode the trycorders line with list of trycorders from the server
+    // in the form trycorders:111.222.333.444,Name1:222.333.444.555,Name2:
+
+
+    private List<String> mIpRemote = new ArrayList<String>();
+    private List<String> mNameRemote = new ArrayList<String>();
+
+    private void decodetrycorders( String msg ) {
+        mIpRemote.clear();
+        mNameRemote.clear();
+        String str;
+        str=msg.substring(11);
+        while(!str.isEmpty()) {
+            int len=str.indexOf(":");
+            if(len<=0) break;
+            String machine=str.substring(0,len);
+            int comma=machine.indexOf(",");
+            String ipadd=machine.substring(0,comma);
+            String name=machine.substring(comma+1);
+            mIpRemote.add(ipadd);
+            mNameRemote.add(name);
+            str=str.substring(len+1);
+        }
+    }
 
     // =====================================================================================
     // voice capture and send on udp
