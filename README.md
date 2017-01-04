@@ -1,3 +1,5 @@
+# Trycorder5
+
 The new Trycorder 3.0 is in the download section on top of this page (with 2.9.7 as beta)
 
 This is an itch I had to scratch for a long time.
@@ -70,5 +72,3 @@ Now people on XDA have a fantastic toy, to play with, learn in, and impress frie
 
 
 
-# Trycorder4
-# Trycorder5
