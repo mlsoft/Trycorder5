@@ -56,6 +56,16 @@
             android:title="Send Remote"
             android:defaultValue="true" />
         <CheckBoxPreference
+            android:key="pref_key_exec_local"
+            android:summary="Determine if we exec from Local Net"
+            android:title="Exec Local"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="pref_key_exec_remote"
+            android:summary="Determine if we exec from Remote Net"
+            android:title="Exec Remote"
+            android:defaultValue="true" />
+        <CheckBoxPreference
             android:key="pref_key_replay_sent"
             android:summary="Determine if we replay the sent text locally"
             android:title="Replay Sent"

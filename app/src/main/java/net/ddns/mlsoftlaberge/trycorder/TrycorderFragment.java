@@ -384,6 +384,8 @@ public class TrycorderFragment extends Fragment
     private boolean isMaster;
     private boolean sendLocal;
     private boolean sendRemote;
+    private boolean execLocal;
+    private boolean execRemote;
     private boolean replaySent;
     private boolean autoBoot;
     private boolean autoStop;
@@ -411,6 +413,8 @@ public class TrycorderFragment extends Fragment
         isMaster = sharedPref.getBoolean("pref_key_ismaster", true);
         sendLocal = sharedPref.getBoolean("pref_key_send_local", true);
         sendRemote = sharedPref.getBoolean("pref_key_send_remote", true);
+        execLocal = sharedPref.getBoolean("pref_key_exec_local", true);
+        execRemote = sharedPref.getBoolean("pref_key_exec_remote", true);
         replaySent = sharedPref.getBoolean("pref_key_replay_sent", false);
         autoBoot = sharedPref.getBoolean("pref_key_auto_boot", true);
         autoStop = sharedPref.getBoolean("pref_key_auto_stop", false);
@@ -1548,7 +1552,7 @@ public class TrycorderFragment extends Fragment
             @Override
             public void onClick(View view) {
                 buttonsound();
-                sendcommand(mChatText.getText().toString());
+                sendtext(mChatText.getText().toString());
                 mChatText.setText("");
             }
         });
@@ -1735,6 +1739,8 @@ public class TrycorderFragment extends Fragment
         isMaster = sharedPref.getBoolean("pref_key_ismaster", true);
         sendLocal = sharedPref.getBoolean("pref_key_send_local", true);
         sendRemote = sharedPref.getBoolean("pref_key_send_remote", true);
+        execLocal = sharedPref.getBoolean("pref_key_exec_local", true);
+        execRemote = sharedPref.getBoolean("pref_key_exec_remote", true);
         replaySent = sharedPref.getBoolean("pref_key_replay_sent", false);
         autoBoot = sharedPref.getBoolean("pref_key_auto_boot", true);
         autoStop = sharedPref.getBoolean("pref_key_auto_stop", false);
@@ -2998,28 +3004,18 @@ public class TrycorderFragment extends Fragment
     // ==============================================================================
     private boolean matchvoice(String textein) {
         String texte = textein.toLowerCase();
-        if (texte.contains("french") || texte.contains("français")) {
+        if (texte.startsWith("french") || texte.startsWith("français")) {
             listenLanguage = "FR";
             speakLanguage = "FR";
             speak("français", speakLanguage);
             return (true);
         }
-        if (texte.contains("english") || texte.contains("anglais")) {
+        if (texte.startsWith("english") || texte.startsWith("anglais")) {
             listenLanguage = "EN";
             speakLanguage = "EN";
             speak("english", speakLanguage);
             return (true);
         }
-        //if (texte.contains("martin") || texte.contains("master")) {
-        //    if (speakLanguage.equals("FR")) speak("Martin est mon maître.");
-        //    else speak("Martin is my Master.");
-        //    return (true);
-        //}
-        //if (texte.contains("computer") || texte.contains("ordinateur")) {
-        //    if (speakLanguage.equals("FR")) speak("Faites votre requète");
-        //    else speak("State your question");
-        //    return (true);
-        //}
         if (texte.contains("fuck") || texte.contains("shit")) {
             if (speakLanguage.equals("FR")) speak("Ne m'adressez pas la parole de cette façon");
             else playsound(R.raw.donotaddressthisunitinthatmanner_clean);
@@ -3028,12 +3024,9 @@ public class TrycorderFragment extends Fragment
             switchbuttonlayout(0);
             return (true);
         }
-        // actions on the trycorder
-        //if (texte.contains("alert")) {
-        //    switchbuttonlayout(4);
-        //    redalert();
-        //    return (true);
-        //}
+        // check if this is a trycorder command
+        if(texte.startsWith("computer ")==false && texte.startsWith("ordinateur ")==false) return(false);
+        // commons actions of the trycorder
         if (texte.contains("sensor off")) {
             switchbuttonlayout(1);
             sensorsoff();
@@ -3244,7 +3237,7 @@ public class TrycorderFragment extends Fragment
     private void sendcommand(String text) {
         if(isMaster) {
             saycommand(text);
-            sendtext(text);
+            sendtext("computer " + text);
         }
     }
 
@@ -3278,10 +3271,10 @@ public class TrycorderFragment extends Fragment
     public void saylist() {
         StringBuffer str = new StringBuffer("");
         for (int i = 0; i < mIpList.size(); ++i) {
-            str.append(mIpList.get(i) + " - " + mNameList.get(i) + "\n");
+            str.append(":" + mIpList.get(i) + " - " + mNameList.get(i) + "\n");
         }
         for (int i = 0; i < mIpRemote.size(); ++i) {
-            str.append(mIpRemote.get(i) + " - " + mNameRemote.get(i) + "\n");
+            str.append("*" + mIpRemote.get(i) + " - " + mNameRemote.get(i) + "\n");
         }
         mWalkieIpList.setText(str.toString());
     }

@@ -106,6 +106,8 @@ public class TrycorderService extends Service implements RecognitionListener {
     private boolean isMaster;
     private boolean sendLocal;
     private boolean sendRemote;
+    private boolean execLocal;
+    private boolean execRemote;
     private boolean autoBoot;
     private boolean autoStop;
     private boolean debugMode;
@@ -131,6 +133,8 @@ public class TrycorderService extends Service implements RecognitionListener {
         isMaster = sharedPref.getBoolean("pref_key_ismaster", true);
         sendLocal = sharedPref.getBoolean("pref_key_send_local", true);
         sendRemote = sharedPref.getBoolean("pref_key_send_remote", true);
+        execLocal = sharedPref.getBoolean("pref_key_exec_local", true);
+        execRemote = sharedPref.getBoolean("pref_key_exec_remote", true);
         autoBoot = sharedPref.getBoolean("pref_key_auto_boot", true);
         autoStop = sharedPref.getBoolean("pref_key_auto_stop", false);
         debugMode = sharedPref.getBoolean("pref_key_debug_mode", false);
@@ -344,44 +348,13 @@ public class TrycorderService extends Service implements RecognitionListener {
 
     private boolean matchvoice(String textein) {
         String texte = textein.toLowerCase();
-        if (texte.contains("server ok")) return(true);
-        //if (texte.contains("red alert")) return(true);
-        //if (texte.contains("yellow alert")) return(true);
-        if (texte.contains("french") || texte.contains("français")) return(true);
-        if (texte.contains("english") || texte.contains("anglais")) return(true);
-        //if (texte.contains("martin") || texte.contains("master")) return(true);
-        //if (texte.contains("computer") || texte.contains("ordinateur")) return(true);
+        if (texte.startsWith("server ok")) return(true);
+        if (texte.startsWith("french") || texte.startsWith("français")) return(true);
+        if (texte.startsWith("english") || texte.startsWith("anglais")) return(true);
         if (texte.contains("fuck") || texte.contains("shit")) return(true);
-        if (texte.contains("sensor off")) return(true);
-        if (texte.contains("sensor") || texte.contains("magnetic")) return(true);
-        if (texte.contains("orientation") || texte.contains("direction")) return(true);
-        if (texte.contains("gravity") || texte.contains("vibration")) return(true);
-        if (texte.contains("temperature") || texte.contains("pressure") || texte.contains("light")) return(true);
-        if (texte.contains("hailing") && texte.contains("close")) return(true);
-        if (texte.contains("hailing") || texte.contains("frequency")) return(true);
-        if (texte.contains("intercom")) return(true);
-        if (texte.contains("chatcomm")) return(true);
-        if (texte.contains("shield") && texte.contains("down")) return(true);
-        if (texte.contains("shield") || texte.contains("raise")) return(true);
-        if (texte.contains("phaser")) return(true);
-        if (texte.contains("fire") || texte.contains("torpedo")) return(true);
-        if (texte.contains("beam me up") || texte.contains("scotty") || texte.contains("transporteur")) return(true);
-        if (texte.contains("beam me down")) return(true);
-        if (texte.contains("tractor push")) return(true);
-        if (texte.contains("tractor off")) return(true);
-        if (texte.contains("tractor pull")) return(true);
-        if (texte.contains("impulse power")) return(true);
-        if (texte.contains("stay here")) return(true);
-        if (texte.contains("warp drive")) return(true);
-        if (texte.contains("viewer on")) return(true);
-        if (texte.contains("local viewer")) return(true);
-        if (texte.contains("viewer off")) return(true);
-        if (texte.contains("logs console")) return(true);
-        if (texte.contains("logs info")) return(true);
-        if (texte.contains("system plans")) return(true);
-        if (texte.contains("system info")) return(true);
-        if (texte.contains("system stat")) return(true);
-        if (texte.contains("speak list")) return(true);
+        // all other generic computer commands
+        if (texte.startsWith("computer ")) return(true);
+        if (texte.startsWith("ordinateur ")) return(true);
         return(false);
     }
 
@@ -435,40 +408,41 @@ public class TrycorderService extends Service implements RecognitionListener {
 
         private void serversend(String destip) {
             // try to connect to a socket
-            try {
-                InetAddress serverAddr = InetAddress.getByName(destip);
-                clientSocket = new Socket(serverAddr, SERVERPORT);
-                Log.d("clientthread", "server connected " + destip);
-            } catch (Exception e) {
-                Log.d("clientthread", e.toString());
-            }
+            //try {
+            //    InetAddress serverAddr = InetAddress.getByName(destip);
+            //    clientSocket = new Socket(serverAddr, SERVERPORT);
+            //    Log.d("clientthread", "server connected " + destip);
+            //} catch (Exception e) {
+            //    Log.d("clientthread", e.toString());
+            //}
             // try to send the message
             try {
                 PrintWriter out = new PrintWriter(new BufferedWriter(
-                        new OutputStreamWriter(clientSocket.getOutputStream())), true);
+                        new OutputStreamWriter(starshipSocket.getOutputStream())), true);
                 out.println(mesg);
+                out.flush();
                 Log.d("clientthread", "data sent: " + mesg);
             } catch (Exception e) {
                 Log.d("clientthread", e.toString());
             }
             // try to receive the answer
-            try {
-                BufferedReader bufinput = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                String read = bufinput.readLine();
-                if (read != null) {
-                    mHandler.post(new updateUIThread(read));
-                    Log.d("clientthread", "answer received: " + read);
-                }
-            } catch (Exception e) {
-                Log.d("clientthread", e.toString());
-            }
+            //try {
+            //    BufferedReader bufinput = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            //    String read = bufinput.readLine();
+            //    if (read != null) {
+            //        mHandler.post(new updateUIThread(read,1));
+            //        Log.d("clientthread", "answer received: " + read);
+            //    }
+            //} catch (Exception e) {
+            //    Log.d("clientthread", e.toString());
+            //}
             // try to close the socket of the client
-            try {
-                clientSocket.close();
-                Log.d("clientthread", "server closed " + destip);
-            } catch (Exception e) {
-                Log.d("clientthread", e.toString());
-            }
+            //try {
+            //    clientSocket.close();
+            //    Log.d("clientthread", "server closed " + destip);
+            //} catch (Exception e) {
+            //    Log.d("clientthread", e.toString());
+            //}
         }
 
         private void clientsend(String destip) {
@@ -539,6 +513,7 @@ public class TrycorderService extends Service implements RecognitionListener {
         // close the socket of the server
         try {
             starshipSocket.close();
+            starshipSocket=null;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -575,6 +550,7 @@ public class TrycorderService extends Service implements RecognitionListener {
                     PrintWriter out = new PrintWriter(new BufferedWriter(
                             new OutputStreamWriter(starshipSocket.getOutputStream())), true);
                     out.println(identification);
+                    out.flush();
                     Log.d("starshipthread", "data sent: " + identification);
                 } catch (Exception e) {
                     Log.d("starshipthread", e.toString());
@@ -592,7 +568,7 @@ public class TrycorderService extends Service implements RecognitionListener {
                     try {
                         String read = bufinput.readLine();
                         if (read != null) {
-                            mHandler.post(new updateUIThread(read));
+                            mHandler.post(new updateUIThread(read,1));
                             Log.d("starshipthread", "answer received: " + read);
                         }
                     } catch (Exception e) {
@@ -603,6 +579,7 @@ public class TrycorderService extends Service implements RecognitionListener {
                 // try to close the socket of the client
                 try {
                     starshipSocket.close();
+                    starshipSocket=null;
                     Log.d("starshipthread", "server closed " + destip);
                 } catch (Exception e) {
                     Log.d("starshipthread", e.toString());
@@ -706,7 +683,7 @@ public class TrycorderService extends Service implements RecognitionListener {
                     String read = bufinput.readLine();
                     if (read == null) break;
                     Log.d("commthreadrun", "update conversation");
-                    mHandler.post(new updateUIThread(read));
+                    mHandler.post(new updateUIThread(read,0));
 
                 } catch (IOException e) {
                     Log.d("commthreadrun", "exception " + e.toString());
@@ -720,21 +697,23 @@ public class TrycorderService extends Service implements RecognitionListener {
     // ===== thread used to update the ui of the running application with received text =====
     class updateUIThread implements Runnable {
         private String msg = null;
+        private int rem=0;
 
-        public updateUIThread(String str) {
+        public updateUIThread(String str, int remote) {
             msg = str;
+            rem = remote;
             Log.d("uithread", str);
         }
 
         @Override
         public void run() {
             if (msg != null) {
-                displaytext(msg);
+                displaytext(msg,rem);
             }
         }
     }
 
-    public void displaytext(String msg) {
+    public void displaytext(String msg,int remote) {
         if(msg.contains("trycorders:")) {
             playsound(R.raw.computerbeep_29);
             decodetrycorders(msg);
@@ -758,6 +737,10 @@ public class TrycorderService extends Service implements RecognitionListener {
         if(matchvoice(msg)==false) {
             speak(msg);
         }
+        // check if we are forbidden to execute command
+        if(!execLocal && remote==0) return;
+        if(!execRemote && remote==1) return;
+        // inform activity of command to execute
         informActivity("text", msg);
     }
 

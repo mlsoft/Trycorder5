@@ -7,12 +7,12 @@ Current Build Directory Index=0
 ProjectRootRelative=./
 
 [CMake][CMake Build Directory 0]
-Build Directory Path=file:///home/mlsoft/AndroidStudioProjects/Trycorder4/tryclient/build
-Build Type=Release
+Build Directory Path=file:///home/mlsoft/AndroidStudioProjects/Trycorder5/tryclient/build
+Build Type=Debug
 CMake Binary=file:///usr/bin/cmake
 Environment Profile=
 Extra Arguments=
-Install Directory=file:///usr/local
+Install Directory=
 
 [Defines And Includes][Compiler]
 Name=GCC

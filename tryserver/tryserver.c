@@ -11,7 +11,8 @@
 #include <arpa/inet.h> //inet_addr
 #include <unistd.h>    //write
 #include <pthread.h> //for threading , link with lpthread
- 
+#include <time.h>
+
 #define SOCK_PATH "/var/run/tryserver.sock"
 
 // ========= for the server of the tryclients ==========
@@ -35,6 +36,8 @@ void publishlist();
 
 // the log-file pointer
 static FILE *fplog=NULL;
+// the machine log file pointer
+static FILE *fpmach=NULL;
 
 // the local unix socket to talk with the user
 static int fdsock=0;
@@ -49,6 +52,82 @@ void say(const char *s) {
   fflush(fplog);
 }
 
+void demomode() {
+    sendall("sensors\n");
+    sleep(2);
+    sendall("computer magnetic\n");
+    sleep(3);
+    sendall("computer orientation\n");
+    sleep(3);
+    sendall("computer gravity\n");
+    sleep(3);
+    sendall("computer temperature\n");
+    sleep(3);
+    sendall("computer sensor off\n");
+    sleep(2);
+    sendall("communications\n");
+    sleep(2);
+    sendall("computer hailing\n");
+    sleep(3);
+    sendall("computer hailing close\n");
+    sleep(2);
+    sendall("computer intercomm\n");
+    sleep(4);
+    sendall("computer chatcomm\n");
+    sleep(4);
+    sendall("shields\n");
+    sleep(2);
+    sendall("computer raise shield\n");
+    sleep(2);
+    sendall("computer lower shield\n");
+    sleep(2);
+    sendall("fire capabilities\n");
+    sleep(2);
+    sendall("computer phaser\n");
+    sleep(4);
+    sendall("computer fire\n");
+    sleep(3);
+    sendall("yellow alert\n");
+    sleep(2);
+    sendall("transporter\n");
+    sleep(2);
+    sendall("computer beam me down\n");
+    sleep(4);
+    sendall("computer beam me up\n");
+    sleep(4);
+    sendall("tractor beam\n");
+    sleep(2);
+    sendall("computer tractor push\n");
+    sleep(3);
+    sendall("computer tractor pull\n");
+    sleep(3);
+    sendall("computer tractor off\n");
+    sleep(2);
+    sendall("propulsors\n");
+    sleep(2);
+    sendall("computer impulse power\n");
+    sleep(3);
+    sendall("computer warp drive\n");
+    sleep(4);
+    sendall("computer stay here\n");
+    sleep(2);
+    sendall("camera\n");
+    sleep(2);
+    sendall("computer local viewer\n");
+    sleep(4);
+    sendall("computer snap photo\n");
+    sleep(4);
+    sendall("computer logs console\n");
+    sendall("computer intercomm\n");
+    sendall("finishing demo\n");
+}
+
+void * demo_handler( void *dum) {
+    demomode();
+}
+
+
+
 // ====================== MAIN ==============================
 
 int main(int argc , char *argv[])
@@ -58,6 +137,8 @@ int main(int argc , char *argv[])
 
     // the log file for all tryserver actions
     fplog=fopen("/var/log/tryserver.log","a");
+    // the log file for all tryserver machines
+    fpmach=fopen("/var/log/trycorder.log","a");
     
     // the thread that will handle connections from tryclient
     pthread_t input_thread;
@@ -86,6 +167,10 @@ int main(int argc , char *argv[])
       if(s!=NULL) {
 	if(strncmp(inputline,"list",4) ==0) {
 	  listconnclient();
+	} else if(strncmp(inputline,"demo",4) ==0) {
+	  demomode();
+	} else if(strncmp(inputline,"quit",4) ==0) {
+	  break;
 	} else {
 	  // send this command to all trycorders
 	  sendall(inputline);
@@ -95,6 +180,7 @@ int main(int argc , char *argv[])
     
     
     fclose(fplog);
+    fclose(fpmach);
  
     return(0);
 }
@@ -251,6 +337,12 @@ void* input_handler(void* threadname)
 	    client_message[read_size]=0;
 	    if(strncmp(client_message,"list",4) ==0) {
 	      listconnclient();
+	    } else if(strncmp(client_message,"demo",4) ==0) {
+	      demomode();
+	    } else if(strncmp(client_message,"quit",4) ==0) {
+	      close(fdsock);
+	      close(socket_desc);
+	      exit(0);
 	    } else {
 	      // send this command to all trycorders
 	      sendall(client_message);
@@ -369,6 +461,9 @@ void *connection_handler(void *connvoid)
     char buf[256];
     
     // log connection from
+    time_t now=time(NULL);
+    sprintf(buf,"%s",ctime(&now));
+    say(buf);
     sprintf(buf,"From:%s\n",conn->ipaddr);
     say(buf);
     
@@ -397,21 +492,33 @@ void *connection_handler(void *connvoid)
 		strcpy(conn->tryname,client_message+10);
 		// add this thread/connection to the list of permanent threads
 		addconnclient(conn);
+		// log the machine name in machine log
+		now=time(NULL);
+		fprintf(fpmach,"%s",ctime(&now));
+		fprintf(fpmach,"%s:%s\n",conn->ipaddr,conn->tryname);
+		fflush(fpmach);
 	} else {
 		// this is a temporary, one-shot message from the client
                 res=write(sock , server_response , strlen(server_response));
         	sprintf(buf,"Responded:%s",server_response);
         	say(buf);
-		// send command back to all clients except the sender
-		if(nbconnclient>0) {
-		  int i;
-		  for (i=0;i<nbconnclient;++i) {
-		    if(strcmp(connclient[i]->ipaddr,conn->ipaddr)==0) continue;
-		    strcat(client_message,"\n");
-		    int sockm=connclient[i]->client_sock;
-		    int res=write(sockm , client_message , strlen(client_message));
-		    sprintf(buf,"Mirror:%s:%s",connclient[i]->ipaddr,client_message);
-		    say(buf);
+		if(strncmp(client_message,"demo",4)==0) {
+		  pthread_t demo_thread;
+		  if( pthread_create( &demo_thread , NULL ,  demo_handler , (void*) NULL) < 0) {
+		    say("could not create thread\n");
+		  }
+		} else {
+		  // send command back to all clients except the sender
+		  if(nbconnclient>0) {
+		    int i;
+		    for (i=0;i<nbconnclient;++i) {
+		      if(strcmp(connclient[i]->ipaddr,conn->ipaddr)==0) continue;
+		      strcat(client_message,"\n");
+		      int sockm=connclient[i]->client_sock;
+		      int res=write(sockm , client_message , strlen(client_message));
+		      sprintf(buf,"Mirror:%s:%s",connclient[i]->ipaddr,client_message);
+		      say(buf);
+		    }
 		  }
 		}
         }
