@@ -312,6 +312,7 @@ public class TrycorderFragment extends Fragment
     private Button mModeVisionNightButton;
     private Button mModeVisionDayButton;
     private Button mModeDesktopButton;
+    private Button mModeDestructButton;
 
     // the button to control sound-effects
     private Button mSoundButton;
@@ -1295,6 +1296,15 @@ public class TrycorderFragment extends Fragment
             }
         });
 
+        mModeDestructButton = (Button) view.findViewById(R.id.mode_destruct_button);
+        mModeDestructButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonsound();
+                autodestruct();
+            }
+        });
+
         // ================== get handles on the 3 layout containers ===================
         // the sensor layout, to contain my sensorview
         mSensorLayout = (LinearLayout) view.findViewById(R.id.sensor_layout);
@@ -1653,6 +1663,7 @@ public class TrycorderFragment extends Fragment
         mModeVisionNightButton.setTypeface(face2);
         mModeVisionDayButton.setTypeface(face2);
         mModeDesktopButton.setTypeface(face2);
+        mModeDestructButton.setTypeface(face2);
         // top mode buttons
         mModeCrewButton.setTypeface(face2);
         mModeInvButton.setTypeface(face2);
@@ -2143,6 +2154,13 @@ public class TrycorderFragment extends Fragment
 
     private void buttonbad() {
         playsound(R.raw.denybeep1);
+    }
+
+    private void autodestruct() {
+        //playsound(R.raw.autodestructsequencearmed_ep);
+        //playsound(R.raw.oneminutetoautodestruct_ep);
+        //playsound(R.raw.selfdestructsequenceterminated_ep);
+        playsound(R.raw.destructsequence);
     }
 
     private void yellowalert() {
@@ -3184,6 +3202,10 @@ public class TrycorderFragment extends Fragment
         if (texte.contains("system stat")) {
             switchbuttonlayout(9);
             switchviewer(9);
+            return (true);
+        }
+        if (texte.contains("auto destruct")) {
+            autodestruct();
             return (true);
         }
         if (texte.contains("speak list")) {

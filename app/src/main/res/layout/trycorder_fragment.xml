@@ -815,7 +815,7 @@
                         android:layout_marginRight="2dp"
                         android:layout_weight="25"
                         android:background="@drawable/trekbutton_green_right"
-                        android:text="CHAT" />
+                        android:text="CHAT COMM" />
 
                 </LinearLayout>
 
@@ -1362,7 +1362,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         android:weightSum="10">
 
                         <ScrollView
@@ -1767,7 +1767,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1801,7 +1801,7 @@
                                 android:layout_marginStart="@dimen/button_margin"
                                 android:layout_marginTop="@dimen/button_margin"
                                 android:layout_weight="2"
-                                android:background="@drawable/trekbutton_red"
+                                android:background="@drawable/trekbutton_orange"
                                 android:text="Video Gal."
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -1909,7 +1909,7 @@
                                 android:textStyle="bold" />
 
                             <Button
-                                android:id="@+id/mode_spare_button"
+                                android:id="@+id/mode_destruct_button"
                                 android:layout_width="0dp"
                                 android:layout_height="48dp"
                                 android:layout_gravity="center"
@@ -1918,8 +1918,8 @@
                                 android:layout_marginStart="@dimen/button_margin"
                                 android:layout_marginTop="@dimen/button_margin"
                                 android:layout_weight="2"
-                                android:background="@drawable/trekbutton_indigo"
-                                android:text=""
+                                android:background="@drawable/trekbutton_red"
+                                android:text="Auto Destruct"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -2058,7 +2058,7 @@
                     android:layout_marginEnd="@dimen/button_margin"
                     android:layout_marginStart="@dimen/button_margin"
                     android:layout_weight="2"
-                    android:background="@drawable/trekbutton_red_center"
+                    android:background="@drawable/trekbutton_orange_center"
                     android:maxLines="1"
                     android:text="Record"
                     android:textSize="18sp"

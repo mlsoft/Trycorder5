@@ -1,0 +1,7 @@
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/install.dir
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/list_install_components.dir
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/rebuild_cache.dir
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/gtkmltest.dir
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/install/local.dir
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/install/strip.dir
+/home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/CMakeFiles/edit_cache.dir

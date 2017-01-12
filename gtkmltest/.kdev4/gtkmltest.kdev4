@@ -1,0 +1,171 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x12\x00g\x00t\x00k\x00m\x00l\x00t\x00e\x00s\x00t)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index=0
+ProjectRootRelative=./
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=file:///home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build
+Build Type=Debug
+CMake Binary=file:///usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=file:///usr/local
+
+[CustomDefinesAndIncludes][ProjectPath0]
+Defines=\x00\x00\x00\x00
+Includes=\x00\x00\x00\x01\x00\x00\x00.\x00/\x00u\x00s\x00r\x00/\x00i\x00n\x00c\x00l\x00u\x00d\x00e\x00/\x00g\x00t\x00k\x00m\x00m\x00-\x003\x00.\x000\x00/
+Path=.
+
+[Defines And Includes][Compiler]
+Name=GCC
+Path=gcc
+Type=GCC
+
+[Filters]
+size=25
+
+[Filters][0]
+inclusive=0
+pattern=.*
+targets=3
+
+[Filters][1]
+inclusive=0
+pattern=.git
+targets=2
+
+[Filters][10]
+inclusive=0
+pattern=*.o
+targets=1
+
+[Filters][11]
+inclusive=0
+pattern=*.a
+targets=1
+
+[Filters][12]
+inclusive=0
+pattern=*.so
+targets=1
+
+[Filters][13]
+inclusive=0
+pattern=*.so.*
+targets=1
+
+[Filters][14]
+inclusive=0
+pattern=moc_*.cpp
+targets=1
+
+[Filters][15]
+inclusive=0
+pattern=*.moc
+targets=1
+
+[Filters][16]
+inclusive=0
+pattern=ui_*.h
+targets=1
+
+[Filters][17]
+inclusive=0
+pattern=qrc_*.cpp
+targets=1
+
+[Filters][18]
+inclusive=0
+pattern=*~
+targets=1
+
+[Filters][19]
+inclusive=0
+pattern=*.orig
+targets=1
+
+[Filters][2]
+inclusive=0
+pattern=CVS
+targets=2
+
+[Filters][20]
+inclusive=0
+pattern=.*.kate-swp
+targets=1
+
+[Filters][21]
+inclusive=0
+pattern=.*.swp
+targets=1
+
+[Filters][22]
+inclusive=0
+pattern=*.pyc
+targets=1
+
+[Filters][23]
+inclusive=0
+pattern=*.pyo
+targets=1
+
+[Filters][24]
+inclusive=0
+pattern=/make.sh
+targets=1
+
+[Filters][3]
+inclusive=0
+pattern=.svn
+targets=2
+
+[Filters][4]
+inclusive=0
+pattern=_svn
+targets=2
+
+[Filters][5]
+inclusive=0
+pattern=SCCS
+targets=2
+
+[Filters][6]
+inclusive=0
+pattern=_darcs
+targets=2
+
+[Filters][7]
+inclusive=0
+pattern=.hg
+targets=2
+
+[Filters][8]
+inclusive=0
+pattern=.bzr
+targets=2
+
+[Filters][9]
+inclusive=0
+pattern=__pycache__
+targets=2
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=gtkmltest
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Configured from ProjectItem=gtkmltest,gtkmltest
+Project Target=gtkmltest,gtkmltest
+Working Directory=file:///home/mlsoft/AndroidStudioProjects/Trycorder5/gtkmltest/build/
+isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit
