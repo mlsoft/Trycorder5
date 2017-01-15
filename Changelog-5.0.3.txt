@@ -1,0 +1,34 @@
+2017-01-15: - Version 5.0.3 Removed annoying sound. added some debugging scripts.
+
+2017-01-15: - Version 5.0.3 Removed one annoying beep Prepared the tryserver to be more efficient
+
+2017-01-12: - added to gitignore
+
+2017-01-12: - Version 5.0.3 preparing for F-Droid repository
+
+2017-01-08: - Version 5.0.2
+switched to Api 25 Nougat
+
+2017-01-04: - remade the README.md with last texts
+
+2017-01-04: - Merge branch 'master' of https://github.com/mlsoft/Trycorder5
+
+2017-01-04: - renamed html doc to index.html
+
+2017-01-04: - Set theme jekyll-theme-slate
+
+2017-01-04: - reconverted the doc in xhtml format
+
+2017-01-04: - modified readme
+
+2017-01-04: - remake the index.html to be smaller
+
+2017-01-04: - created the main index
+
+2017-01-04: - moved files to prepare for web site
+
+2017-01-04: - version 5.0.1 new screenshots modified manual ajusted service class
+
+2016-12-21: - version 5.0.0 this is the first commit of the version 5 with remote ip-addr of others trycorders thru the tryserver
+
+2016-12-19: - first commit
