@@ -715,7 +715,7 @@ public class TrycorderService extends Service implements RecognitionListener {
 
     public void displaytext(String msg,int remote) {
         if(msg.contains("trycorders:")) {
-            playsound(R.raw.computerbeep_29);
+            //playsound(R.raw.computerbeep_29);     // annoying
             decodetrycorders(msg);
             informActivity("iplist","");
             return;
