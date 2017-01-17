@@ -195,6 +195,7 @@ struct ConnClient {
   int client_sock;
   char ipaddr[64];
   char tryname[64];
+  char androidver[32];
 };
 
 static struct ConnClient *connclient[256];
@@ -510,10 +511,10 @@ void *connection_handler(void *connvoid)
 		} else {
 		  // send command back to all clients except the sender
 		  if(nbconnclient>0) {
+		    strcat(client_message,"\n");
 		    int i;
 		    for (i=0;i<nbconnclient;++i) {
 		      if(strcmp(connclient[i]->ipaddr,conn->ipaddr)==0) continue;
-		      strcat(client_message,"\n");
 		      int sockm=connclient[i]->client_sock;
 		      int res=write(sockm , client_message , strlen(client_message));
 		      sprintf(buf,"Mirror:%s:%s",connclient[i]->ipaddr,client_message);
