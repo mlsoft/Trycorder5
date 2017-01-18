@@ -2200,6 +2200,8 @@ public class TrycorderFragment extends Fragment
     private void sensorsoff() {
         if (isChatty) speak("Sensors off");
         switchsensorlayout(0);
+        stopsensors();
+        stopmusic();
     }
 
     private void opencomm() {

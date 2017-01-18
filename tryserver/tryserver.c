@@ -34,6 +34,9 @@ void sendall(char *);
 void listconnclient();
 void publishlist();
 
+// the speak mode flag
+static int speakmode=0;
+
 // the log-file pointer
 static FILE *fplog=NULL;
 // the machine log file pointer
@@ -169,6 +172,10 @@ int main(int argc , char *argv[])
 	  listconnclient();
 	} else if(strncmp(inputline,"demo",4) ==0) {
 	  demomode();
+	} else if(strncmp(inputline,"speak",5) ==0) {
+	  speakmode=1;
+	} else if(strncmp(inputline,"nospeak",7) ==0) {
+	  speakmode=0;
 	} else if(strncmp(inputline,"quit",4) ==0) {
 	  break;
 	} else {
@@ -340,6 +347,10 @@ void* input_handler(void* threadname)
 	      listconnclient();
 	    } else if(strncmp(client_message,"demo",4) ==0) {
 	      demomode();
+	    } else if(strncmp(client_message,"speak",5) ==0) {
+	      speakmode=1;
+	    } else if(strncmp(client_message,"nospeak",7) ==0) {
+	      speakmode=0;
 	    } else if(strncmp(client_message,"quit",4) ==0) {
 	      close(fdsock);
 	      close(socket_desc);
@@ -528,7 +539,7 @@ void *connection_handler(void *connvoid)
 	if(client_message[read_size-1]=='\n') client_message[read_size-1]=0;
 	// speak the message
 	sprintf(runcommand,"espeak \"%s\" &",client_message);
-	res=system(runcommand);
+	if(speakmode!=0) res=system(runcommand);
 
 	
     }

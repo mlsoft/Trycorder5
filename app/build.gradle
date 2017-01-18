@@ -8,8 +8,8 @@ android {
         applicationId "net.ddns.mlsoftlaberge.trycorder"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 504
-        versionName "5.0.4"
+        versionCode 505
+        versionName "5.0.5"
     }
     buildTypes {
         release {
