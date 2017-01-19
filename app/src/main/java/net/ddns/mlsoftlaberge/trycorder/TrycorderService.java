@@ -188,7 +188,7 @@ public class TrycorderService extends Service implements RecognitionListener {
     // prepare a notification with the text
     private Notification getNotification(String text){
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0,
-                new Intent(getApplicationContext(), TryclientActivity.class),
+                new Intent(getApplicationContext(), TrycorderActivity.class),
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         Notification notification = new Notification.Builder(getApplicationContext())
@@ -525,7 +525,7 @@ public class TrycorderService extends Service implements RecognitionListener {
         String identification="trycorder";
 
         public StarshipThread() {
-            identification="trycorder:"+mFetcher.fetch_device_name();
+            identification="trycorder:"+mFetcher.fetch_device_name()+"/"+mFetcher.fetch_device_release();
         }
 
         @Override

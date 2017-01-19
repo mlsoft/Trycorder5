@@ -11,6 +11,7 @@ import android.net.DhcpInfo;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
 import android.telephony.TelephonyManager;
@@ -405,6 +406,10 @@ public class Fetcher {
 
     public String fetch_device_name() {
         return(android.os.Build.MODEL);
+    }
+
+    public String fetch_device_release() {
+        return(android.os.Build.VERSION.RELEASE);
     }
 
     public String fetch_dhcpinfo() {
