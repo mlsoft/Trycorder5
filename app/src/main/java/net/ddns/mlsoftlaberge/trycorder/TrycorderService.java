@@ -525,7 +525,9 @@ public class TrycorderService extends Service implements RecognitionListener {
         String identification="trycorder";
 
         public StarshipThread() {
-            identification="trycorder:"+mFetcher.fetch_device_name()+"/"+mFetcher.fetch_device_release();
+            identification="trycorder:"+mFetcher.fetch_device_name()+
+                    "/"+mFetcher.fetch_device_release()+
+                    "/"+mFetcher.fetch_package_version();
         }
 
         @Override

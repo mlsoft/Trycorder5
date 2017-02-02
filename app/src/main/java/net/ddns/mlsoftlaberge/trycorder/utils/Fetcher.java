@@ -412,6 +412,19 @@ public class Fetcher {
         return(android.os.Build.VERSION.RELEASE);
     }
 
+    public String fetch_package_version() {
+        String ver="";
+        try {
+            PackageManager pm = context.getPackageManager();
+            PackageInfo pi;
+            pi = pm.getPackageInfo(context.getPackageName(), 0);
+            ver=pi.versionName;
+        } catch (Exception e) {
+            Log.e("CustomExceptionHandler", "Error", e);
+        }
+        return(ver);
+    }
+
     public String fetch_dhcpinfo() {
         DhcpInfo d;
         WifiManager wifii;

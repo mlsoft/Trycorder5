@@ -36,6 +36,8 @@ void publishlist();
 
 // the speak mode flag
 static int speakmode=0;
+// the mirror mode flag
+static int mirrormode=1;
 
 // the log-file pointer
 static FILE *fplog=NULL;
@@ -176,6 +178,12 @@ int main(int argc , char *argv[])
 	  speakmode=1;
 	} else if(strncmp(inputline,"nospeak",7) ==0) {
 	  speakmode=0;
+	} else if(strncmp(inputline,"mirror",6) ==0) {
+	  mirrormode=1;
+	} else if(strncmp(inputline,"fullmirror",10) ==0) {
+	  mirrormode=2;
+	} else if(strncmp(inputline,"nomirror",8) ==0) {
+	  mirrormode=0;
 	} else if(strncmp(inputline,"quit",4) ==0) {
 	  break;
 	} else {
@@ -202,7 +210,7 @@ struct ConnClient {
   int client_sock;
   char ipaddr[64];
   char tryname[64];
-  char androidver[32];
+  char androidver[64];
 };
 
 static struct ConnClient *connclient[256];
@@ -351,6 +359,12 @@ void* input_handler(void* threadname)
 	      speakmode=1;
 	    } else if(strncmp(client_message,"nospeak",7) ==0) {
 	      speakmode=0;
+	    } else if(strncmp(client_message,"mirror",6) ==0) {
+	      mirrormode=1;
+	    } else if(strncmp(client_message,"fullmirror",10) ==0) {
+	      mirrormode=2;
+	    } else if(strncmp(client_message,"nomirror",8) ==0) {
+	      mirrormode=0;
 	    } else if(strncmp(client_message,"quit",4) ==0) {
 	      close(fdsock);
 	      close(socket_desc);
@@ -525,7 +539,16 @@ void *connection_handler(void *connvoid)
 		    strcat(client_message,"\n");
 		    int i;
 		    for (i=0;i<nbconnclient;++i) {
-		      if(strcmp(connclient[i]->ipaddr,conn->ipaddr)==0) continue;
+		      // do not mirror to the sender
+		      if(strcmp(connclient[i]->ipaddr,conn->ipaddr)==0) continue; 
+		      // when it is not a command, we always mirror
+		      if(strncmp(client_message,"computer",8) ==0) {
+			// do not mirror when mode == 0
+			if(mirrormode==0) continue;	
+			// do not mirror to others than local if mirrormode==1
+			if(strncmp(connclient[i]->ipaddr,"192.168.",8)!=0 && mirrormode==1) continue;
+			// mirrormode==2 or client is local then mirror is on
+		      }
 		      int sockm=connclient[i]->client_sock;
 		      int res=write(sockm , client_message , strlen(client_message));
 		      sprintf(buf,"Mirror:%s:%s",connclient[i]->ipaddr,client_message);
