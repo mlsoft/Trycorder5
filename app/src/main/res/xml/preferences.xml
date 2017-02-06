@@ -74,12 +74,12 @@
             android:key="pref_key_auto_boot"
             android:summary="Determine if we start talk server at boot"
             android:title="Auto Boot"
-            android:defaultValue="true"/>
+            android:defaultValue="false"/>
         <CheckBoxPreference
             android:key="pref_key_auto_stop"
             android:summary="Determine if we stop the server at exit"
             android:title="Auto Stop"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
         <CheckBoxPreference
             android:key="pref_key_debug_mode"
             android:summary="Enable to debug locally"

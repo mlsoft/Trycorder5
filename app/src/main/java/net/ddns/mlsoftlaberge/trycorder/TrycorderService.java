@@ -153,8 +153,8 @@ public class TrycorderService extends Service implements RecognitionListener {
         sendRemote = sharedPref.getBoolean("pref_key_send_remote", true);
         execLocal = sharedPref.getBoolean("pref_key_exec_local", true);
         execRemote = sharedPref.getBoolean("pref_key_exec_remote", true);
-        autoBoot = sharedPref.getBoolean("pref_key_auto_boot", true);
-        autoStop = sharedPref.getBoolean("pref_key_auto_stop", false);
+        autoBoot = sharedPref.getBoolean("pref_key_auto_boot", false);
+        autoStop = sharedPref.getBoolean("pref_key_auto_stop", true);
         debugMode = sharedPref.getBoolean("pref_key_debug_mode", false);
         debugAddr = sharedPref.getString("pref_key_debug_addr", "192.168.0.184");
 
@@ -252,9 +252,9 @@ public class TrycorderService extends Service implements RecognitionListener {
 
     public void setspeaklang(String lng) {
         if (lng.equals("FR")) {
-            tts.setLanguage(Locale.FRENCH);
+            if(tts!=null) tts.setLanguage(Locale.FRENCH);
         } else if (lng.equals("EN")) {
-            tts.setLanguage(Locale.US);
+            if(tts!=null) tts.setLanguage(Locale.US);
         } else {
             // default prechoosen language
         }
@@ -262,14 +262,14 @@ public class TrycorderService extends Service implements RecognitionListener {
 
     public void speak(String texte) {
         initspeak();
-        tts.speak(texte, TextToSpeech.QUEUE_ADD, null);
+        if(tts!=null) tts.speak(texte, TextToSpeech.QUEUE_ADD, null);
         say("Speaked: "+texte);
     }
 
     public void speak(String texte,String lng) {
         initspeak();
         setspeaklang(lng);
-        tts.speak(texte, TextToSpeech.QUEUE_ADD, null);
+        if(tts!=null) tts.speak(texte, TextToSpeech.QUEUE_ADD, null);
         say("Speaked: "+texte);
     }
 

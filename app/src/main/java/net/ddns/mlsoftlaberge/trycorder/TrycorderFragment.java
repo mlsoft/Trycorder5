@@ -432,8 +432,8 @@ public class TrycorderFragment extends Fragment
         execLocal = sharedPref.getBoolean("pref_key_exec_local", true);
         execRemote = sharedPref.getBoolean("pref_key_exec_remote", true);
         replaySent = sharedPref.getBoolean("pref_key_replay_sent", false);
-        autoBoot = sharedPref.getBoolean("pref_key_auto_boot", true);
-        autoStop = sharedPref.getBoolean("pref_key_auto_stop", false);
+        autoBoot = sharedPref.getBoolean("pref_key_auto_boot", false);
+        autoStop = sharedPref.getBoolean("pref_key_auto_stop", true);
         debugMode = sharedPref.getBoolean("pref_key_debug_mode", false);
         debugAddr = sharedPref.getString("pref_key_debug_addr", "192.168.0.184");
 
@@ -1768,8 +1768,8 @@ public class TrycorderFragment extends Fragment
         execLocal = sharedPref.getBoolean("pref_key_exec_local", true);
         execRemote = sharedPref.getBoolean("pref_key_exec_remote", true);
         replaySent = sharedPref.getBoolean("pref_key_replay_sent", false);
-        autoBoot = sharedPref.getBoolean("pref_key_auto_boot", true);
-        autoStop = sharedPref.getBoolean("pref_key_auto_stop", false);
+        autoBoot = sharedPref.getBoolean("pref_key_auto_boot", false);
+        autoStop = sharedPref.getBoolean("pref_key_auto_stop", true);
         debugMode = sharedPref.getBoolean("pref_key_debug_mode", false);
         debugAddr = sharedPref.getString("pref_key_debug_addr", "192.168.0.184");
 
