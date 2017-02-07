@@ -6,7 +6,7 @@
 <BR>
 
 <a href="https://forum.xda-developers.com/android/apps-games/trycorder-public-project-t3391155" target="_blank">
-  Available on XDA Developpers <img src="https://forum.xda-cdn.com/images/2015/xda-logo_newcolors.svg" height="60"/>
+  Available on XDA-Developpers
 </a>
 
 ##Introduction
