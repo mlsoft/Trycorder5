@@ -1,6 +1,9 @@
 #Trycorder
+<a href="https://f-droid.org/repository/browse/?fdid=net.ddns.mlsoftlaberge.trycorder" target="_blank">
+  <img src="https://f-droid.org/badge/get-it-on.png" height="60"/>
+</a>
 
-Introduction
+##Introduction
 
 For the non-trekkies, a Trycorder is a portable measuring tool, communication tool, and remote-control tool for your Starship. It has been used a lot in many very popular Science-Fiction TV serie and Movies.
 
@@ -33,17 +36,17 @@ With this Trycorder, You can do the following:
 The Main Intelligence of the central server can respond to you.
 - And many more to come ...
 
-To install
-Download the APK, and install it by clicking on it after the download (in your Download directory on your phone, using your phone file manager)
+##Installation
+To install download the APK, and install it by clicking on it after the download (in your Download directory on your phone, using your phone file manager)
  or 
 Download the sources on github and have fun with android studio. (github.org/mlsoft)
 
-Tested on:
-Samsung Galaxy Nexus (GT-I9250): CyanogenMod 6.0.1, CyanogenMod 5.1.1
-Motorola Moto-G (XT-1032): CyanogenMod 6.0.1, CyanogenMod 4.4.4, CyanogenMod-7.1
-Samsung Ace-II (GT-S7560M): CyanogenMod 4.4.4
-LG P705g: Stock 4.0.3 (unrooted plain stock)
-Tablet Datawind 7Ci, Android-4.1
+##Tested on
+ - Samsung Galaxy Nexus (GT-I9250): CyanogenMod 6.0.1, CyanogenMod 5.1.1
+ - Motorola Moto-G (XT-1032): CyanogenMod 6.0.1, CyanogenMod 4.4.4, CyanogenMod-7.1
+ - Samsung Ace-II (GT-S7560M): CyanogenMod 4.4.4
+ - LG P705g: Stock 4.0.3 (unrooted plain stock)
+ - Tablet Datawind 7Ci, Android-4.1
 
 Please tell me of your success so i can add to the list of tested phones.
 
