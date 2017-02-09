@@ -12,3 +12,5 @@
 /tryclient/build
 /tryserver/build
 /captures
+trycorder.list
+/tryserver/trycorder.list
