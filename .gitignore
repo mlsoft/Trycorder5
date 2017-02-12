@@ -12,5 +12,7 @@
 /captures
 trycorder.list
 /tryserver/trycorder.list
-/trysql
+/*/*.sqlite
+/*/*.dump
+/*/*.csv
 
