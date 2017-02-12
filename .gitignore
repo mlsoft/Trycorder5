@@ -7,10 +7,10 @@
 .DS_Store
 /build
 /app/build
-/gtkmltest
-/ktryclient
 /tryclient/build
 /tryserver/build
 /captures
 trycorder.list
 /tryserver/trycorder.list
+/trysql
+

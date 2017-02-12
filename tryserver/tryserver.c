@@ -34,6 +34,9 @@ void sendall(char *);
 void listconnclient();
 void publishlist();
 
+// function to write stats to database
+int sqlwrite(char *, char *);
+
 // the speak mode flag
 static int speakmode=0;
 // the mirror mode flag
@@ -522,6 +525,7 @@ void *connection_handler(void *connvoid)
 		now=time(NULL);
 		fprintf(fpmach,"%s",ctime(&now));
 		fprintf(fpmach,"%s:%s\n",conn->ipaddr,conn->tryname);
+		sqlwrite(conn->ipaddr,conn->tryname);
 		fflush(fpmach);
 	} else {
 		// this is a temporary, one-shot message from the client
@@ -589,4 +593,8 @@ void *connection_handler(void *connvoid)
     return 0;
 }
 
+static char buf[2048];
 
+int sqlwrite(char *ipaddr, char *tryname) {
+      return(0);
+}
