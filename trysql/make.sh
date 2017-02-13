@@ -1,3 +1,3 @@
-gcc -o trysql -lsqlite3 -pthread trysql.c
+gcc -o trysql -lsqlite3 -pthread -lsqlite3 trysql.c
 
 

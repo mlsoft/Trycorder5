@@ -37,6 +37,7 @@ void publishlist();
 // function to write stats to database
 int sqlwrite(char *, char *);
 
+
 // the speak mode flag
 static int speakmode=0;
 // the mirror mode flag

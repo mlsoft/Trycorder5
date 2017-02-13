@@ -46,12 +46,33 @@ int res;
       return(-1);
     }
     
-    // select all trycorder entrys
+    // select all trycorder entrys and update the from-and-to addr
+    if(strcmp(argv[1],"rebuild")==0) {
+      looprebuild();
+    }
     
-    
-  
     sqlite3_close(db);
     
     return(0);
 }
 
+int looprebuild() {
+int res;
+
+    res=sqlite3_prepare(db,selectusers,-1,&selectstmt,NULL);
+    if(res!=SQLITE_OK) return(-1);
+    
+    res=sqlite3_step(selectstmt);
+    
+    while(res==SQLITE_ROW) {
+	int i;
+	int nbf;
+	
+	printf("row=%s,%s\n",sqlite3_column_text(selectstmt,0),sqlite3_column_text(selectstmt,1));
+	
+	res=sqlite3_step(selectstmt);
+    }
+    
+    return(0);
+  
+}

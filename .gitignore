@@ -7,12 +7,10 @@
 .DS_Store
 /build
 /app/build
-/tryclient/build
-/tryserver/build
-/captures
-trycorder.list
-/tryserver/trycorder.list
+/*/build
 /*/*.sqlite
 /*/*.dump
+/*/*.list
+/*/*.log
 /*/*.csv
 

@@ -1,3 +1,3 @@
-git diff
+#git diff
 git add .
 git commit
