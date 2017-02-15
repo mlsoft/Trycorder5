@@ -8,6 +8,7 @@
 /build
 /app/build
 /*/build
+/*/database
 /*/*.sqlite
 /*/*.dump
 /*/*.list

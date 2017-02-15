@@ -13,6 +13,8 @@
 #include <pthread.h> //for threading , link with lpthread
 #include <time.h>
 
+#include <sqlite3.h>
+
 #define SOCK_PATH "/var/run/tryserver.sock"
 
 // ========= for the server of the tryclients ==========
@@ -35,7 +37,7 @@ void listconnclient();
 void publishlist();
 
 // function to write stats to database
-int sqlwrite(char *, char *);
+extern int sqlwrite(char *, char *);
 
 
 // the speak mode flag
@@ -526,8 +528,8 @@ void *connection_handler(void *connvoid)
 		now=time(NULL);
 		fprintf(fpmach,"%s",ctime(&now));
 		fprintf(fpmach,"%s:%s\n",conn->ipaddr,conn->tryname);
-		sqlwrite(conn->ipaddr,conn->tryname);
 		fflush(fpmach);
+		sqlwrite(conn->ipaddr,conn->tryname);
 	} else {
 		// this is a temporary, one-shot message from the client
                 res=write(sock , server_response , strlen(server_response));
@@ -594,8 +596,127 @@ void *connection_handler(void *connvoid)
     return 0;
 }
 
-static char buf[2048];
+// ========================================================================================================
+
+
+void transform_name(const char *fromname, char *toname, char *toaver, char *totver) {
+char *s;
+char *p;
+int i;
+int addr[4];
+char buf[128];
+    strcpy(toname,fromname);
+    toaver[0]=0;
+    totver[0]=0;
+    strcpy(buf,fromname);
+    s=buf;
+    // name part
+    p=strchr(s,'/');
+    if(p==NULL) return;
+    *p=0;
+    strcpy(toname,s);
+    s=p+1;
+    // android version part
+    p=strchr(s,'/');
+    if(p==NULL) return;
+    *p=0;
+    strcpy(toaver,s);
+    s=p+1;
+    // trycorder version part
+    strcpy(totver,s);
+    return;
+}
+
+void transform_addr(const char *fromaddr, char *toaddr) {
+char *s;
+char *p;
+int i;
+int addr[4];
+char buf[64];
+    strcpy(toaddr,fromaddr);
+    strcpy(buf,fromaddr);
+    s=buf;
+    // first number
+    p=strchr(s,'.');
+    if(p==NULL) return;
+    *p=0;
+    addr[0]=atoi(s);
+    s=p+1;
+    // second number
+    p=strchr(s,'.');
+    if(p==NULL) return;
+    *p=0;
+    addr[1]=atoi(s);
+    s=p+1;
+    // third number
+    p=strchr(s,'.');
+    if(p==NULL) return;
+    *p=0;
+    addr[2]=atoi(s);
+    s=p+1;
+    // fourth number
+    addr[3]=atoi(s);
+    // convert to 12 digit addr
+    sprintf(toaddr,"%03d%03d%03d%03d",addr[0],addr[1],addr[2],addr[3]);
+    return;
+}
+
+int update_callback(void *notused,int nbf, char **fields, char **names) {
+int i;
+
+    for(i=0;i<nbf;++i) {
+	printf("%s ",fields[i]);
+    }
+    printf("\n");
+  
+    return(0);
+}
+
+static char tryserverfile[]="/home/bin/tryserver.sqlite";
+static char updatebuf[2048];
+static char insertbuf[2048];
+static sqlite3 *db;
 
 int sqlwrite(char *ipaddr, char *tryname) {
-      return(0);
+char *errmsg=0;
+char newaddr[64];
+char newname[64];
+char newandver[32];
+char newtryver[32];
+int res;
+
+    transform_addr(ipaddr,newaddr);
+    transform_name(tryname,newname,newandver,newtryver);
+    
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    
+    // insert in database
+    sprintf(insertbuf,"INSERT INTO trycorder VALUES ('%s','%s','%s','%s','%s','1','','');",newaddr,newname,newandver,newtryver,ipaddr);
+      
+    // the exec way
+    res=sqlite3_exec(db,insertbuf,update_callback,0,&errmsg);
+
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL INSERT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+      // then try to update it
+      // update the database
+      sprintf(updatebuf,"UPDATE trycorder SET connection=connection+1 WHERE ipaddr='%s' and name='%s';",newaddr,newname);
+      // the exec way
+      res=sqlite3_exec(db,updatebuf,update_callback,0,&errmsg);
+      if( res!=SQLITE_OK ){
+	fprintf(stdout, "SQL UPDATE error: %s\n", errmsg);
+	sqlite3_free(errmsg);
+      }
+    }
+
+    sqlite3_close(db);
+  
+    return(0);
 }
