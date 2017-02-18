@@ -1,1 +1,1 @@
-sqlite3 /home/bin/tryserver.sqlite
+sqlite3 /home/bin/tryserver.sqlite $*

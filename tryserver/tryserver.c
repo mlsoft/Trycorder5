@@ -661,6 +661,69 @@ char buf[64];
     return;
 }
 
+static char tryserverfile[]="/home/bin/tryserver.sqlite";
+static char updatebuf[2048];
+static char insertbuf[2048];
+static char selectbuf[2048];
+static sqlite3 *db;
+
+static char country[32];
+static char state[128];
+static char city[128];
+static char selcountry[32];
+
+int find_callback(void *notused,int nbf, char **fields, char **names) {
+    if(nbf<1) return(-1);
+    strcpy(selcountry,fields[0]);
+    return(0);
+}
+
+int select_callback(void *notused,int nbf, char **fields, char **names) {
+    if(nbf<3) return(-1);
+    strcpy(country,fields[0]);
+    strcpy(state,fields[1]);
+    strcpy(city,fields[2]);
+    return(0);
+}
+
+
+int findcity(char *ipaddr, char *name) {
+char *errmsg=0;
+int res;
+
+    country[0]=0;
+    state[0]=0;
+    city[0]=0;
+
+    selcountry[0]=0;
+    
+    // check if country already setup for this IP/Name
+    sprintf(selectbuf,"SELECT country from trycorder where localaddr='%s' and name='%s';",ipaddr,name);
+    
+    res=sqlite3_exec(db,selectbuf,find_callback,0,&errmsg);
+
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    }
+    // if the country is already setup then dont reread from database
+    if(selcountry[0]!=0) {
+      return(-1);
+    }
+    
+    // find the country and rest from dbipcity database
+    sprintf(selectbuf,"SELECT country,state,city FROM dbipcity WHERE '%s'>=fromaddr and '%s'<=toaddr;",ipaddr,ipaddr);
+  
+    res=sqlite3_exec(db,selectbuf,select_callback,0,&errmsg);
+
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    }
+    
+    return(0);
+}
+
 int update_callback(void *notused,int nbf, char **fields, char **names) {
 int i;
 
@@ -671,11 +734,6 @@ int i;
   
     return(0);
 }
-
-static char tryserverfile[]="/home/bin/tryserver.sqlite";
-static char updatebuf[2048];
-static char insertbuf[2048];
-static sqlite3 *db;
 
 int sqlwrite(char *ipaddr, char *tryname) {
 char *errmsg=0;
@@ -696,26 +754,33 @@ int res;
       return(-1);
     }
     
-    // insert in database
-    sprintf(insertbuf,"INSERT INTO trycorder VALUES ('%s','%s','%s','%s','%s','1','','');",newaddr,newname,newandver,newtryver,ipaddr);
-      
-    // the exec way
-    res=sqlite3_exec(db,insertbuf,update_callback,0,&errmsg);
-
-    if( res!=SQLITE_OK ){
-      fprintf(stdout, "SQL INSERT error: %s\n", errmsg);
-      sqlite3_free(errmsg);
-      // then try to update it
+    int exi=findcity(ipaddr,newname);
+    
+    // if the record already exist then just update it
+    if(exi==(-1)) {
       // update the database
-      sprintf(updatebuf,"UPDATE trycorder SET connection=connection+1 WHERE ipaddr='%s' and name='%s';",newaddr,newname);
+      sprintf(updatebuf,"UPDATE trycorder SET android='%s',tryversion='%s',connection=connection+1 WHERE ipaddr='%s' and name='%s';",newandver,newtryver,newaddr,newname);
       // the exec way
       res=sqlite3_exec(db,updatebuf,update_callback,0,&errmsg);
       if( res!=SQLITE_OK ){
 	fprintf(stdout, "SQL UPDATE error: %s\n", errmsg);
 	sqlite3_free(errmsg);
+      } else {
+	printf("Update OK\n");
+      }
+    } else {	// if not, then insert in table
+      // insert in database
+      sprintf(insertbuf,"INSERT INTO trycorder VALUES ('%s','%s','%s','%s','%s','1','%s','%s');",newaddr,newname,newandver,newtryver,ipaddr,country,city);
+      // the exec way
+      res=sqlite3_exec(db,insertbuf,update_callback,0,&errmsg);
+      if( res!=SQLITE_OK ){
+	fprintf(stdout, "SQL INSERT error: %s\n", errmsg);
+	sqlite3_free(errmsg);
+      } else {
+	printf("Insert OK\n");
       }
     }
-
+    
     sqlite3_close(db);
   
     return(0);

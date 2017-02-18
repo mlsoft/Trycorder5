@@ -1,0 +1,515 @@
+
+city
+"North Ryde"
+Melbourne
+Sydney
+Bangkok
+""
+Beijing
+Philadelphia
+"New York"
+"Quezon City"
+"New Delhi"
+Chennai
+Mumbai
+Dhaka
+Hyderabad
+Ahmedabad
+"Los Angeles"
+Atlanta
+Durham
+Tustin
+Newark
+Richardson
+London
+Wilmington
+Toronto
+Johannesburg
+Lagos
+Rabat
+Fes
+Randburg
+"Cape Town"
+Algiers
+Casa
+"St. Louis"
+"Ann Arbor"
+"Kansas City"
+Jackson
+Dallas
+Indianapolis
+Seattle
+Boston
+Washington
+Regina
+Birmingham
+Leipzig
+Paris
+"Camden Town"
+Roubaix
+Lille
+Issy-les-Moulineaux
+Alcobendas
+Edinburgh
+Warsaw
+Dublin
+Frankfurt
+Cologne
+Berlin
+Szczecin
+Prague
+Schaerbeek
+Belgrade
+Shijiazhuang
+Mandaluyong
+"Mandaue City"
+"Cebu City"
+"Davao City"
+"General Santos City"
+"Kuala Lumpur"
+Taipa
+"Central Jakarta"
+"Shah Alam"
+Kuching
+"Kuala Kangsar"
+Seongnam-si
+Wuhan
+Bangalore
+Kolkata
+Rajahmundry
+Pune
+"Dịch Vọng"
+Rajshahi
+Perth
+Wellington
+Christchurch
+Bengaluru
+Auckland
+"Hong Kong"
+Chiyoda
+Broomfield
+Cambridge
+Moskva
+"New Haven"
+Odesa
+"Reykjavík"
+Stuttgart
+Munich
+"München"
+"Düsseldorf"
+Karlsruhe
+"Oak Park"
+"Zürich"
+"Nürnberg"
+Chicago
+Kochi
+"Buenos Aires"
+Lucknow
+Noida
+Faisalabad
+Dunedin
+Pakkred
+Mykolaiv
+Zagreb
+Halifax
+Montreal
+Vancouver
+Assen
+Adelaide
+Rotterdam
+Utrecht
+Buchs
+Bordeaux
+"San Isidro"
+Rho
+"Bogotá"
+Fargo
+"Las Vegas"
+Monroe
+Phoenix
+Denver
+Montgomery
+"Des Moines"
+"Red Dog Mine"
+Columbus
+Southfield
+Ludhiana
+Bukoba
+"Mexico City"
+"Ho Chi Minh City"
+"Salt Lake City"
+Herndon
+Louisville
+Portland
+Columbia
+Raleigh
+Boise
+Orlando
+Ottawa
+Nashville
+"Mount Laurel"
+Stillwater
+Calgary
+Greenville
+Moscow
+Kremenchuk
+Oslo
+Rostov
+Vilnius
+Belgorod
+"București"
+Haifa
+Kyzyl
+Dubai
+Madrid
+"Syców"
+Istanbul
+"Saint Petersburg"
+Yekaterinburg
+Khimki
+Fortaleza
+"Maringá"
+"São Paulo"
+"São João Del Rei"
+Campinas
+Guadalajara
+"Brasília"
+Vienna
+Hrodna
+Marousi
+Athens
+"Frankfurt am Main"
+Budapest
+Schwaz
+Modena
+Bonn
+Kazan
+"Ružinov"
+Szolnok
+Ljubljana
+Amsterdam
+Sion
+Curitiba
+"Porto Alegre"
+"Rio de Janeiro"
+Montevideo
+Nosara
+"Santo Domingo"
+Shanghai
+"Chiang Mai"
+"Santa Rosa"
+Mizque
+"Fernando De La Mora"
+"Córdoba"
+Santiago
+"Barranquilla (Distrito Especial, Industrial Y Portuario)"
+Quito
+"San Nicolas"
+Guangzhou
+Albany
+Toledo
+Tampa
+Minneapolis
+Campobasso
+Copenhagen
+Jihlava
+Bednayel
+"Málaga"
+Nantes
+"València"
+Nuremberg
+Lublin
+"Malmö"
+Wien-Donaustadt
+Kaliningrad
+"Grâce-Hollogne"
+Skopje
+Valencia
+Franco
+"Ciudad de México"
+Teloloapan
+Pachuca
+Papalotla
+"San Francisco Tlalcilalcalpan"
+Tijuana
+Sundsvall
+Lodz
+Sochi
+Kharkiv
+"T  bilisi"
+Samara
+Birkirkara
+Roskilde
+"Pitești"
+Sankt-Peterburg
+"№4"
+Slatina
+Mytishchi
+Riyadh
+"Kuwait City"
+Lisbon
+"Den Haag"
+"Ciudad Madero"
+Hermosillo
+Zapopan
+Matamoros
+Monclova
+"San Pedro Garza García"
+Caracas
+Lima
+Apopa
+Huechuraba
+Stockholm
+Hamburg
+Manama
+Strasbourg
+Wien
+Fornebu
+Oxford
+Tampere
+Strovolos
+Lviv
+Manchester
+"Wrocław"
+"L  viv"
+Izmir
+Sarajevo
+Podgorica
+Raahe
+"6th of October City"
+"Borj Louizir"
+Sandton
+Cairo
+Tunis
+Ikeja
+Monrovia
+Casablanca
+Amanzimtoti
+Parow
+"Cedar Knolls"
+Roma
+Milan
+Turin
+Catania
+Solna
+Belfast
+Patras
+Pittsburgh
+Cincinnati
+Burnaby
+Dartmouth
+Seoul
+Wallisellen
+Rugby
+Warszawa
+"Poselok №2"
+"Hodonín"
+"Alphen aan den Rijn"
+Tomsk
+Rennes
+Lyon
+Tehran
+Barnaul
+Slobozia
+"Stoke Gifford"
+"Bradley Stoke"
+Hefei
+"South Jakarta"
+Barcelona
+Viciebsk
+Turku
+Espoo
+Novosibirsk
+Baghdad
+Isfahan
+"Tel Aviv-Yafo"
+"Poznań"
+Damascus
+Poltava
+Kiev
+Islamabad
+Tizi
+Accra
+Meknes
+Alexandria
+Dakar
+"Petaling Jaya"
+Kyiv
+Zurich
+"Chișinău"
+Fatih
+Dnepropetrovsk
+Reykjavik
+"Norrköping"
+Vigo
+Bishkek
+Minsk
+Kiel
+Darmstadt
+Hangzhou
+Guwahati
+Basantpur
+Madison
+"Saint John"
+Brisbane
+Bundoora
+Lewiston
+Whitestone
+Maastricht
+Kaluga
+"Pozuelo de Alarcón"
+"Veszprém"
+Camaiore
+Brussels
+Bruxelles
+"Wiener Neustadt"
+Wels
+Lelystad
+"Overland Park"
+"Rock Hill"
+Memphis
+Baltimore
+Marietta
+Beaverton
+"San Juan"
+Providence
+Slidell
+Tulsa
+"White Marsh"
+Rockville
+Tucson
+Omaha
+"Hot Springs"
+"New Orleans"
+Saskatoon
+"Little Rock"
+"Rocky Mount"
+Charlotte
+Helena
+Kingston
+Wallingford
+Lexington
+Williamsport
+"Köln"
+Marseille
+Montauban
+Krakow
+Bialystok
+"Białystok"
+"Rožnov pod Radhoštěm"
+Dresden
+Hanover
+Odessa
+"İncesu"
+Usak
+Amiens
+Caen
+Orleans
+Gothenburg
+Farsta
+"Petah Tikva"
+Perugia
+Naples
+Ivrea
+Brescia
+Florence
+Graz
+Saint-Lambert-la-Potherie
+Bourguignon-sous-Montbavin
+Kouvola
+Potsdam
+"Grumolo delle Abbadesse"
+"Sainte Clotilde"
+Erfurt
+Rome
+Lleida
+Katowice
+Charleroi
+"Liège"
+Brugg
+Zamudio
+Tartu
+Saku
+Glasgow
+Exeter
+Middelburg
+Almere
+Toulouse
+Metz
+Montpellier
+Nice
+Rouen
+Rochdale
+Zaventem
+Arnhem
+Innsbruck
+Wroclaw
+Mainz
+Gera
+Riga
+Venlo
+Varna
+"Mieuxcé"
+Bern
+"Zürich District"
+Stavropol
+Linz
+"Liberec III-Jeřáb"
+"Nizhny Novgorod"
+"Amsterdam Zuid-Oost"
+Oviedo
+Tallinn
+Bratislava
+"Västerås"
+"Nowy Sacz"
+"Umeå"
+Bucharest
+Blagnac
+Sofia
+Poznan
+Norresundby
+Donetsk
+Uusikaupunki
+Tourcoing
+Rzeszow
+Annecy-le-Vieux
+"Halkalı"
+Konya
+Samsun
+Waterford
+"Székesfehérvár"
+"Hradec Kralove"
+Thessaloniki
+Helsinki
+"Gdańsk"
+Reims
+Oryol
+"Łódź"
+Oldenburg
+"Budaörs"
+Zenica
+Maidenhead
+Magdeburg
+Bremerhaven
+"Ceske Budejovice"
+"Rosh Haayin"
+Karlskrona
+"Luxembourg District"
+"Kraków"
+Teulada
+Cagliari
+Ufa
+Rostov-on-Don
+Ukrainka
+Beograd
+Varberg
+Porto
+"Highlands Ranch"
+"Liễu Giai"
+Albuquerque
+Arkhangelsk
+Albertslund
+Lisboa
+Edmonton
+Vavuniya
+Vantaa

@@ -1,0 +1,519 @@
+
+country,city,count()
+AR,"Córdoba",1
+AR,"San Nicolas",1
+AR,"Santa Rosa",1
+AT,Graz,1
+AT,Innsbruck,1
+AT,"Wiener Neustadt",1
+AU,Adelaide,1
+AU,Bundoora,1
+BA,Sarajevo,1
+BD,Rajshahi,1
+BE,"Grâce-Hollogne",1
+BG,Sofia,1
+BG,Varna,1
+BH,Manama,1
+BO,Mizque,1
+BR,Campinas,1
+BR,Franco,1
+BR,"Maringá",1
+BY,Hrodna,1
+BY,Minsk,1
+BY,Viciebsk,1
+CA,Calgary,1
+CA,Edmonton,1
+CA,Halifax,1
+CA,Regina,1
+CA,Saskatoon,1
+CH,Bern,1
+CH,Brugg,1
+CH,Buchs,1
+CH,Wallisellen,1
+CL,Huechuraba,1
+CN,Guangzhou,1
+CN,Hangzhou,1
+CN,Hefei,1
+CN,Shijiazhuang,1
+CN,Wuhan,1
+CR,Nosara,1
+CY,Strovolos,1
+CZ,"Ceske Budejovice",1
+CZ,"Hradec Kralove",1
+CZ,Jihlava,1
+CZ,"Liberec III-Jeřáb",1
+CZ,"Rožnov pod Radhoštěm",1
+DE,Bremerhaven,1
+DE,Erfurt,1
+DE,Gera,1
+DE,Magdeburg,1
+DE,Mainz,1
+DE,Potsdam,1
+DK,Albertslund,1
+DK,Copenhagen,1
+DK,Norresundby,1
+DK,Roskilde,1
+DO,"Santo Domingo",1
+EC,Quito,1
+EE,Saku,1
+EE,Tallinn,1
+EE,Tartu,1
+EG,Alexandria,1
+ES,Lleida,1
+ES,Oviedo,1
+ES,Zamudio,1
+FI,Espoo,1
+FI,Helsinki,1
+FI,Kouvola,1
+FI,Uusikaupunki,1
+FI,Vantaa,1
+FR,Annecy-le-Vieux,1
+FR,Caen,1
+FR,Metz,1
+FR,Montauban,1
+FR,Reims,1
+FR,Saint-Lambert-la-Potherie,1
+FR,Toulouse,1
+FR,Tourcoing,1
+GB,Birmingham,1
+GB,Exeter,1
+GB,Glasgow,1
+GB,Maidenhead,1
+GB,Oxford,1
+GB,Rugby,1
+GB,"Stoke Gifford",1
+GE,"T  bilisi",1
+GR,Marousi,1
+GR,Patras,1
+HU,"Budaörs",1
+HU,Szolnok,1
+HU,"Székesfehérvár",1
+HU,"Veszprém",1
+ID,"South Jakarta",1
+IE,Waterford,1
+IL,"Rosh Haayin",1
+IN,Basantpur,1
+IN,Bengaluru,1
+IN,Chennai,1
+IN,Guwahati,1
+IN,Kolkata,1
+IN,Pune,1
+IN,Rajahmundry,1
+IR,Isfahan,1
+IR,Tehran,1
+IS,"Reykjavík",1
+IT,Brescia,1
+IT,Cagliari,1
+IT,Campobasso,1
+IT,"Grumolo delle Abbadesse",1
+IT,Ivrea,1
+IT,Modena,1
+IT,Perugia,1
+IT,Rome,1
+JM,Kingston,1
+KG,Bishkek,1
+LB,Bednayel,1
+LK,Vavuniya,1
+LR,Monrovia,1
+MA,Fes,1
+MA,Meknes,1
+MD,"Chișinău",1
+MO,Taipa,1
+MT,Birkirkara,1
+MX,"Ciudad Madero",1
+MX,Guadalajara,1
+MX,Hermosillo,1
+MX,Matamoros,1
+MX,Pachuca,1
+MX,Papalotla,1
+MX,"San Francisco Tlalcilalcalpan",1
+MX,"San Pedro Garza García",1
+MX,Teloloapan,1
+MY,"Kuala Kangsar",1
+MY,Kuching,1
+NL,"Amsterdam Zuid-Oost",1
+NL,Arnhem,1
+NL,Assen,1
+NL,Maastricht,1
+NL,Middelburg,1
+NL,Venlo,1
+NZ,Christchurch,1
+NZ,Dunedin,1
+PE,Lima,1
+PH,"Cebu City",1
+PH,"General Santos City",1
+PH,"Quezon City",1
+PK,Islamabad,1
+PL,Bialystok,1
+PL,"Białystok",1
+PL,"Gdańsk",1
+PL,Krakow,1
+PL,"Kraków",1
+PL,Lublin,1
+PL,Poznan,1
+PL,Rzeszow,1
+PL,"Syców",1
+PL,Szczecin,1
+PL,Warszawa,1
+PR,"San Juan",1
+PT,Lisboa,1
+RE,"Sainte Clotilde",1
+RO,"București",1
+RO,"Pitești",1
+RO,Slatina,1
+RO,Slobozia,1
+RU,Arkhangelsk,1
+RU,Barnaul,1
+RU,Belgorod,1
+RU,Kaluga,1
+RU,Oryol,1
+RU,"Poselok №2",1
+RU,Rostov,1
+RU,Rostov-on-Don,1
+RU,Sankt-Peterburg,1
+RU,Sochi,1
+RU,Stavropol,1
+RU,Tomsk,1
+RU,"№4",1
+SE,Farsta,1
+SE,"Norrköping",1
+SE,Sundsvall,1
+SE,"Umeå",1
+SE,Varberg,1
+SE,"Västerås",1
+SN,Dakar,1
+SV,Apopa,1
+SY,Damascus,1
+TH,Pakkred,1
+TN,"Borj Louizir",1
+TR,Fatih,1
+TR,"Halkalı",1
+TR,Izmir,1
+TR,Konya,1
+TR,Samsun,1
+TR,"İncesu",1
+TZ,Bukoba,1
+UA,Dnepropetrovsk,1
+UA,Kremenchuk,1
+UA,"L  viv",1
+UA,Odesa,1
+UA,Odessa,1
+UA,Poltava,1
+UA,Ukrainka,1
+US,Albuquerque,1
+US,Boise,1
+US,Boston,1
+US,Charlotte,1
+US,Columbia,1
+US,Helena,1
+US,"Highlands Ranch",1
+US,Jackson,1
+US,Lewiston,1
+US,Marietta,1
+US,Memphis,1
+US,Monroe,1
+US,"New Haven",1
+US,"New Orleans",1
+US,"Overland Park",1
+US,Providence,1
+US,"Red Dog Mine",1
+US,Rockville,1
+US,"Rocky Mount",1
+US,Slidell,1
+US,Wallingford,1
+US,"White Marsh",1
+US,Williamsport,1
+VN,"Liễu Giai",1
+ZA,Johannesburg,1
+ZA,Sandton,1
+AT,Wels,2
+AU,Perth,2
+BA,Zenica,2
+BE,Bruxelles,2
+BE,Charleroi,2
+BE,"Liège",2
+CA,Burnaby,2
+CA,Dartmouth,2
+CA,Ottawa,2
+CA,"Saint John",2
+CH,"Zürich District",2
+CO,"Bogotá",2
+CZ,"Hodonín",2
+DE,"Köln",2
+DZ,Algiers,2
+DZ,Tizi,2
+EG,"6th of October City",2
+ES,"Málaga",2
+FI,Tampere,2
+FR,Lille,2
+FR,Rouen,2
+GB,Manchester,2
+HK,"Hong Kong",2
+IN,Hyderabad,2
+IN,Kochi,2
+IN,Lucknow,2
+IQ,Baghdad,2
+IS,Reykjavik,2
+IT,Camaiore,2
+IT,Florence,2
+IT,Naples,2
+IT,Rho,2
+IT,Teulada,2
+KR,Seoul,2
+KW,"Kuwait City",2
+LU,"Luxembourg District",2
+LV,Riga,2
+MA,Casa,2
+ME,Podgorica,2
+MX,Monclova,2
+MX,Tijuana,2
+MX,Zapopan,2
+MY,"Kuala Lumpur",2
+NG,Ikeja,2
+NZ,Auckland,2
+NZ,Wellington,2
+PE,"San Isidro",2
+PK,Faisalabad,2
+PL,Katowice,2
+PL,"Nowy Sacz",2
+PL,"Poznań",2
+PL,"Łódź",2
+PT,Porto,2
+RS,Beograd,2
+RU,Khimki,2
+RU,"Nizhny Novgorod",2
+RU,Samara,2
+RU,Ufa,2
+RU,Yekaterinburg,2
+SE,Gothenburg,2
+SE,Karlskrona,2
+SE,Solna,2
+SK,Bratislava,2
+SK,"Ružinov",2
+TH,"Chiang Mai",2
+TR,Usak,2
+UA,Donetsk,2
+UA,Kharkiv,2
+UA,Kyiv,2
+UA,Lviv,2
+UA,Mykolaiv,2
+US,Cincinnati,2
+US,Fargo,2
+US,Greenville,2
+US,"Hot Springs",2
+US,Lexington,2
+US,"Little Rock",2
+US,Omaha,2
+US,Toledo,2
+US,Tulsa,2
+US,Wilmington,2
+VE,Caracas,2
+ZA,Amanzimtoti,2
+ZA,"Cape Town",2
+ZA,Parow,2
+AT,Linz,3
+AT,Schwaz,3
+AT,Wien,3
+AT,Wien-Donaustadt,3
+BE,Zaventem,3
+BR,Fortaleza,3
+BR,"Porto Alegre",3
+CL,Santiago,3
+CN,Shanghai,3
+DE,"Frankfurt am Main",3
+EG,Cairo,3
+ES,"Pozuelo de Alarcón",3
+ES,Valencia,3
+ES,"València",3
+FI,Raahe,3
+FR,Blagnac,3
+FR,Montpellier,3
+FR,Nice,3
+FR,Roubaix,3
+GB,Belfast,3
+GB,"Bradley Stoke",3
+GB,Whitestone,3
+GR,Thessaloniki,3
+IL,Haifa,3
+IL,"Tel Aviv-Yafo",3
+IN,Ahmedabad,3
+IN,Ludhiana,3
+IT,Turin,3
+JP,Chiyoda,3
+MA,Casablanca,3
+NL,Almere,3
+NL,"Den Haag",3
+NL,Lelystad,3
+PL,Lodz,3
+PL,Wroclaw,3
+PL,"Wrocław",3
+PY,"Fernando De La Mora",3
+RS,Belgrade,3
+RU,Novosibirsk,3
+SA,Riyadh,3
+SI,Ljubljana,3
+TH,Bangkok,3
+US,"Cedar Knolls",3
+US,Durham,3
+US,Manchester,3
+US,Montgomery,3
+US,"Mount Laurel",3
+US,"Rock Hill",3
+UY,Montevideo,3
+AE,Dubai,4
+AU,"North Ryde",4
+BD,Dhaka,4
+BE,Schaerbeek,4
+BR,Curitiba,4
+CH,Sion,4
+DE,Dresden,4
+DE,"Nürnberg",4
+FI,Turku,4
+FR,Amiens,4
+FR,Bordeaux,4
+FR,Bourguignon-sous-Montbavin,4
+FR,Lyon,4
+FR,"Mieuxcé",4
+FR,Orleans,4
+ID,"Central Jakarta",4
+IN,Noida,4
+KR,Seongnam-si,4
+LT,Vilnius,4
+MK,Skopje,4
+MY,"Petaling Jaya",4
+NL,"Alphen aan den Rijn",4
+NL,Utrecht,4
+PH,"Mandaue City",4
+RU,Kyzyl,4
+RU,"Saint Petersburg",4
+US,Beaverton,4
+US,"Kansas City",4
+US,Raleigh,4
+US,Vienna,4
+AU,Melbourne,5
+BR,"Brasília",5
+BR,"Rio de Janeiro",5
+CO,"Barranquilla (Distrito Especial, Industrial Y Portuario)",5
+DE,Darmstadt,5
+ES,Vigo,5
+FR,Nantes,5
+FR,Strasbourg,5
+IE,Dublin,5
+IT,Catania,5
+MX,"Mexico City",5
+NO,Fornebu,5
+RU,Kaliningrad,5
+RU,Kazan,5
+RU,Mytishchi,5
+SE,"Malmö",5
+UA,Kiev,5
+US,"Ann Arbor",5
+US,"Las Vegas",5
+US,Madison,5
+US,Richardson,5
+US,Tucson,5
+US,Washington,5
+DE,"Düsseldorf",6
+ES,Alcobendas,6
+FR,Marseille,6
+GB,Edinburgh,6
+IL,"Petah Tikva",6
+IN,Bangalore,6
+IN,Mumbai,6
+NL,Rotterdam,6
+RO,Bucharest,6
+TN,Tunis,6
+US,Broomfield,6
+US,Cambridge,6
+US,"Des Moines",6
+US,Herndon,6
+US,Nashville,6
+US,Pittsburgh,6
+US,"Salt Lake City",6
+US,Stillwater,6
+VN,"Ho Chi Minh City",6
+AU,Brisbane,7
+DE,Oldenburg,7
+ES,Barcelona,7
+GB,Rochdale,7
+IN,"New Delhi",7
+MX,"Ciudad de México",7
+RU,Moscow,7
+TR,Istanbul,7
+US,Phoenix,7
+NO,Oslo,8
+PH,"Davao City",8
+SE,Stockholm,8
+US,Birmingham,8
+US,"St. Louis",8
+US,Tampa,8
+VN,"Dịch Vọng",8
+ZA,Randburg,8
+CA,Vancouver,9
+CZ,Prague,9
+FR,Rennes,9
+IT,Roma,9
+US,Albany,9
+US,Baltimore,9
+US,Denver,9
+US,Louisville,9
+US,Minneapolis,9
+US,Southfield,9
+US,Tustin,9
+ZZ,"",9
+GR,Athens,10
+MY,"Shah Alam",10
+NG,Lagos,10
+PT,Lisbon,10
+US,Portland,10
+AU,Sydney,11
+BE,Brussels,11
+DE,Kiel,11
+HR,Zagreb,11
+PH,Mandaluyong,11
+CH,Zurich,12
+CH,"Zürich",12
+US,Philadelphia,12
+HU,Budapest,13
+US,Atlanta,13
+US,Chicago,13
+US,"Oak Park",14
+CN,Beijing,15
+US,Indianapolis,15
+US,Orlando,16
+BR,"São Paulo",17
+CA,Montreal,17
+MA,Rabat,17
+RU,Moskva,17
+AR,"Buenos Aires",19
+BR,"São João Del Rei",19
+GB,"Camden Town",19
+GH,Accra,19
+DE,Karlsruhe,21
+DE,Leipzig,21
+US,Seattle,21
+DE,Bonn,22
+DE,Stuttgart,22
+PL,Warsaw,23
+CA,Toronto,24
+DE,Hamburg,26
+DE,Nuremberg,29
+FR,Issy-les-Moulineaux,30
+AT,Vienna,31
+DE,"München",32
+NL,Amsterdam,33
+US,Dallas,34
+DE,Munich,36
+US,Newark,37
+DE,Hanover,38
+ES,Madrid,49
+IT,Milan,50
+GB,London,77
+DE,Cologne,84
+"","",93
+DE,Berlin,125
+FR,Paris,144
+US,Columbus,159
+US,"New York",207
+US,"Los Angeles",291
+DE,Frankfurt,357

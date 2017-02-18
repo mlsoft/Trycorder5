@@ -18,7 +18,7 @@
 
 // ====================== MAIN ==============================
 
-static char databasefile[]="tryserver.sqlite";
+static char databasefile[]="/home/bin/tryserver.sqlite";
 
 static sqlite3 *db;
 static sqlite3_stmt *selectstmt;
@@ -28,6 +28,8 @@ extern int looprebuild();
 extern int looprecity();
 extern int looploadcity();
 extern int loopsavecity();
+extern int looploadlist();
+extern int looptrycity();
 
 int main(int argc , char *argv[])
 {
@@ -57,6 +59,16 @@ int res;
     // select all dbipcity entrys and update the from-and-to addr
     if(strcmp(argv[1],"savecity")==0) {
       loopsavecity();
+    }
+    
+    // select all dbipcity entrys and update the from-and-to addr
+    if(strcmp(argv[1],"loadlist")==0) {
+      looploadlist();
+    }
+    
+    // select update the trycorder-table with city
+    if(strcmp(argv[1],"trycity")==0) {
+      looptrycity();
     }
     
     return(0);
@@ -206,17 +218,24 @@ char *errmsg = 0;
 	int i;
 	int nbf;
 	
+	char *p=strchr(sqlite3_column_text(selectstmt,0),'.');
+	if(p==NULL) {
+	  res=sqlite3_step(selectstmt);
+	  continue;
+	}
+	
 	// transform original address to newaddr
 	transform_addr(sqlite3_column_text(selectstmt,0),newaddr);
 	transform_addr(sqlite3_column_text(selectstmt,1),newaddr2);
 	
 	// print the original record and transformation
 	printf("row=%s,%s,%s,%s\n",sqlite3_column_text(selectstmt,0),sqlite3_column_text(selectstmt,1),newaddr,newaddr2);
-	
+	//printf("row=%s\n",newaddr);
+
 	// if the address has been modified
 	if(strcmp(sqlite3_column_text(selectstmt,0),newaddr)!=0) {
 	  // update the database
-	  sprintf(updatecity,"UPDATE dbipcity SET fromip='%s',toip='%s' WHERE fromip='%s';",newaddr,newaddr2,sqlite3_column_text(selectstmt,0));
+	  sprintf(updatecity,"UPDATE dbipcity SET fromip='%s',toip='%s' WHERE fromaddr='%s';",newaddr,newaddr2,sqlite3_column_text(selectstmt,0));
 
 	  // the exec way
 	  res=sqlite3_exec(db,updatecity,update_callback,0,&errmsg);
@@ -245,14 +264,21 @@ char *errmsg = 0;
 }
 
 
-void strclean(char *to, char *from) {
-char *s;
+void strclean(char *to, const char *from) {
+const char *s;
 char *p;
     s=from;
     if(*s=='"') s++;
-    p=strchr(s,'"');
-    if(p!=NULL) *p=0;
     strcpy(to,s);
+    p=strchr(to,'"');
+    if(p!=NULL) *p=0;
+    p=strchr(to,'\n');
+    if(p!=NULL) *p=0;
+    int l=strlen(to);
+    for(int i=0;i<l;++i) {
+      if(to[i]=='\'') to[i]=' ';
+      if(to[i]=='\\') to[i]=' ';
+    }
     return;
 }
 
@@ -418,3 +444,160 @@ char *p;
   
 }
 
+
+static char insertlist[2048];
+static char listline[512];
+
+static char ipaddr[64];
+static char name[128];
+static char android[32];
+static char tryversion[32];
+
+int looploadlist() {
+int res;
+char newaddr[64];
+char *errmsg = 0;
+char *s;
+char *p;
+
+    // try to open the database
+    res=sqlite3_open("/home/bin/tryserver.sqlite",&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+
+    // open the data file from dbip
+    FILE *fp=fopen("trycorder.list","r");
+    if(fp==NULL) return(-1);
+    
+    s=fgets(listline,500,fp);
+    
+    while(s!=NULL) {
+	if(listline[0]<'0' || listline[0]>'9') {
+	  s=fgets(listline,500,fp);
+	  continue;
+	}
+
+	int i;
+	int nbf;
+	ipaddr[0]=0;
+	name[0]=0;
+	android[0]=0;
+	tryversion[0]=0;
+	
+	s=listline;
+	p=strchr(s,'\n');
+	if(p!=NULL) *p=0;
+	// first field ipaddr
+	p=strchr(s,':');
+	if(p!=NULL) *p=0;
+	strcpy(ipaddr,s);
+	s=p+1;
+	// second field name
+	p=strchr(s,'/');
+	if(p!=NULL) *p=0;
+	strclean(name,s);
+	if(p!=NULL) {
+	  s=p+1;
+	  // third field android
+	  p=strchr(s,'/');
+	  if(p!=NULL) *p=0;
+	  strclean(android,s);
+	  if(p!=NULL) {
+	    s=p+1;
+	    // fourth field tryversion
+	    strclean(tryversion,s);
+	  }
+	}
+	
+	// transform original address to newaddr
+	transform_addr(ipaddr,newaddr);
+	
+	// print the original record and transformation
+	printf("row=%s,%s,%s,%s,%s\n",newaddr,name,android,tryversion,ipaddr);
+	
+	// insert in database
+	sprintf(insertlist,"INSERT INTO trycorder VALUES ('%s','%s','%s','%s','%s','1','','');",
+		newaddr,name,android,tryversion,ipaddr);
+
+	// the exec way
+	res=sqlite3_exec(db,insertlist,update_callback,0,&errmsg);
+	if( res!=SQLITE_OK ){
+	  fprintf(stdout, "SQL error: %s\n", errmsg);
+	  sqlite3_free(errmsg);
+	}
+
+	// loop to next record
+	s=fgets(listline,500,fp);
+    }
+
+    fclose(fp);
+    
+    sqlite3_close(db);
+    
+    return(0);
+  
+}
+
+int looptrycity() {
+int res;
+char newaddr[32];
+char newaddr2[32];
+char *errmsg = 0;
+
+    // try to open the database
+    res=sqlite3_open(databasefile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    
+    res=sqlite3_prepare(db,"SELECT ipaddr,localaddr,name,dbipcity.country,dbipcity.state,dbipcity.city,trycorder.country from trycorder,dbipcity where localaddr>=fromaddr and localaddr<=toaddr",-1,&selectstmt,NULL);
+    if(res!=SQLITE_OK) {
+      printf("cant prepare database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    
+    res=sqlite3_step(selectstmt);
+    
+    while(res==SQLITE_ROW) {
+	int i;
+	int nbf;
+
+	const char *p=sqlite3_column_text(selectstmt,6);	// trycorder.country
+	if(*p!=0) {
+	  res=sqlite3_step(selectstmt);
+	  continue;
+	}
+
+	char city[128];
+	strclean(city,sqlite3_column_text(selectstmt,5));
+	
+	// print the original record and transformation
+	printf("row=%s,%s,%s,%s\n",sqlite3_column_text(selectstmt,0),sqlite3_column_text(selectstmt,2),sqlite3_column_text(selectstmt,3),city);
+	
+	// update the database
+	sprintf(updatecity,"UPDATE trycorder SET country='%s',city='%s' WHERE localaddr='%s' and name='%s';",sqlite3_column_text(selectstmt,3),city,sqlite3_column_text(selectstmt,1),sqlite3_column_text(selectstmt,2));
+
+	// the exec way
+	res=sqlite3_exec(db,updatecity,update_callback,0,&errmsg);
+	  
+	if( res!=SQLITE_OK ){
+	  fprintf(stdout, "SQL error: %s\n", errmsg);
+	  sqlite3_free(errmsg);
+	}
+
+	
+	// loop to next record
+	res=sqlite3_step(selectstmt);
+    }
+
+    sqlite3_close(db);
+    
+    return(0);
+  
+}

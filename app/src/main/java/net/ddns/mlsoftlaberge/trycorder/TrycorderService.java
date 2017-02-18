@@ -112,6 +112,18 @@ public class TrycorderService extends Service implements RecognitionListener {
         return(mNameRemote);
     }
 
+    public int getnbtrycorders() {
+        return(mNbTrycorders);
+    }
+
+    public int getnbcountrys() {
+        return(mNbCountrys);
+    }
+
+    public int getnbcitys() {
+        return(mNbCitys);
+    }
+
     @Override
     public IBinder onBind(Intent arg0) {
         return mBinder;
@@ -740,6 +752,11 @@ public class TrycorderService extends Service implements RecognitionListener {
             informActivity("iplist","");
             return;
         }
+        if(msg.contains("statistics:")) {
+            decodestatistics(msg);
+            informActivity("iplist","");
+            return;
+        }
         if(msg.contains("server ok")) {
             playsound(R.raw.computerbeep_39);
             return;
@@ -787,6 +804,24 @@ public class TrycorderService extends Service implements RecognitionListener {
             mIpRemote.add(ipadd);
             mNameRemote.add(name);
             str=str.substring(len+1);
+        }
+    }
+
+    private int mNbTrycorders=0;
+    private int mNbCountrys=0;
+    private int mNbCitys=0;
+
+    private void decodestatistics( String msg ) {
+        mNbTrycorders=0;
+        mNbCountrys=0;
+        mNbCitys=0;
+        String str=msg.substring(11);
+        if(!str.isEmpty()) {
+            int len=str.indexOf(",");
+            String nbtryc=str.substring(0,len);
+            mNbTrycorders=Integer.valueOf(nbtryc);
+            // todo decode other values
+
         }
     }
 

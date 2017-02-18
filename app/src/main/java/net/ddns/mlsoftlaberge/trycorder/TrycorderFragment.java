@@ -197,6 +197,7 @@ public class TrycorderFragment extends Fragment
     private LinearLayout mChatLayout;
     private Button mChatSendButton;
     private EditText mChatText;
+    private TextView mChatDisplay;
 
     // the button to talk to computer
     private ImageButton mTalkButton;
@@ -1570,6 +1571,8 @@ public class TrycorderFragment extends Fragment
         // position 13 of sensor layout
         mChatLayout = (LinearLayout) view.findViewById(R.id.chat_layout);
 
+        mChatDisplay = (TextView) view.findViewById(R.id.chat_display);
+
         mChatText = (EditText) view.findViewById(R.id.chat_text);
 
         mChatSendButton = (Button) view.findViewById(R.id.chat_send_button);
@@ -1578,6 +1581,7 @@ public class TrycorderFragment extends Fragment
             public void onClick(View view) {
                 buttonsound();
                 sendtext(mChatText.getText().toString());
+                saychat(mChatText.getText().toString());
                 mChatText.setText("");
             }
         });
@@ -1740,6 +1744,10 @@ public class TrycorderFragment extends Fragment
 
     // ask the service to give us the list of ip/names
 
+    private int mNbTrycorders;
+    private int mNbCountrys;
+    private int mNbCitys;
+
     public void askscanlist() {
         if(mBound) {
             mIpList = mTrycorderService.getiplist();
@@ -1747,7 +1755,18 @@ public class TrycorderFragment extends Fragment
             mIpRemote = mTrycorderService.getipremote();
             mNameRemote = mTrycorderService.getnameremote();
             saylist();
+            mNbTrycorders=mTrycorderService.getnbtrycorders();
+            mNbCountrys=mTrycorderService.getnbcountrys();
+            mNbCitys=mTrycorderService.getnbcitys();
+            saystats();
         }
+    }
+
+    // todo put the stats in screen widgets
+    private void saystats() {
+        saychat("Trycorders="+String.valueOf(mNbTrycorders));
+        saychat("Countrys="+String.valueOf(mNbCountrys));
+        saychat("Citys="+String.valueOf(mNbCitys));
     }
 
     // =====================================================================================
@@ -3267,6 +3286,8 @@ public class TrycorderFragment extends Fragment
         if (matchvoice(msg) == false) {
             // the text is already spoken by the service, so dont repeat anymore
             //speak(msg);
+            // send the text spoken to the chat display
+            saychat(msg);
         }
     }
 
@@ -3288,7 +3309,7 @@ public class TrycorderFragment extends Fragment
     }
 
     // =========================================================================
-    // system log talker
+    // system command talker
     private StringBuffer cmdbuffer = new StringBuffer(1000);
 
     public void saycommand(String texte) {
@@ -3297,6 +3318,15 @@ public class TrycorderFragment extends Fragment
         mLogsCommand.setText(cmdbuffer);
     }
 
+    // =========================================================================
+    // system chat talker
+    private StringBuffer chatbuffer = new StringBuffer(1000);
+
+    public void saychat(String texte) {
+        chatbuffer.insert(0, texte + "\n");
+        if(chatbuffer.length()>1000) chatbuffer.setLength(1000);
+        mChatDisplay.setText(chatbuffer);
+    }
 
     // =====================================================================================
     // discovery section
