@@ -820,8 +820,12 @@ public class TrycorderService extends Service implements RecognitionListener {
             int len=str.indexOf(",");
             String nbtryc=str.substring(0,len);
             mNbTrycorders=Integer.valueOf(nbtryc);
-            // todo decode other values
-
+            String str2=str.substring(len+1);
+            len=str2.indexOf(",");
+            String nbcoun=str2.substring(0,len);
+            mNbCountrys=Integer.valueOf(nbcoun);
+            String nbcity=str2.substring(len+1);
+            mNbCitys=Integer.valueOf(nbcity);
         }
     }
 

@@ -21,7 +21,6 @@ BR,"Maringá",1
 BY,Hrodna,1
 BY,Minsk,1
 BY,Viciebsk,1
-CA,Calgary,1
 CA,Edmonton,1
 CA,Halifax,1
 CA,Regina,1
@@ -233,6 +232,7 @@ BE,Bruxelles,2
 BE,Charleroi,2
 BE,"Liège",2
 CA,Burnaby,2
+CA,Calgary,2
 CA,Dartmouth,2
 CA,Ottawa,2
 CA,"Saint John",2
@@ -270,8 +270,6 @@ MX,Tijuana,2
 MX,Zapopan,2
 MY,"Kuala Lumpur",2
 NG,Ikeja,2
-NZ,Auckland,2
-NZ,Wellington,2
 PE,"San Isidro",2
 PK,Faisalabad,2
 PL,Katowice,2
@@ -344,6 +342,8 @@ MA,Casablanca,3
 NL,Almere,3
 NL,"Den Haag",3
 NL,Lelystad,3
+NZ,Auckland,3
+NZ,Wellington,3
 PL,Lodz,3
 PL,Wroclaw,3
 PL,"Wrocław",3
@@ -458,7 +458,6 @@ US,Baltimore,9
 US,Denver,9
 US,Louisville,9
 US,Minneapolis,9
-US,Southfield,9
 US,Tustin,9
 ZZ,"",9
 GR,Athens,10
@@ -466,6 +465,7 @@ MY,"Shah Alam",10
 NG,Lagos,10
 PT,Lisbon,10
 US,Portland,10
+US,Southfield,10
 AU,Sydney,11
 BE,Brussels,11
 DE,Kiel,11
@@ -502,18 +502,18 @@ FR,Issy-les-Moulineaux,30
 AT,Vienna,31
 DE,"München",32
 NL,Amsterdam,33
-US,Dallas,34
+US,Dallas,35
 DE,Munich,36
 US,Newark,37
 DE,Hanover,38
-ES,Madrid,49
+ES,Madrid,50
 IT,Milan,50
-GB,London,77
+GB,London,78
 DE,Cologne,84
 "","",93
 DE,Berlin,125
 FR,Paris,144
 US,Columbus,159
-US,"New York",207
+US,"New York",208
 US,"Los Angeles",291
-DE,Frankfurt,357
+DE,Frankfurt,358

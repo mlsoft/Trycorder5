@@ -276,7 +276,7 @@ void sendall(char *line) {
 void publishlist() {
   if(nbconnclient<=0) return;
   char buf[2048];
-  char mach[64];
+  char mach[128];
   int i;
   strcpy(buf,"trycorders:");
   for(i=0;i<nbconnclient;++i) {
@@ -477,6 +477,10 @@ void* listener_handler(void* threadname)
     return (NULL);
 }
 
+extern int getstattrycorders();
+extern int getstatcountrys();
+extern int getstatcitys();
+
 /*
  * This will handle connection for each client
  * */
@@ -540,6 +544,15 @@ void *connection_handler(void *connvoid)
 		  if( pthread_create( &demo_thread , NULL ,  demo_handler , (void*) NULL) < 0) {
 		    say("could not create thread\n");
 		  }
+		} else if(strncmp(client_message,"stats",5)==0) {
+		  // send statistics to same client
+		  int a=getstattrycorders();
+		  int b=getstatcountrys();
+		  int c=getstatcitys();
+		  sprintf(buf,"statistics:%d,%d,%d\n",a,b,c);
+		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"Sent Statistics: %d,%d,%d\n",a,b,c);
+		  say(buf);
 		} else {
 		  // send command back to all clients except the sender
 		  if(nbconnclient>0) {
@@ -736,11 +749,11 @@ int i;
 }
 
 int sqlwrite(char *ipaddr, char *tryname) {
-char *errmsg=0;
 char newaddr[64];
 char newname[64];
 char newandver[32];
 char newtryver[32];
+char *errmsg=0;
 int res;
 
     transform_addr(ipaddr,newaddr);
@@ -784,4 +797,78 @@ int res;
     sqlite3_close(db);
   
     return(0);
+}
+
+// ===========================================================================================================
+
+static char countvalue[32];
+static int countloop=0;
+
+static int nbtry=0;
+static int nbcou=0;
+static int nbcit=0;
+
+int count_callback(void *notused,int nbf, char **fields, char **names) {
+    countvalue[0]=0;
+    if(nbf<1) return(-1);
+    strcpy(countvalue,fields[0]);
+    countloop++;
+    return(0);
+}
+
+
+int getstattrycorders() {
+char *errmsg=0;
+int res;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+
+    // return nb of trycorders()
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nbtry=atoi(countvalue);
+    }
+    
+    // return nb of countrys
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder group by country;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nbcou=countloop;
+    }
+    
+    // return nb of citys
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder group by city;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nbcit=countloop;
+    }
+    
+    sqlite3_close(db);
+    return(nbtry);
+}
+
+int getstatcountrys() {
+    return(nbcou);
+}
+
+int getstatcitys() {
+    return(nbcit);
 }
