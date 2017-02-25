@@ -1,0 +1,86 @@
+2017-02-25: - updated the apk
+
+2017-02-25: - added a new statistic (by state)
+
+2017-02-25: - version 5.1.3 refined the statistics functions adjusted the chat window
+
+2017-02-18: - ajusted statistics for more precise values
+
+2017-02-18: - version 5.1.2 ajusted trycorder to display statistics from the server in chat window
+
+2017-02-15: - modified the tryserver to log in a sqlfile ajusted trysql to import old data in database
+
+2017-02-13: - added some sql commands to trysql.c
+
+2017-02-11: - added trysql manager (experimental)
+
+2017-02-11: - adjusted tryclient and tryserver for database access. pre-adjustment
+
+2017-02-09: - git ajustments
+
+2017-02-07: - remodified readme to remove xda logo
+
+2017-02-07: - added XDA in readme
+
+2017-02-07: - Merge branch 'master' of https://github.com/mlsoft/Trycorder5
+
+2017-02-07: - modified readme
+
+2017-02-07: - Merge pull request #5 from mueller-ma/patch-1
+Added fdroid logo + improvements to readme
+2017-02-07: - Update README.md
+
+2017-02-06: - version 5.1.0 try to solve the bootloop on certain devices (mostly 4.x)
+
+2017-02-06: - version 5.1.0 updated the changelog
+
+2017-02-06: - version 5.1.0 added the apache license in every source files
+
+2017-02-05: - updated changelog
+
+2017-02-05: - version 5.0.9 Tried to correct the camera-1 interface for newer camera-2 phones. adjusted some few things too.
+
+2017-02-02: - version 5.0.7 updated tryserver to mirror less data updated trycorderservice to identify itself better
+
+2017-01-19: - Version 5.0.6 minor corrections with the service
+
+2017-01-18: - version 5.0.5 corrected the sensor-off command increased tryserver efficiency collected 500 differents machines who tested the app
+
+2017-01-17: - version 5.0.4 minor ajustments
+
+2017-01-15: - Updated changelog
+
+2017-01-15: - Version 5.0.3 Removed annoying sound. added some debugging scripts.
+
+2017-01-15: - Version 5.0.3 Removed one annoying beep Prepared the tryserver to be more efficient
+
+2017-01-12: - added to gitignore
+
+2017-01-12: - Version 5.0.3 preparing for F-Droid repository
+
+2017-01-08: - Version 5.0.2
+switched to Api 25 Nougat
+
+2017-01-04: - remade the README.md with last texts
+
+2017-01-04: - Merge branch 'master' of https://github.com/mlsoft/Trycorder5
+
+2017-01-04: - renamed html doc to index.html
+
+2017-01-04: - Set theme jekyll-theme-slate
+
+2017-01-04: - reconverted the doc in xhtml format
+
+2017-01-04: - modified readme
+
+2017-01-04: - remake the index.html to be smaller
+
+2017-01-04: - created the main index
+
+2017-01-04: - moved files to prepare for web site
+
+2017-01-04: - version 5.0.1 new screenshots modified manual ajusted service class
+
+2016-12-21: - version 5.0.0 this is the first commit of the version 5 with remote ip-addr of others trycorders thru the tryserver
+
+2016-12-19: - first commit
