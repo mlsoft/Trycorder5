@@ -452,29 +452,6 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="5"
-                                android:orientation="horizontal">
-
-                                <ScrollView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <TextView
-                                        android:id="@+id/chat_display"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:background="@android:color/black"
-                                        android:text="Chat messages"
-                                        android:textColor="@android:color/white"
-                                        android:textSize="16sp"
-                                        android:textStyle="normal" />
-                                </ScrollView>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
                                 android:layout_weight="2"
                                 android:orientation="horizontal">
 
@@ -483,6 +460,8 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="8"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
                                     android:background="@android:color/white"
                                     android:gravity="top"
                                     android:hint="Command/Message"
@@ -506,6 +485,31 @@
                                     android:text="Send"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="5"
+                                android:orientation="horizontal">
+
+                                <ScrollView
+                                    android:id="@+id/chat_scroll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/chat_display"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@android:color/black"
+                                        android:text="Chat messages"
+                                        android:textColor="@android:color/holo_green_light"
+                                        android:textSize="16sp"
+                                        android:textStyle="normal" />
+
+                                </ScrollView>
 
                             </LinearLayout>
 

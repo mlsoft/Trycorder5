@@ -90,6 +90,9 @@ public class TrycorderActivity extends FragmentActivity implements
                 // refresh the ip list
                 if(currentMode==1) mTrycorderFragment.askscanlist();
                 if(currentMode==7) mTrydesktopFragment.askscanlist();
+            } else if (theEvent.equals("statlist")) {
+                // refresh the statistics
+                if(currentMode==1) mTrycorderFragment.askstatlist();
             } else if (theEvent.equals("text")) {
                 // text received
                 if(currentMode==1) mTrycorderFragment.displaytext(theText);

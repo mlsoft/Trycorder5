@@ -67,6 +67,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -198,6 +199,7 @@ public class TrycorderFragment extends Fragment
     private Button mChatSendButton;
     private EditText mChatText;
     private TextView mChatDisplay;
+    private ScrollView mChatScroll;
 
     // the button to talk to computer
     private ImageButton mTalkButton;
@@ -1572,6 +1574,7 @@ public class TrycorderFragment extends Fragment
         mChatLayout = (LinearLayout) view.findViewById(R.id.chat_layout);
 
         mChatDisplay = (TextView) view.findViewById(R.id.chat_display);
+        mChatScroll = (ScrollView) view.findViewById(R.id.chat_scroll);
 
         mChatText = (EditText) view.findViewById(R.id.chat_text);
 
@@ -1744,10 +1747,6 @@ public class TrycorderFragment extends Fragment
 
     // ask the service to give us the list of ip/names
 
-    private int mNbTrycorders;
-    private int mNbCountrys;
-    private int mNbCitys;
-
     public void askscanlist() {
         if(mBound) {
             mIpList = mTrycorderService.getiplist();
@@ -1755,6 +1754,15 @@ public class TrycorderFragment extends Fragment
             mIpRemote = mTrycorderService.getipremote();
             mNameRemote = mTrycorderService.getnameremote();
             saylist();
+        }
+    }
+
+    private int mNbTrycorders;
+    private int mNbCountrys;
+    private int mNbCitys;
+
+    public void askstatlist() {
+        if(mBound) {
             mNbTrycorders=mTrycorderService.getnbtrycorders();
             mNbCountrys=mTrycorderService.getnbcountrys();
             mNbCitys=mTrycorderService.getnbcitys();

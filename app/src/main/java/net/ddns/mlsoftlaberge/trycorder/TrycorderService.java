@@ -754,7 +754,7 @@ public class TrycorderService extends Service implements RecognitionListener {
         }
         if(msg.contains("statistics:")) {
             decodestatistics(msg);
-            informActivity("iplist","");
+            informActivity("statlist","");
             return;
         }
         if(msg.contains("server ok")) {

@@ -45,9 +45,9 @@ CZ,"Rožnov pod Radhoštěm",1
 DE,Bremerhaven,1
 DE,Erfurt,1
 DE,Gera,1
-DE,Magdeburg,1
 DE,Mainz,1
 DE,Potsdam,1
+DE,Rostock,1
 DK,Albertslund,1
 DK,Copenhagen,1
 DK,Norresundby,1
@@ -82,8 +82,9 @@ GB,Oxford,1
 GB,Rugby,1
 GB,"Stoke Gifford",1
 GE,"T  bilisi",1
-GR,Marousi,1
 GR,Patras,1
+GT,"Guatemala City",1
+HN,Tegucigalpa,1
 HU,"Budaörs",1
 HU,Szolnok,1
 HU,"Székesfehérvár",1
@@ -96,8 +97,10 @@ IN,Bengaluru,1
 IN,Chennai,1
 IN,Guwahati,1
 IN,Kolkata,1
+IN,"Port Blair",1
 IN,Pune,1
 IN,Rajahmundry,1
+IQ,Erbil,1
 IR,Isfahan,1
 IR,Tehran,1
 IS,"Reykjavík",1
@@ -115,19 +118,21 @@ LB,Bednayel,1
 LK,Vavuniya,1
 LR,Monrovia,1
 MA,Fes,1
-MA,Meknes,1
+MA,Nador,1
 MD,"Chișinău",1
 MO,Taipa,1
 MT,Birkirkara,1
 MX,"Ciudad Madero",1
 MX,Guadalajara,1
 MX,Hermosillo,1
+MX,Irapuato,1
 MX,Matamoros,1
 MX,Pachuca,1
 MX,Papalotla,1
 MX,"San Francisco Tlalcilalcalpan",1
 MX,"San Pedro Garza García",1
 MX,Teloloapan,1
+MX,Tepic,1
 MY,"Kuala Kangsar",1
 MY,Kuching,1
 NL,"Amsterdam Zuid-Oost",1
@@ -136,12 +141,12 @@ NL,Assen,1
 NL,Maastricht,1
 NL,Middelburg,1
 NL,Venlo,1
+NO,Sandefjord,1
 NZ,Christchurch,1
 NZ,Dunedin,1
 PE,Lima,1
 PH,"Cebu City",1
 PH,"General Santos City",1
-PH,"Quezon City",1
 PK,Islamabad,1
 PL,Bialystok,1
 PL,"Białystok",1
@@ -149,7 +154,6 @@ PL,"Gdańsk",1
 PL,Krakow,1
 PL,"Kraków",1
 PL,Lublin,1
-PL,Poznan,1
 PL,Rzeszow,1
 PL,"Syców",1
 PL,Szczecin,1
@@ -158,6 +162,7 @@ PR,"San Juan",1
 PT,Lisboa,1
 RE,"Sainte Clotilde",1
 RO,"București",1
+RO,"Iași",1
 RO,"Pitești",1
 RO,Slatina,1
 RO,Slobozia,1
@@ -174,6 +179,7 @@ RU,Sochi,1
 RU,Stavropol,1
 RU,Tomsk,1
 RU,"№4",1
+SA,"Al Badayea",1
 SE,Farsta,1
 SE,"Norrköping",1
 SE,Sundsvall,1
@@ -183,6 +189,7 @@ SE,"Västerås",1
 SN,Dakar,1
 SV,Apopa,1
 SY,Damascus,1
+TH,"Khwaeng Huai Khwang",1
 TH,Pakkred,1
 TN,"Borj Louizir",1
 TR,Fatih,1
@@ -210,6 +217,7 @@ US,Jackson,1
 US,Lewiston,1
 US,Marietta,1
 US,Memphis,1
+US,Milwaukee,1
 US,Monroe,1
 US,"New Haven",1
 US,"New Orleans",1
@@ -230,7 +238,6 @@ AU,Perth,2
 BA,Zenica,2
 BE,Bruxelles,2
 BE,Charleroi,2
-BE,"Liège",2
 CA,Burnaby,2
 CA,Calgary,2
 CA,Dartmouth,2
@@ -240,14 +247,15 @@ CH,"Zürich District",2
 CO,"Bogotá",2
 CZ,"Hodonín",2
 DE,"Köln",2
+DE,Magdeburg,2
 DZ,Algiers,2
 DZ,Tizi,2
 EG,"6th of October City",2
 ES,"Málaga",2
 FI,Tampere,2
-FR,Lille,2
 FR,Rouen,2
 GB,Manchester,2
+GR,Marousi,2
 HK,"Hong Kong",2
 IN,Hyderabad,2
 IN,Kochi,2
@@ -259,11 +267,11 @@ IT,Florence,2
 IT,Naples,2
 IT,Rho,2
 IT,Teulada,2
-KR,Seoul,2
 KW,"Kuwait City",2
 LU,"Luxembourg District",2
 LV,Riga,2
 MA,Casa,2
+MA,Meknes,2
 ME,Podgorica,2
 MX,Monclova,2
 MX,Tijuana,2
@@ -271,9 +279,11 @@ MX,Zapopan,2
 MY,"Kuala Lumpur",2
 NG,Ikeja,2
 PE,"San Isidro",2
+PH,"Quezon City",2
 PK,Faisalabad,2
 PL,Katowice,2
 PL,"Nowy Sacz",2
+PL,Poznan,2
 PL,"Poznań",2
 PL,"Łódź",2
 PT,Porto,2
@@ -286,8 +296,6 @@ RU,Yekaterinburg,2
 SE,Gothenburg,2
 SE,Karlskrona,2
 SE,Solna,2
-SK,Bratislava,2
-SK,"Ružinov",2
 TH,"Chiang Mai",2
 TR,Usak,2
 UA,Donetsk,2
@@ -308,7 +316,6 @@ US,Wilmington,2
 VE,Caracas,2
 ZA,Amanzimtoti,2
 ZA,"Cape Town",2
-ZA,Parow,2
 AT,Linz,3
 AT,Schwaz,3
 AT,Wien,3
@@ -325,6 +332,7 @@ ES,Valencia,3
 ES,"València",3
 FI,Raahe,3
 FR,Blagnac,3
+FR,Lille,3
 FR,Montpellier,3
 FR,Nice,3
 FR,Roubaix,3
@@ -337,7 +345,7 @@ IL,"Tel Aviv-Yafo",3
 IN,Ahmedabad,3
 IN,Ludhiana,3
 IT,Turin,3
-JP,Chiyoda,3
+KR,Seoul,3
 MA,Casablanca,3
 NL,Almere,3
 NL,"Den Haag",3
@@ -352,31 +360,30 @@ RS,Belgrade,3
 RU,Novosibirsk,3
 SA,Riyadh,3
 SI,Ljubljana,3
+SK,Bratislava,3
+SK,"Ružinov",3
 TH,Bangkok,3
 US,"Cedar Knolls",3
-US,Durham,3
 US,Manchester,3
 US,Montgomery,3
 US,"Mount Laurel",3
 US,"Rock Hill",3
 UY,Montevideo,3
+ZA,Parow,3
 AE,Dubai,4
 AU,"North Ryde",4
 BD,Dhaka,4
+BE,"Liège",4
 BE,Schaerbeek,4
 BR,Curitiba,4
 CH,Sion,4
 DE,Dresden,4
-DE,"Nürnberg",4
-FI,Turku,4
-FR,Amiens,4
-FR,Bordeaux,4
 FR,Bourguignon-sous-Montbavin,4
 FR,Lyon,4
 FR,"Mieuxcé",4
 FR,Orleans,4
 ID,"Central Jakarta",4
-IN,Noida,4
+JP,Chiyoda,4
 KR,Seongnam-si,4
 LT,Vilnius,4
 MK,Skopje,4
@@ -387,133 +394,139 @@ PH,"Mandaue City",4
 RU,Kyzyl,4
 RU,"Saint Petersburg",4
 US,Beaverton,4
-US,"Kansas City",4
+US,Durham,4
 US,Raleigh,4
-US,Vienna,4
-AU,Melbourne,5
-BR,"Brasília",5
 BR,"Rio de Janeiro",5
 CO,"Barranquilla (Distrito Especial, Industrial Y Portuario)",5
-DE,Darmstadt,5
+DE,"Nürnberg",5
 ES,Vigo,5
+FI,Turku,5
+FR,Amiens,5
+FR,Bordeaux,5
 FR,Nantes,5
 FR,Strasbourg,5
 IE,Dublin,5
+IN,Noida,5
 IT,Catania,5
 MX,"Mexico City",5
 NO,Fornebu,5
 RU,Kaliningrad,5
-RU,Kazan,5
 RU,Mytishchi,5
 SE,"Malmö",5
-UA,Kiev,5
 US,"Ann Arbor",5
+US,"Kansas City",5
 US,"Las Vegas",5
 US,Madison,5
 US,Richardson,5
 US,Tucson,5
-US,Washington,5
+US,Vienna,5
+AU,Melbourne,6
+BR,"Brasília",6
+DE,Darmstadt,6
 DE,"Düsseldorf",6
 ES,Alcobendas,6
 FR,Marseille,6
 GB,Edinburgh,6
 IL,"Petah Tikva",6
-IN,Bangalore,6
 IN,Mumbai,6
 NL,Rotterdam,6
 RO,Bucharest,6
 TN,Tunis,6
+UA,Kiev,6
 US,Broomfield,6
-US,Cambridge,6
 US,"Des Moines",6
 US,Herndon,6
-US,Nashville,6
 US,Pittsburgh,6
-US,"Salt Lake City",6
-US,Stillwater,6
 VN,"Ho Chi Minh City",6
-AU,Brisbane,7
-DE,Oldenburg,7
 ES,Barcelona,7
 GB,Rochdale,7
 IN,"New Delhi",7
 MX,"Ciudad de México",7
-RU,Moscow,7
+RU,Kazan,7
 TR,Istanbul,7
+US,Cambridge,7
+US,Nashville,7
 US,Phoenix,7
+US,"Salt Lake City",7
+US,Stillwater,7
+US,Washington,7
+AU,Brisbane,8
+DE,Oldenburg,8
+IN,Bangalore,8
 NO,Oslo,8
 PH,"Davao City",8
+RU,Moscow,8
 SE,Stockholm,8
-US,Birmingham,8
 US,"St. Louis",8
 US,Tampa,8
 VN,"Dịch Vọng",8
 ZA,Randburg,8
 CA,Vancouver,9
-CZ,Prague,9
 FR,Rennes,9
 IT,Roma,9
 US,Albany,9
 US,Baltimore,9
+US,Birmingham,9
 US,Denver,9
 US,Louisville,9
-US,Minneapolis,9
 US,Tustin,9
-ZZ,"",9
-GR,Athens,10
 MY,"Shah Alam",10
 NG,Lagos,10
 PT,Lisbon,10
 US,Portland,10
 US,Southfield,10
+ZZ,"",10
 AU,Sydney,11
-BE,Brussels,11
-DE,Kiel,11
-HR,Zagreb,11
+CZ,Prague,11
+GR,Athens,11
 PH,Mandaluyong,11
+US,Minneapolis,11
+BE,Brussels,12
 CH,Zurich,12
 CH,"Zürich",12
-US,Philadelphia,12
+DE,Kiel,12
+HR,Zagreb,13
 HU,Budapest,13
-US,Atlanta,13
-US,Chicago,13
+US,Philadelphia,13
+US,Atlanta,14
+US,Chicago,14
 US,"Oak Park",14
 CN,Beijing,15
 US,Indianapolis,15
-US,Orlando,16
-BR,"São Paulo",17
-CA,Montreal,17
-MA,Rabat,17
-RU,Moskva,17
-AR,"Buenos Aires",19
+US,Orlando,17
+CA,Montreal,18
 BR,"São João Del Rei",19
+BR,"São Paulo",19
 GB,"Camden Town",19
 GH,Accra,19
-DE,Karlsruhe,21
-DE,Leipzig,21
-US,Seattle,21
+RU,Moskva,20
+AR,"Buenos Aires",21
 DE,Bonn,22
-DE,Stuttgart,22
+DE,Karlsruhe,22
+US,Seattle,22
+DE,Stuttgart,23
+MA,Rabat,23
 PL,Warsaw,23
 CA,Toronto,24
 DE,Hamburg,26
-DE,Nuremberg,29
+DE,Leipzig,27
+DE,Nuremberg,30
 FR,Issy-les-Moulineaux,30
-AT,Vienna,31
-DE,"München",32
+DE,"München",33
 NL,Amsterdam,33
+AT,Vienna,35
 US,Dallas,35
 DE,Munich,36
-US,Newark,37
-DE,Hanover,38
-ES,Madrid,50
-IT,Milan,50
-GB,London,78
-DE,Cologne,84
-"","",93
-DE,Berlin,125
-FR,Paris,144
-US,Columbus,159
-US,"New York",208
-US,"Los Angeles",291
-DE,Frankfurt,358
+DE,Hanover,39
+US,Newark,41
+IT,Milan,51
+ES,Madrid,54
+GB,London,82
+DE,Cologne,85
+"","",97
+DE,Berlin,127
+FR,Paris,148
+US,Columbus,162
+US,"New York",216
+US,"Los Angeles",293
+DE,Frankfurt,366

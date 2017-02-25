@@ -98,3 +98,5 @@ LV
 BG
 LU
 LK
+GT
+HN
