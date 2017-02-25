@@ -1,528 +1,327 @@
 
-city
-"North Ryde"
-Melbourne
-Sydney
-Bangkok
-""
-Beijing
-Philadelphia
-"New York"
-"Quezon City"
-"New Delhi"
-Chennai
-Mumbai
-Dhaka
-Hyderabad
-Ahmedabad
-"Los Angeles"
-Atlanta
-Durham
-Tustin
-Newark
-Richardson
-London
-Wilmington
-Toronto
-Johannesburg
-Lagos
-Rabat
-Fes
-Randburg
-"Cape Town"
-Algiers
-Casa
-"St. Louis"
-"Ann Arbor"
-"Kansas City"
-Jackson
-Dallas
-Indianapolis
-Seattle
-Boston
-Washington
-Regina
-Birmingham
-Leipzig
-Paris
-"Camden Town"
-Roubaix
-Lille
-Issy-les-Moulineaux
-Alcobendas
-Edinburgh
-Warsaw
-Dublin
-Frankfurt
-Cologne
-Berlin
-Szczecin
-Prague
-Schaerbeek
-Belgrade
-Shijiazhuang
-Mandaluyong
-"Mandaue City"
-"Cebu City"
-"Davao City"
-"General Santos City"
-"Kuala Lumpur"
-Taipa
-"Central Jakarta"
-"Shah Alam"
-Kuching
-"Kuala Kangsar"
-Seongnam-si
-Wuhan
-Bangalore
-Kolkata
-Rajahmundry
-Pune
-"Dịch Vọng"
-Rajshahi
-Perth
-Wellington
-Christchurch
-Bengaluru
-Auckland
-"Hong Kong"
-Chiyoda
-Broomfield
-Cambridge
-Moskva
-"New Haven"
-Odesa
-"Reykjavík"
-Stuttgart
-Munich
-"München"
-"Düsseldorf"
-Karlsruhe
-"Oak Park"
-"Zürich"
-"Nürnberg"
-Chicago
-Kochi
-"Buenos Aires"
-Lucknow
-Noida
-Faisalabad
-Dunedin
-Pakkred
-Mykolaiv
-Zagreb
-Halifax
-Montreal
-Vancouver
-Assen
-Adelaide
-Rotterdam
-Utrecht
-Buchs
-Bordeaux
-"San Isidro"
-Rho
-"Bogotá"
-Fargo
-"Las Vegas"
-Monroe
-Phoenix
-Denver
-Montgomery
-"Des Moines"
-"Red Dog Mine"
-Columbus
-Southfield
-Ludhiana
-Bukoba
-"Mexico City"
-"Ho Chi Minh City"
-"Salt Lake City"
-Herndon
-Louisville
-Portland
-Columbia
-Raleigh
-Boise
-Orlando
-Ottawa
-Nashville
-"Mount Laurel"
-Stillwater
-Calgary
-Greenville
-Moscow
-Kremenchuk
-Oslo
-Rostov
-Vilnius
-Belgorod
-"București"
-Haifa
-Kyzyl
-Dubai
-Madrid
-"Syców"
-Istanbul
-"Saint Petersburg"
-Yekaterinburg
-Khimki
-Fortaleza
-"Maringá"
-"São Paulo"
-"São João Del Rei"
-Campinas
-Guadalajara
-"Brasília"
-Vienna
-Hrodna
-Marousi
-Athens
-"Frankfurt am Main"
-Budapest
-Schwaz
-Modena
-Bonn
-Kazan
-"Ružinov"
-Szolnok
-Ljubljana
-Amsterdam
-Sion
-Curitiba
-"Porto Alegre"
-"Rio de Janeiro"
-Montevideo
-Nosara
-"Santo Domingo"
-Shanghai
-"Chiang Mai"
-"Santa Rosa"
-Mizque
-"Fernando De La Mora"
-"Córdoba"
-Santiago
-"Barranquilla (Distrito Especial, Industrial Y Portuario)"
-Quito
-"San Nicolas"
-Guangzhou
-Albany
-Toledo
-Tampa
-Minneapolis
-Campobasso
-Copenhagen
-Jihlava
-Bednayel
-"Málaga"
-Nantes
-"València"
-Nuremberg
-Lublin
-"Malmö"
-Wien-Donaustadt
-Kaliningrad
-"Grâce-Hollogne"
-Skopje
-Valencia
-Franco
-"Ciudad de México"
-Teloloapan
-Pachuca
-Papalotla
-"San Francisco Tlalcilalcalpan"
-Tijuana
-Sundsvall
-Lodz
-Sochi
-Kharkiv
-"T  bilisi"
-Samara
-Birkirkara
-Roskilde
-"Pitești"
-Sankt-Peterburg
-"№4"
-Slatina
-Mytishchi
-Riyadh
-"Kuwait City"
-Lisbon
-"Den Haag"
-"Ciudad Madero"
-Hermosillo
-Zapopan
-Matamoros
-Monclova
-"San Pedro Garza García"
-Caracas
-Lima
-Apopa
-Huechuraba
-Stockholm
-Hamburg
-Manama
-Strasbourg
-Wien
-Fornebu
-Oxford
-Tampere
-Strovolos
-Lviv
-Manchester
-"Wrocław"
-"L  viv"
-Izmir
-Sarajevo
-Podgorica
-Raahe
-"6th of October City"
-"Borj Louizir"
-Sandton
-Cairo
-Tunis
-Ikeja
-Monrovia
-Casablanca
-Amanzimtoti
-Parow
-"Cedar Knolls"
-Roma
-Milan
-Turin
-Catania
-Solna
-Belfast
-Patras
-Pittsburgh
-Cincinnati
-Burnaby
-Dartmouth
-Seoul
-Wallisellen
-Rugby
-Warszawa
-"Poselok №2"
-"Hodonín"
-"Alphen aan den Rijn"
-Tomsk
-Rennes
-Lyon
-Tehran
-Barnaul
-Slobozia
-"Stoke Gifford"
-"Bradley Stoke"
-Hefei
-"South Jakarta"
-Barcelona
-Viciebsk
-Turku
-Espoo
-Novosibirsk
-Baghdad
-Isfahan
-"Tel Aviv-Yafo"
-"Poznań"
-Damascus
-Poltava
-Kiev
-Islamabad
-Tizi
-Accra
-Meknes
-Alexandria
-Dakar
-"Petaling Jaya"
-Kyiv
-Zurich
-"Chișinău"
-Fatih
-Dnepropetrovsk
-Reykjavik
-"Norrköping"
-Vigo
-Bishkek
-Minsk
-Kiel
-Darmstadt
-Hangzhou
-Guwahati
-Basantpur
-Madison
-"Saint John"
-Brisbane
-Bundoora
-Lewiston
-Whitestone
-Maastricht
-Kaluga
-"Pozuelo de Alarcón"
-"Veszprém"
-Camaiore
-Brussels
-Bruxelles
-"Wiener Neustadt"
-Wels
-Lelystad
-"Overland Park"
-"Rock Hill"
-Memphis
-Baltimore
-Marietta
-Beaverton
-"San Juan"
-Providence
-Slidell
-Tulsa
-"White Marsh"
-Rockville
-Tucson
-Omaha
-"Hot Springs"
-"New Orleans"
-Saskatoon
-"Little Rock"
-"Rocky Mount"
-Charlotte
-Helena
-Kingston
-Wallingford
-Lexington
-Williamsport
-"Köln"
-Marseille
-Montauban
-Krakow
-Bialystok
-"Białystok"
-"Rožnov pod Radhoštěm"
-Dresden
-Hanover
-Odessa
-"İncesu"
-Usak
-Amiens
-Caen
-Orleans
-Gothenburg
-Farsta
-"Petah Tikva"
-Perugia
-Naples
-Ivrea
-Brescia
-Florence
-Graz
-Saint-Lambert-la-Potherie
-Bourguignon-sous-Montbavin
-Kouvola
-Potsdam
-"Grumolo delle Abbadesse"
-"Sainte Clotilde"
-Erfurt
-Rome
-Lleida
-Katowice
-Charleroi
-"Liège"
-Brugg
-Zamudio
-Tartu
-Saku
-Glasgow
-Exeter
-Middelburg
-Almere
-Toulouse
-Metz
-Montpellier
-Nice
-Rouen
-Rochdale
-Zaventem
-Arnhem
-Innsbruck
-Wroclaw
-Mainz
-Gera
-Riga
-Venlo
-Varna
-"Mieuxcé"
-Bern
-"Zürich District"
-Stavropol
-Linz
-"Liberec III-Jeřáb"
-"Nizhny Novgorod"
-"Amsterdam Zuid-Oost"
-Oviedo
-Tallinn
-Bratislava
-"Västerås"
-"Nowy Sacz"
-"Umeå"
-Bucharest
-Blagnac
-Sofia
-Poznan
-Norresundby
-Donetsk
-Uusikaupunki
-Tourcoing
-Rzeszow
-Annecy-le-Vieux
-"Halkalı"
-Konya
-Samsun
-Waterford
-"Székesfehérvár"
-"Hradec Kralove"
-Thessaloniki
-Helsinki
-"Gdańsk"
-Reims
-Oryol
-"Łódź"
-Oldenburg
-"Budaörs"
-Zenica
-Maidenhead
-Magdeburg
-Bremerhaven
-"Ceske Budejovice"
-"Rosh Haayin"
-Karlskrona
-"Luxembourg District"
-"Kraków"
-Teulada
-Cagliari
-Ufa
-Rostov-on-Don
-Ukrainka
-Beograd
-Varberg
-Porto
-"Highlands Ranch"
-"Liễu Giai"
-Albuquerque
-Arkhangelsk
-Albertslund
-Lisboa
-Edmonton
-Vavuniya
-Vantaa
-Sandefjord
-Rostock
-Milwaukee
-"Al Badayea"
-Erbil
-Irapuato
-"Iași"
-"Port Blair"
-Tepic
-"Khwaeng Huai Khwang"
-"Guatemala City"
-Nador
-Tegucigalpa
+city,count()
+"",164
+"6th of October City",3
+Adelaide,1
+Ahmedabad,3
+Albany,1
+Alcobendas,1
+Algiers,1
+Amanzimtoti,2
+Amsterdam,2
+"Ann Arbor",1
+Apopa,1
+Assen,1
+Athens,4
+Atlanta,7
+Auckland,2
+Baghdad,7
+Bangalore,11
+Bangkok,4
+"Barranquilla (Distrito Especial, Industrial Y Portuario)",5
+Bednayel,1
+Beijing,15
+Belfast,2
+Belgorod,1
+Belgrade,2
+"Ben Aknoun",1
+Bengaluru,1
+Berea,1
+Berlin,15
+Birkirkara,1
+Birmingham,6
+"Bogotá",2
+Boise,1
+Bonn,2
+Bordeaux,1
+"Borj Louizir",1
+Boston,1
+"Brasília",7
+Broomfield,6
+Bucharest,2
+Buchs,1
+"București",1
+Budapest,2
+"Buenos Aires",20
+Bujumbura,6
+Bukoba,1
+Cairo,2
+Calgary,1
+Cambridge,2
+"Camden Town",4
+Campinas,1
+Campobasso,1
+"Cape Town",2
+Caracas,2
+Casa,2
+Casablanca,1
+Catania,1
+"Cebu City",1
+"Cedar Knolls",3
+"Central Jakarta",4
+Charlotte,1
+Chennai,2
+"Chiang Mai",2
+Chicago,3
+Chiyoda,4
+Christchurch,1
+"Ciudad Madero",1
+"Ciudad de México",7
+Clonsilla,1
+"Coeur d  Alene",2
+Cologne,12
+Columbia,1
+Columbus,3
+Copenhagen,1
+Curitiba,4
+"Córdoba",1
+Dallas,13
+"Davao City",8
+"Den Haag",1
+Denver,5
+"Des Moines",6
+Dhaka,4
+Dibrugarh,1
+Donetsk,1
+Dubai,3
+Dublin,2
+Dunedin,1
+Durham,2
+"Düsseldorf",5
+"Dịch Vọng",2
+Edinburgh,2
+Erbil,1
+Faisalabad,1
+Fargo,1
+"Fernando De La Mora",3
+Fes,1
+Fornebu,2
+Fortaleza,3
+Franco,1
+Frankfurt,112
+"Frankfurt am Main",2
+"General Santos City",1
+"Gijón",1
+Greenville,1
+"Grâce-Hollogne",1
+Guadalajara,1
+Guangzhou,1
+"Guatemala City",1
+Haifa,3
+Halifax,1
+Hamburg,7
+Hermosillo,1
+Herndon,1
+"Ho Chi Minh City",6
+"Hong Kong",1
+Hrodna,1
+Huechuraba,1
+Hyderabad,4
+Ikeja,2
+Indianapolis,12
+Irapuato,1
+Issy-les-Moulineaux,2
+Istanbul,1
+Izmir,1
+Jackson,1
+Jihlava,1
+Johannesburg,1
+Kaliningrad,4
+"Kansas City",3
+Karlsruhe,4
+Kazan,5
+Kharkiv,1
+Khimki,1
+"Khwaeng Huai Khwang",1
+Kiev,1
+Kochi,2
+Kolkata,1
+Kremenchuk,1
+"Kuala Kangsar",1
+"Kuala Lumpur",2
+Kuching,1
+"Kuwait City",1
+Kyzyl,2
+"L  viv",2
+Lagos,10
+"Las Vegas",1
+Leipzig,11
+Lille,2
+Lima,1
+Linz,1
+Lisboa,1
+Lisbon,3
+"Little Rock",1
+Livorno,2
+"Liễu Giai",1
+Ljubljana,2
+Lodz,1
+London,19
+"Los Angeles",144
+Louisville,3
+Lublin,1
+Lucknow,2
+Ludhiana,3
+Lviv,2
+Madrid,12
+"Malmö",3
+Manama,1
+Manchester,1
+Mandaluyong,9
+"Mandaue City",4
+"Maringá",1
+Marousi,1
+Matamoros,1
+Meknes,2
+Melbourne,5
+"Mexico City",5
+Milan,23
+Milwaukee,1
+Minneapolis,1
+Mizque,1
+Modena,1
+Monclova,2
+Monroe,1
+Monrovia,1
+Montevideo,2
+Montgomery,2
+Montreal,6
+Moscow,3
+Moskva,5
+"Mount Laurel",1
+Mumbai,5
+Munich,5
+Mykolaiv,1
+Mytishchi,1
+"Málaga",1
+"München",5
+Nantes,1
+Nashville,3
+"New Delhi",6
+"New Haven",1
+"New York",2565
+Newark,14
+Noida,3
+"North Ryde",3
+Nosara,1
+Nuremberg,6
+"Nürnberg",5
+"Oak Park",4
+Odesa,1
+Oldenburg,1
+Orlando,6
+Oslo,1
+Ottawa,1
+Oxford,1
+Pachuca,1
+Pakkred,1
+Papalotla,1
+Paris,27
+Parow,3
+Patras,1
+Perth,3
+Pescara,1
+Philadelphia,3
+Phoenix,2
+"Pitești",2
+Podgorica,2
+"Port Blair",1
+Portland,1
+"Porto Alegre",3
+Prague,2
+Pune,1
+"Quezon City",2
+Quito,1
+Raahe,1
+Rabat,21
+Rajahmundry,1
+Rajshahi,1
+Raleigh,2
+Randburg,7
+"Red Dog Mine",1
+Regina,1
+"Reykjavík",1
+Rho,4
+Richardson,1
+"Rio de Janeiro",5
+Riyadh,2
+Roma,5
+Roskilde,1
+Rostov,1
+Rotterdam,2
+Roubaix,2
+"Ružinov",1
+"Saint Petersburg",1
+"Salt Lake City",1
+Samara,1
+"San Francisco Tlalcilalcalpan",1
+"San Isidro",2
+"San Nicolas",1
+"San Pedro Garza García",1
+Sandton,1
+Sankt-Peterburg,1
+"Santa Rosa",1
+Santiago,3
+"Santo Domingo",1
+Sarajevo,1
+Schaerbeek,3
+Schwaz,2
+Seattle,11
+Seongnam-si,2
+"Shah Alam",10
+Shanghai,3
+Sharma,1
+Shijiazhuang,1
+Sion,2
+Skopje,3
+Slatina,1
+Sochi,1
+Solna,1
+Southfield,5
+"St. Louis",2
+Stillwater,3
+Stockholm,1
+Strasbourg,2
+Strovolos,1
+Stuttgart,7
+Sundsvall,1
+"Syców",1
+Sydney,6
+Szczecin,1
+Szolnok,1
+"São João Del Rei",19
+"São Paulo",19
+"T  bilisi",1
+Taipa,1
+Tampa,3
+Tampere,1
+Tegucigalpa,1
+Tehran,1
+Teloloapan,1
+Tepic,1
+"Thung Song Hong",1
+Tijuana,2
+Toledo,1
+Toronto,12
+Tunis,5
+Turin,1
+Tustin,3
+Utrecht,4
+Valencia,2
+"València",2
+Vancouver,4
+Vavuniya,1
+Vienna,9
+Warsaw,3
+Washington,4
+Wellington,3
+Wien,2
+Wien-Donaustadt,3
+Wilmington,1
+"Wrocław",1
+Wuhan,1
+Yekaterinburg,1
+Zagreb,3
+Zapopan,2
+"Zürich",11
+"№4",1

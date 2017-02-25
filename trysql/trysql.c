@@ -568,20 +568,23 @@ char *errmsg = 0;
 	int i;
 	int nbf;
 
-	const char *p=sqlite3_column_text(selectstmt,6);	// trycorder.country
-	if(*p!=0) {
-	  res=sqlite3_step(selectstmt);
-	  continue;
-	}
+	//const char *p=sqlite3_column_text(selectstmt,6);	// trycorder.country
+	//if(*p!=0) {
+	//  res=sqlite3_step(selectstmt);
+	//  continue;
+	//}
 
 	char city[128];
 	strclean(city,sqlite3_column_text(selectstmt,5));
 	
+	char state[128];
+	strclean(state,sqlite3_column_text(selectstmt,4));
+	
 	// print the original record and transformation
-	printf("row=%s,%s,%s,%s\n",sqlite3_column_text(selectstmt,0),sqlite3_column_text(selectstmt,2),sqlite3_column_text(selectstmt,3),city);
+	printf("row=%s,%s,%s,%s,%s\n",sqlite3_column_text(selectstmt,0),sqlite3_column_text(selectstmt,2),sqlite3_column_text(selectstmt,3),city,state);
 	
 	// update the database
-	sprintf(updatecity,"UPDATE trycorder SET country='%s',city='%s' WHERE localaddr='%s' and name='%s';",sqlite3_column_text(selectstmt,3),city,sqlite3_column_text(selectstmt,1),sqlite3_column_text(selectstmt,2));
+	sprintf(updatecity,"UPDATE trycorder SET country='%s',city='%s',state='%s' WHERE localaddr='%s' and name='%s';",sqlite3_column_text(selectstmt,3),city,state,sqlite3_column_text(selectstmt,1),sqlite3_column_text(selectstmt,2));
 
 	// the exec way
 	res=sqlite3_exec(db,updatecity,update_callback,0,&errmsg);

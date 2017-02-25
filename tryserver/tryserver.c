@@ -480,6 +480,7 @@ void* listener_handler(void* threadname)
 extern int getstattrycorders();
 extern int getstatcountrys();
 extern int getstatcitys();
+extern int getstatstates();
 
 /*
  * This will handle connection for each client
@@ -549,9 +550,10 @@ void *connection_handler(void *connvoid)
 		  int a=getstattrycorders();
 		  int b=getstatcountrys();
 		  int c=getstatcitys();
-		  sprintf(buf,"statistics:%d,%d,%d\n",a,b,c);
+		  int d=getstatstates();
+		  sprintf(buf,"statistics:%d,%d,%d,%d\n",a,b,c,d);
 		  res=write(sock,buf,strlen(buf));
-		  sprintf(buf,"Sent Statistics: %d,%d,%d\n",a,b,c);
+		  sprintf(buf,"Sent Statistics: %d,%d,%d,%d\n",a,b,c,d);
 		  say(buf);
 		} else {
 		  // send command back to all clients except the sender
@@ -783,7 +785,7 @@ int res;
       }
     } else {	// if not, then insert in table
       // insert in database
-      sprintf(insertbuf,"INSERT INTO trycorder VALUES ('%s','%s','%s','%s','%s','1','%s','%s');",newaddr,newname,newandver,newtryver,ipaddr,country,city);
+      sprintf(insertbuf,"INSERT INTO trycorder VALUES ('%s','%s','%s','%s','%s','1','%s','%s','%s');",newaddr,newname,newandver,newtryver,ipaddr,country,city,state);
       // the exec way
       res=sqlite3_exec(db,insertbuf,update_callback,0,&errmsg);
       if( res!=SQLITE_OK ){
@@ -807,6 +809,7 @@ static int countloop=0;
 static int nbtry=0;
 static int nbcou=0;
 static int nbcit=0;
+static int nbsta=0;
 
 int count_callback(void *notused,int nbf, char **fields, char **names) {
     countvalue[0]=0;
@@ -861,6 +864,17 @@ int res;
       nbcit=countloop;
     }
     
+    // return nb of states
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder group by state;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nbsta=countloop;
+    }
+    
     sqlite3_close(db);
     return(nbtry);
 }
@@ -871,4 +885,8 @@ int getstatcountrys() {
 
 int getstatcitys() {
     return(nbcit);
+}
+
+int getstatstates() {
+    return(nbsta);
 }

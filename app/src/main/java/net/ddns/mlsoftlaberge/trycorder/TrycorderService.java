@@ -124,6 +124,10 @@ public class TrycorderService extends Service implements RecognitionListener {
         return(mNbCitys);
     }
 
+    public int getnbstates() {
+        return(mNbStates);
+    }
+
     @Override
     public IBinder onBind(Intent arg0) {
         return mBinder;
@@ -810,11 +814,13 @@ public class TrycorderService extends Service implements RecognitionListener {
     private int mNbTrycorders=0;
     private int mNbCountrys=0;
     private int mNbCitys=0;
+    private int mNbStates=0;
 
     private void decodestatistics( String msg ) {
         mNbTrycorders=0;
         mNbCountrys=0;
         mNbCitys=0;
+        mNbStates=0;
         String str=msg.substring(11);
         if(!str.isEmpty()) {
             int len=str.indexOf(",");
@@ -824,8 +830,12 @@ public class TrycorderService extends Service implements RecognitionListener {
             len=str2.indexOf(",");
             String nbcoun=str2.substring(0,len);
             mNbCountrys=Integer.valueOf(nbcoun);
-            String nbcity=str2.substring(len+1);
+            String str3=str2.substring(len+1);
+            len=str3.indexOf(",");
+            String nbcity=str3.substring(0,len);
             mNbCitys=Integer.valueOf(nbcity);
+            String nbstate=str3.substring(len+1);
+            mNbStates=Integer.valueOf(nbstate);
         }
     }
 

@@ -1760,12 +1760,14 @@ public class TrycorderFragment extends Fragment
     private int mNbTrycorders;
     private int mNbCountrys;
     private int mNbCitys;
+    private int mNbStates;
 
     public void askstatlist() {
         if(mBound) {
             mNbTrycorders=mTrycorderService.getnbtrycorders();
             mNbCountrys=mTrycorderService.getnbcountrys();
             mNbCitys=mTrycorderService.getnbcitys();
+            mNbStates=mTrycorderService.getnbstates();
             saystats();
         }
     }
@@ -1774,6 +1776,7 @@ public class TrycorderFragment extends Fragment
     private void saystats() {
         saychat("Trycorders="+String.valueOf(mNbTrycorders));
         saychat("Countrys="+String.valueOf(mNbCountrys));
+        saychat("States="+String.valueOf(mNbStates));
         saychat("Citys="+String.valueOf(mNbCitys));
     }
 
