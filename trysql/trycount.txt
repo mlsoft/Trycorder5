@@ -1,328 +1,594 @@
 
-country,city,count()
-AR,"Córdoba",1
-AR,"San Nicolas",1
-AR,"Santa Rosa",1
-AT,Linz,1
-AU,Adelaide,1
-BA,Sarajevo,1
-BD,Rajshahi,1
-BE,"Grâce-Hollogne",1
-BH,Manama,1
-BO,Mizque,1
-BR,Campinas,1
-BR,Franco,1
-BR,"Maringá",1
-BY,Hrodna,1
-CA,Calgary,1
-CA,Halifax,1
-CA,Ottawa,1
-CA,Regina,1
-CH,Buchs,1
-CL,Huechuraba,1
-CN,Guangzhou,1
-CN,Shijiazhuang,1
-CN,Wuhan,1
-CR,Nosara,1
-CY,Strovolos,1
-CZ,Jihlava,1
-DE,Oldenburg,1
-DK,Copenhagen,1
-DK,Roskilde,1
-DO,"Santo Domingo",1
-DZ,Algiers,1
-DZ,"Ben Aknoun",1
-EC,Quito,1
-ES,Alcobendas,1
-ES,"Gijón",1
-ES,"Málaga",1
-FI,Raahe,1
-FI,Tampere,1
-FR,Bordeaux,1
-FR,Nantes,1
-GB,Manchester,1
-GB,Oxford,1
-GE,"T  bilisi",1
-GR,Marousi,1
-GR,Patras,1
-GT,"Guatemala City",1
-HK,"Hong Kong",1
-HN,Tegucigalpa,1
-HU,Szolnok,1
-IE,Clonsilla,1
-IN,Bengaluru,1
-IN,Dibrugarh,1
-IN,Kolkata,1
-IN,"Port Blair",1
-IN,Pune,1
-IN,Rajahmundry,1
-IN,Sharma,1
-IQ,Erbil,1
-IR,Tehran,1
-IS,"Reykjavík",1
-IT,Campobasso,1
-IT,Catania,1
-IT,Modena,1
-IT,Pescara,1
-IT,Turin,1
-KW,"Kuwait City",1
-LB,Bednayel,1
-LK,Vavuniya,1
-LR,Monrovia,1
-MA,Casablanca,1
-MA,Fes,1
-MO,Taipa,1
-MT,Birkirkara,1
-MX,"Ciudad Madero",1
-MX,Guadalajara,1
-MX,Hermosillo,1
-MX,Irapuato,1
-MX,Matamoros,1
-MX,Pachuca,1
-MX,Papalotla,1
-MX,"San Francisco Tlalcilalcalpan",1
-MX,"San Pedro Garza García",1
-MX,Teloloapan,1
-MX,Tepic,1
-MY,"Kuala Kangsar",1
-MY,Kuching,1
-NL,Assen,1
-NL,"Den Haag",1
-NO,Oslo,1
-NZ,Christchurch,1
-NZ,Dunedin,1
-PE,Lima,1
-PH,"Cebu City",1
-PH,"General Santos City",1
-PK,Faisalabad,1
-PL,Lodz,1
-PL,Lublin,1
-PL,"Syców",1
-PL,Szczecin,1
-PL,"Wrocław",1
-PT,Lisboa,1
-RO,"București",1
-RO,Slatina,1
-RU,Belgorod,1
-RU,Khimki,1
-RU,Mytishchi,1
-RU,Rostov,1
-RU,"Saint Petersburg",1
-RU,Samara,1
-RU,Sankt-Peterburg,1
-RU,Sochi,1
-RU,Yekaterinburg,1
-RU,"№4",1
-SE,Solna,1
-SE,Stockholm,1
-SE,Sundsvall,1
-SK,"Ružinov",1
-SV,Apopa,1
-TH,"Khwaeng Huai Khwang",1
-TH,Pakkred,1
-TH,"Thung Song Hong",1
-TN,"Borj Louizir",1
-TR,Istanbul,1
-TR,Izmir,1
-TZ,Bukoba,1
-UA,Donetsk,1
-UA,Kharkiv,1
-UA,Kiev,1
-UA,Kremenchuk,1
-UA,Mykolaiv,1
-UA,Odesa,1
-US,Albany,1
-US,"Ann Arbor",1
-US,Boise,1
-US,Boston,1
-US,Charlotte,1
-US,Columbia,1
-US,Fargo,1
-US,Greenville,1
-US,Herndon,1
-US,Jackson,1
-US,"Las Vegas",1
-US,"Little Rock",1
-US,Milwaukee,1
-US,Minneapolis,1
-US,Monroe,1
-US,"Mount Laurel",1
-US,"New Haven",1
-US,Portland,1
-US,"Red Dog Mine",1
-US,Richardson,1
-US,"Salt Lake City",1
-US,Toledo,1
-US,Wilmington,1
-VN,"Liễu Giai",1
-ZA,Berea,1
-ZA,Johannesburg,1
-ZA,Sandton,1
-AT,Schwaz,2
-AT,Wien,2
-CH,Sion,2
-CO,"Bogotá",2
-CZ,Prague,2
-DE,Bonn,2
-DE,"Frankfurt am Main",2
-EG,Cairo,2
-ES,Valencia,2
-ES,"València",2
-FR,Issy-les-Moulineaux,2
-FR,Lille,2
-FR,Roubaix,2
-FR,Strasbourg,2
-GB,Belfast,2
-GB,Edinburgh,2
-HU,Budapest,2
-IE,Dublin,2
-IN,Chennai,2
-IN,Kochi,2
-IN,Lucknow,2
-IT,Livorno,2
-KR,Seongnam-si,2
-MA,Casa,2
-MA,Meknes,2
-ME,Podgorica,2
-MX,Monclova,2
-MX,Tijuana,2
-MX,Zapopan,2
-MY,"Kuala Lumpur",2
-NG,Ikeja,2
-NL,Amsterdam,2
-NL,Rotterdam,2
-NO,Fornebu,2
-NZ,Auckland,2
-PE,"San Isidro",2
-PH,"Quezon City",2
-RO,Bucharest,2
-RO,"Pitești",2
-RS,Belgrade,2
-RU,Kyzyl,2
-SA,Riyadh,2
-SI,Ljubljana,2
-TH,"Chiang Mai",2
-UA,"L  viv",2
-UA,Lviv,2
-US,Cambridge,2
-US,"Coeur d  Alene",2
-US,Durham,2
-US,Montgomery,2
-US,Phoenix,2
-US,Raleigh,2
-US,"St. Louis",2
-UY,Montevideo,2
-VE,Caracas,2
-VN,"Dịch Vọng",2
-ZA,Amanzimtoti,2
-ZA,"Cape Town",2
-AE,Dubai,3
-AT,Wien-Donaustadt,3
-AU,"North Ryde",3
-AU,Perth,3
-BE,Schaerbeek,3
-BR,Fortaleza,3
-BR,"Porto Alegre",3
-CL,Santiago,3
-CN,Shanghai,3
-EG,"6th of October City",3
-HR,Zagreb,3
-IL,Haifa,3
-IN,Ahmedabad,3
-IN,Ludhiana,3
-IN,Noida,3
-MK,Skopje,3
-NZ,Wellington,3
-PL,Warsaw,3
-PT,Lisbon,3
-PY,"Fernando De La Mora",3
-RU,Moscow,3
-SE,"Malmö",3
-US,"Cedar Knolls",3
-US,Chicago,3
-US,Columbus,3
-US,"Kansas City",3
-US,Louisville,3
-US,Nashville,3
-US,Philadelphia,3
-US,Stillwater,3
-US,Tampa,3
-US,Tustin,3
-ZA,Parow,3
-BD,Dhaka,4
-BR,Curitiba,4
-CA,Vancouver,4
-DE,Karlsruhe,4
-GB,"Camden Town",4
-GR,Athens,4
-ID,"Central Jakarta",4
-IN,Hyderabad,4
-IT,Rho,4
-JP,Chiyoda,4
-NL,Utrecht,4
-PH,"Mandaue City",4
-RU,Kaliningrad,4
-TH,Bangkok,4
-US,"Oak Park",4
-US,Washington,4
-AU,Melbourne,5
-BR,"Rio de Janeiro",5
-CO,"Barranquilla (Distrito Especial, Industrial Y Portuario)",5
-DE,"Düsseldorf",5
-DE,Munich,5
-DE,"München",5
-DE,"Nürnberg",5
-IN,Mumbai,5
-IT,Roma,5
-MX,"Mexico City",5
-RU,Kazan,5
-RU,Moskva,5
-TN,Tunis,5
-US,Denver,5
-US,Southfield,5
-AU,Sydney,6
-BI,Bujumbura,6
-CA,Montreal,6
-DE,Nuremberg,6
-IN,"New Delhi",6
-US,Birmingham,6
-US,Broomfield,6
-US,"Des Moines",6
-US,Orlando,6
-VN,"Ho Chi Minh City",6
-BR,"Brasília",7
-DE,Hamburg,7
-DE,Stuttgart,7
-IQ,Baghdad,7
-MX,"Ciudad de México",7
-US,Atlanta,7
-ZA,Randburg,7
-PH,"Davao City",8
-AT,Vienna,9
-PH,Mandaluyong,9
-MY,"Shah Alam",10
-NG,Lagos,10
-CH,"Zürich",11
-DE,Leipzig,11
-IN,Bangalore,11
-US,Seattle,11
-CA,Toronto,12
-DE,Cologne,12
-ES,Madrid,12
-US,Indianapolis,12
-US,Dallas,13
-US,Newark,14
-CN,Beijing,15
-DE,Berlin,15
-BR,"São João Del Rei",19
-BR,"São Paulo",19
-GB,London,19
-AR,"Buenos Aires",20
-MA,Rabat,21
-IT,Milan,23
-FR,Paris,27
-ZZ,"",60
-"","",104
-DE,Frankfurt,112
-US,"Los Angeles",144
-US,"New York",2565
+country	city	count()
+AR	Morón	1
+AR	Munro	1
+AR	Palermo	1
+AR	Santa Rosa	1
+AT	Graz	1
+AT	Innsbruck	1
+AT	Wels	1
+AT	Wiener Neustadt	1
+AU	Adelaide	1
+AU	Bundoora	1
+BD	Rajshahi	1
+BE	Charleroi	1
+BG	Pleven	1
+BG	Varna	1
+BH	Manama	1
+BO	La Paz	1
+BO	Mizque	1
+BO	Santa Cruz de la Sierra	1
+BR	Fortaleza	1
+BR	Franco	1
+BR	Maringá	1
+BR	Pau dos Ferros	1
+BR	Salvador	1
+BY	Brest	1
+BY	Minsk	1
+BY	Viciebsk	1
+CA	Calgary	1
+CA	Edmonton	1
+CA	Halifax	1
+CA	Regina	1
+CA	Saskatoon	1
+CH	Baar	1
+CH	Brugg	1
+CH	Wallisellen	1
+CH	Zürich District	1
+CL	Huechuraba	1
+CN	Fangchenggang	1
+CN	Hefei	1
+CN	Shijiazhuang	1
+CN	Wuhan	1
+CN	Xiamen	1
+CO	Medellín	1
+CO	Pereira	1
+CY	Strovolos	1
+CZ	Ceske Budejovice	1
+CZ	Jihlava	1
+CZ	Kladno	1
+CZ	Liberec III-Jeřáb	1
+CZ	Pilsen	1
+CZ	Staré Brno	1
+DE	Bremen	1
+DE	Bremerhaven	1
+DE	Gera	1
+DE	Halle (Saale)	1
+DE	Lübeck	1
+DE	Mainz	1
+DE	Rostock	1
+DE	Saarbrücken	1
+DK	Albertslund	1
+DK	Copenhagen	1
+DK	Norresundby	1
+DK	Roskilde	1
+DK	Vejle	1
+DO	Santo Domingo	1
+DZ	Ben Aknoun	1
+DZ	Ibn Badis	1
+DZ	Ouargla	1
+EC	Quito	1
+EE	Saku	1
+EE	Tallinn	1
+EE	Tartu	1
+EG	Alexandria	1
+ES	Bilbao	1
+ES	Oviedo	1
+ES	Zamudio	1
+FI	Espoo	1
+FI	Uusikaupunki	1
+FR	Angoulême	1
+FR	Annecy-le-Vieux	1
+FR	Caen	1
+FR	Metz	1
+FR	Montauban	1
+FR	Orleans	1
+FR	Perpignan	1
+FR	Tourcoing	1
+GB	Birmingham	1
+GB	Exeter	1
+GB	Glasgow	1
+GB	Manchester	1
+GB	Northampton	1
+GB	Oxford	1
+GB	Sheffield	1
+GE	T  bilisi	1
+GR	Patras	1
+GT	Guatemala City	1
+HK	Hong Kong	1
+HU	Budaörs	1
+HU	Győr	1
+HU	Szolnok	1
+HU	Székesfehérvár	1
+HU	Törökbálint	1
+HU	Veszprém	1
+ID	South Jakarta	1
+IE	Clonsilla	1
+IE	Waterford	1
+IN	Basantpur	1
+IN	Dibrugarh	1
+IN	Guwahati	1
+IN	Port Blair	1
+IN	Rajahmundry	1
+IQ	Erbil	1
+IR	Isfahan	1
+IT	Bologna	1
+IT	Brescia	1
+IT	Campobasso	1
+IT	Chieti	1
+IT	Modena	1
+IT	Perugia	1
+IT	Pescara	1
+IT	Salerno	1
+IT	Trieste	1
+JM	Kingston	1
+KR	Seoul	1
+KW	Kuwait City	1
+LB	Bednayel	1
+LB	Beirut	1
+LB	Jisr El Bacha	1
+LK	Vavuniya	1
+LR	Monrovia	1
+LU	Luxembourg	1
+MA	Ar-Ribat	1
+MA	Nador	1
+MO	Taipa	1
+MX	Ciudad Madero	1
+MX	Hermosillo	1
+MX	Matamoros	1
+MX	Merida	1
+MX	Pachuca	1
+MX	Puebla	1
+MX	San Pedro Garza García	1
+MX	Teloloapan	1
+MY	Kuala Kangsar	1
+MY	Kuching	1
+NA	Windhoek	1
+NL	Amsterdam Zuid-Oost	1
+NL	Apeldoorn	1
+NL	Arnhem	1
+NL	Assen	1
+NL	Groningen	1
+NL	Maastricht	1
+NL	Middelburg	1
+NL	Venlo	1
+NO	Fannrem	1
+NO	Sandefjord	1
+NO	Trondheim	1
+NZ	Dunedin	1
+NZ	Waihi	1
+PE	Lima	1
+PF	Pape  ete	1
+PH	Balanga	1
+PK	Faisalabad	1
+PL	Gdańsk	1
+PL	Krakow	1
+PL	Kraków	1
+PL	Lublin	1
+PL	Majdanek	1
+PL	Radom	1
+PL	Rzeszow	1
+PL	Syców	1
+PL	Szczecin	1
+PL	Wroclaw	1
+PL	Łódź	1
+PR	San Juan	1
+PT	Lisboa	1
+RE	Sainte Clotilde	1
+RO	București	1
+RO	Cluj-Napoca	1
+RO	Slobozia	1
+RO	Timișoara	1
+RU	Arkhangelsk	1
+RU	Belgorod	1
+RU	Chelyabinsk	1
+RU	Chernogolovka	1
+RU	Kaluga	1
+RU	Kazan  	1
+RU	Nizhny Novgorod	1
+RU	Oryol	1
+RU	Petrozavodsk	1
+RU	Poselok №2	1
+RU	Rostov	1
+RU	Rostov-on-Don	1
+RU	Saratov	1
+RU	Stavropol	1
+RU	Tolyatti	1
+RU	Vologda	1
+RU	г. Санкт-Петербург	1
+RU	№4	1
+SA	Al Badayea	1
+SA	Mecca	1
+SE	Dunker	1
+SE	Farsta	1
+SE	Gothenburg	1
+SE	Norrköping	1
+SE	Sundsvall	1
+SE	Varberg	1
+SE	Västerås	1
+SE	Örnsköldsvik	1
+SN	Dakar	1
+SV	Apopa	1
+TH	Khwaeng Huai Khwang	1
+TH	Pakkred	1
+TH	Thung Song Hong	1
+TN	Borj Louizir	1
+TR	Fatih	1
+TR	Halkalı	1
+TR	Izmir	1
+TR	Konya	1
+TR	Maslak	1
+TR	Samsun	1
+TR	Turgutlu	1
+TR	Vize	1
+TR	İncesu	1
+TR	İstanbul	1
+TZ	Bukoba	1
+UA	Dnepropetrovsk	1
+UA	Dnipropetrovs  k	1
+UA	Kremenchuk	1
+UA	Mariupol  	1
+UA	Odesa	1
+UA	Odessa	1
+UA	Ukrainka	1
+UA	Zhytomyr	1
+US	Cleveland	1
+US	Fargo	1
+US	Helena	1
+US	Highlands Ranch	1
+US	Jackson	1
+US	Lewiston	1
+US	Monroe	1
+US	New Haven	1
+US	Providence	1
+US	Rapid City	1
+US	Red Dog Mine	1
+US	Rockville	1
+US	Rocky Mount	1
+US	Saint Cloud	1
+US	Slidell	1
+US	Tulsa	1
+US	Wallingford	1
+US	White Marsh	1
+US	Wilmington	1
+VE	Caracas	1
+ZA	Berea	1
+ZA	Parow	1
+ZA	Sandton	1
+AU	Canberra	2
+AU	Perth	2
+BA	Sarajevo	2
+BE	Antwerpen	2
+BE	Bruxelles	2
+BG	Sofia	2
+BR	Campinas	2
+CA	Dartmouth	2
+CA	Ottawa	2
+CA	Saint John	2
+CH	Zollikofen	2
+CN	Guangzhou	2
+CN	Yinchuan	2
+CO	Bogotá	2
+CZ	Hodonín	2
+CZ	Hradec Kralove	2
+DE	Potsdam	2
+DZ	Tizi	2
+ES	Lleida	2
+ES	Málaga	2
+ES	Sa	2
+FI	Helsinki	2
+FI	Raahe	2
+FI	Tampere	2
+FR	Rouen	2
+GB	Bradley Stoke	2
+GB	Cardiff	2
+GB	Maidenhead	2
+GB	Rugby	2
+IL	Jerusalem	2
+IL	Rosh Haayin	2
+IN	Bengaluru	2
+IN	Chennai	2
+IN	Coimbatore	2
+IN	Ludhiana	2
+IN	Rajkot	2
+IT	Cagliari	2
+IT	Grumolo delle Abbadesse	2
+IT	Ivrea	2
+IT	Teulada	2
+KR	Seongnam-si	2
+LT	Kaunas	2
+LU	Luxembourg District	2
+LV	Riga	2
+MA	Fes	2
+ME	Podgorica	2
+MX	Guadalajara	2
+MX	Irapuato	2
+MX	Monclova	2
+MX	Zapopan	2
+NL	Eindhoven	2
+PH	Cebu City	2
+PK	Islamabad	2
+PL	Białystok	2
+PL	Nowy Sacz	2
+PL	Poznan	2
+RO	Galați	2
+RO	Iași	2
+RO	Pitești	2
+RS	Beograd	2
+RU	Khimki	2
+RU	Sankt-Peterburg	2
+RU	Ufa	2
+RU	Yekaterinburg	2
+RU	Москва	2
+SA	Jeddah	2
+TH	Chiang Mai	2
+TR	Usak	2
+TZ	Dar es Salaam	2
+UA	Donetsk	2
+UA	Kharkiv	2
+UA	Kyiv	2
+UA	L  viv	2
+UA	Lviv	2
+UA	Mykolaiv	2
+UA	Poltava	2
+US	Albuquerque	2
+US	Charlotte	2
+US	Cincinnati	2
+US	Coeur d  Alene	2
+US	Greenville	2
+US	Lexington	2
+US	Milwaukee	2
+US	Mount Laurel	2
+US	Omaha	2
+US	Overland Park	2
+US	Toledo	2
+US	Williamsport	2
+UY	Montevideo	2
+AT	Wien	3
+AT	Wien-Donaustadt	3
+BA	Zenica	3
+BE	Zaventem	3
+BR	Porto Alegre	3
+CH	Sion	3
+CN	Shanghai	3
+DE	Erfurt	3
+DE	Frankfurt am Main	3
+DE	Magdeburg	3
+DZ	Algiers	3
+EG	6th of October City	3
+EG	Cairo	3
+ES	Pozuelo de Alarcón	3
+ES	València	3
+ET	Addis Ababa	3
+FR	Amiens	3
+FR	Bordeaux	3
+FR	Lille	3
+FR	Nice	3
+FR	Reims	3
+FR	Toulouse	3
+GB	Whitestone	3
+GR	Marousi	3
+GR	Thessaloniki	3
+IL	Haifa	3
+IL	Petah Tikva	3
+IL	Tel Aviv-Yafo	3
+IN	Kolkata	3
+IN	Leh	3
+IS	Reykjavik	3
+IT	Florence	3
+IT	Livorno	3
+IT	Naples	3
+IT	Turin	3
+JP	Chiyoda	3
+LT	Vilnius	3
+NL	  s-Hertogenbosch	3
+NL	Almere	3
+NL	Alphen aan den Rijn	3
+NL	Lelystad	3
+PE	San Isidro	3
+PH	Quezon City	3
+PL	Wrocław	3
+PT	Porto	3
+PY	Fernando De La Mora	3
+RU	Kaliningrad	3
+RU	Samara	3
+SA	Riyadh	3
+SI	Ljubljana	3
+SK	Bratislava	3
+SK	Ružinov	3
+US	Hattiesburg	3
+US	Marietta	3
+US	Memphis	3
+US	Montgomery	3
+US	New Orleans	3
+ZA	Amanzimtoti	3
+ZA	Cape Town	3
+ZA	Randburg	3
+AE	Dubai	4
+AT	Linz	4
+AT	Schwaz	4
+BE	Liège	4
+BE	Schaerbeek	4
+BR	Curitiba	4
+CL	Santiago	4
+DE	Köln	4
+ES	Valencia	4
+ES	Vigo	4
+FR	Blagnac	4
+GB	Belfast	4
+GB	Edinburgh	4
+ID	Central Jakarta	4
+IN	Kochi	4
+IN	Lucknow	4
+MA	Casa	4
+MA	Casablanca	4
+MK	Skopje	4
+MY	Kuala Lumpur	4
+MY	Petaling Jaya	4
+NG	Ikeja	4
+NZ	Wellington	4
+PL	Katowice	4
+PT	Amadora	4
+RS	Belgrade	4
+RU	Kyzyl	4
+US	Beaverton	4
+US	Boise	4
+US	Hot Springs	4
+US	Little Rock	4
+US	Vienna	4
+BD	Dhaka	5
+DE	Nürnberg	5
+FI	Turku	5
+FR	Nantes	5
+IN	Ahmedabad	5
+IN	Hyderabad	5
+IN	Noida	5
+IN	Pune	5
+IT	Catania	5
+IT	Rho	5
+MA	Meknes	5
+MX	Tijuana	5
+NL	Den Haag	5
+NL	Utrecht	5
+NZ	Auckland	5
+PH	Mandaue City	5
+PL	Lodz	5
+RU	Mytishchi	5
+RU	Novosibirsk	5
+RU	Saint Petersburg	5
+SE	Karlskrona	5
+SE	Malmö	5
+TH	Bangkok	5
+TN	Tunis	5
+US	Ann Arbor	5
+US	Las Vegas	5
+US	Manchester	5
+US	Raleigh	5
+VN	Ho Chi Minh City	5
+ZZ		5
+AU	Melbourne	6
+AU	North Ryde	6
+BI	Bujumbura	6
+BR	Rio de Janeiro	6
+CN	Beijing	6
+ES	Alcobendas	6
+ES	Barcelona	6
+FR	Marseille	6
+IR	Tehran	6
+TR	Istanbul	6
+US	Boston	6
+US	Des Moines	6
+US	Durham	6
+US	Kansas City	6
+US	Madison	6
+US	Richardson	6
+US	Tucson	6
+AU	Brisbane	7
+BR	Brasília	7
+CA	Burnaby	7
+DE	Dresden	7
+DE	Düsseldorf	7
+FR	Roubaix	7
+GB	Rochdale	7
+IE	Dublin	7
+IT	Rome	7
+MX	Ciudad de México	7
+MX	Mexico City	7
+NL	Rotterdam	7
+NO	Fornebu	7
+RU	Kazan	7
+US	Broomfield	7
+US	Nashville	7
+DE	Darmstadt	8
+IN	New Delhi	8
+PH	Davao City	8
+RU	Moscow	8
+UA	Kiev	8
+US	Cambridge	8
+US	Pittsburgh	8
+US	St. Louis	8
+VN	Dịch Vọng	8
+DE	Kiel	9
+FR	Bourguignon-sous-Montbavin	9
+IQ	Baghdad	9
+US	Albany	9
+US	Baltimore	9
+US	Birmingham	9
+US	Herndon	9
+US	Tampa	9
+FR	Strasbourg	10
+MY	Shah Alam	10
+NO	Oslo	10
+RO	Bucharest	10
+SE	Stockholm	10
+US	Minneapolis	10
+US	Phoenix	10
+AU	Sydney	11
+CA	Vancouver	11
+FR	Lyon	11
+FR	Rennes	11
+US	Denver	11
+US	Louisville	11
+HR	Zagreb	12
+IN	Mumbai	12
+NG	Lagos	12
+PT	Lisbon	12
+SY	Dimashq	12
+US	Portland	12
+US	Southfield	12
+CH	Zürich	13
+DE	Oldenburg	13
+HU	Budapest	13
+US	Oak Park	13
+US	Washington	13
+BE	Brussels	14
+CZ	Prague	14
+GR	Athens	14
+IN	Bangalore	14
+PH	Mandaluyong	14
+US	Atlanta	14
+US	Tustin	14
+CH	Zurich	15
+US	Columbus	15
+US	Stillwater	15
+GB	Camden Town	16
+IT	Roma	16
+US	Indianapolis	16
+BR	São Paulo	17
+US	Chicago	17
+BR	São João Del Rei	19
+CA	Montreal	19
+DE	Bonn	20
+GH	Accra	20
+US	Orlando	20
+US	Rock Hill	22
+DE	Karlsruhe	23
+US	Philadelphia	23
+US	Salt Lake City	25
+AR	Buenos Aires	26
+RU	Moskva	27
+DE	Leipzig	31
+DE	Stuttgart	31
+MA	Rabat	32
+PL	Warsaw	33
+DE	Hamburg	34
+US	Seattle	34
+DE	München	35
+FR	Issy-les-Moulineaux	36
+DE	Nuremberg	37
+AT	Vienna	38
+CA	Toronto	38
+NL	Amsterdam	39
+US	Newark	42
+DE	Munich	49
+DE	Hanover	50
+US	Dallas	51
+IT	Milan	57
+ES	Madrid	58
+GB	London	82
+US	Los Angeles	88
+DE	Cologne	105
+FR	Paris	110
+DE	Berlin	157
+US	New York	313
+DE	Frankfurt	393

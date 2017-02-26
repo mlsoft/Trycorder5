@@ -713,7 +713,7 @@ int res;
     selcountry[0]=0;
     
     // check if country already setup for this IP/Name
-    sprintf(selectbuf,"SELECT country from trycorder where localaddr='%s' and name='%s';",ipaddr,name);
+    sprintf(selectbuf,"SELECT country from trycorder where ipaddr='%s' and name='%s';",ipaddr,name);
     
     res=sqlite3_exec(db,selectbuf,find_callback,0,&errmsg);
 
@@ -727,7 +727,7 @@ int res;
     }
     
     // find the country and rest from dbipcity database
-    sprintf(selectbuf,"SELECT country,state,city FROM dbipcity WHERE '%s'>=fromaddr and '%s'<=toaddr;",ipaddr,ipaddr);
+    sprintf(selectbuf,"SELECT country,state,city FROM dbipcity WHERE '%s'>=fromip and '%s'<=toip;",ipaddr,ipaddr);
   
     res=sqlite3_exec(db,selectbuf,select_callback,0,&errmsg);
 
@@ -769,7 +769,7 @@ int res;
       return(-1);
     }
     
-    int exi=findcity(ipaddr,newname);
+    int exi=findcity(newaddr,newname);
     
     // if the record already exist then just update it
     if(exi==(-1)) {

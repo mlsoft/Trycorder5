@@ -555,7 +555,7 @@ char *errmsg = 0;
       return(-1);
     }
     
-    res=sqlite3_prepare(db,"SELECT ipaddr,localaddr,name,dbipcity.country,dbipcity.state,dbipcity.city,trycorder.country from trycorder,dbipcity where localaddr>=fromaddr and localaddr<=toaddr",-1,&selectstmt,NULL);
+    res=sqlite3_prepare(db,"SELECT ipaddr,localaddr,name,dbipcity.country,dbipcity.state,dbipcity.city,trycorder.country from trycorder,dbipcity where ipaddr>=fromip and ipaddr<=toip",-1,&selectstmt,NULL);
     if(res!=SQLITE_OK) {
       printf("cant prepare database: %s\n",sqlite3_errmsg(db));
       sqlite3_close(db);
