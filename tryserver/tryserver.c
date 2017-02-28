@@ -555,6 +555,23 @@ void *connection_handler(void *connvoid)
 		  res=write(sock,buf,strlen(buf));
 		  sprintf(buf,"Sent Statistics: %d,%d,%d,%d\n",a,b,c,d);
 		  say(buf);
+		} else if(strncmp(client_message,"logs",4)==0) {
+		  // send statistics to same client
+		  int a=getstattrycorders();
+		  int b=getstatcountrys();
+		  int c=getstatcitys();
+		  int d=getstatstates();
+		  sprintf(buf,"logs:nbtrycorders=%d\n",a);
+		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"logs:nbcountrys=%d\n",b);
+		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"logs:nbstates=%d\n",d);
+		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"logs:nbcitys=%d\n",c);
+		  res=write(sock,buf,strlen(buf));
+		  // print to user
+		  sprintf(buf,"Sent Logs: %d,%d,%d,%d\n",a,b,c,d);
+		  say(buf);
 		} else {
 		  // send command back to all clients except the sender
 		  if(nbconnclient>0) {
@@ -591,7 +608,7 @@ void *connection_handler(void *connvoid)
      
     if(read_size == 0)
     {
-        //puts("Client disconnected\n");
+        say("Client disconnected\n");
     }
     else if(read_size == -1)
     {

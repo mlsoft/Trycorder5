@@ -29,6 +29,7 @@ BY	Viciebsk	1
 CA	Calgary	1
 CA	Edmonton	1
 CA	Halifax	1
+CA	Moncton	1
 CA	Regina	1
 CA	Saskatoon	1
 CH	Baar	1
@@ -41,29 +42,28 @@ CN	Hefei	1
 CN	Shijiazhuang	1
 CN	Wuhan	1
 CN	Xiamen	1
+CO	Bucaramanga	1
 CO	Medellín	1
 CO	Pereira	1
 CY	Strovolos	1
 CZ	Ceske Budejovice	1
 CZ	Jihlava	1
-CZ	Kladno	1
 CZ	Liberec III-Jeřáb	1
 CZ	Pilsen	1
 CZ	Staré Brno	1
-DE	Bremen	1
 DE	Bremerhaven	1
+DE	Eschborn	1
 DE	Gera	1
 DE	Halle (Saale)	1
+DE	Hannover	1
 DE	Lübeck	1
-DE	Mainz	1
 DE	Rostock	1
 DE	Saarbrücken	1
+DE	Schwerin	1
 DK	Albertslund	1
-DK	Copenhagen	1
 DK	Norresundby	1
 DK	Roskilde	1
 DK	Vejle	1
-DO	Santo Domingo	1
 DZ	Ben Aknoun	1
 DZ	Ibn Badis	1
 DZ	Ouargla	1
@@ -81,7 +81,6 @@ FR	Angoulême	1
 FR	Annecy-le-Vieux	1
 FR	Caen	1
 FR	Metz	1
-FR	Montauban	1
 FR	Orleans	1
 FR	Perpignan	1
 FR	Tourcoing	1
@@ -116,6 +115,7 @@ IT	Bologna	1
 IT	Brescia	1
 IT	Campobasso	1
 IT	Chieti	1
+IT	Genoa	1
 IT	Modena	1
 IT	Perugia	1
 IT	Pescara	1
@@ -127,6 +127,7 @@ KW	Kuwait City	1
 LB	Bednayel	1
 LB	Beirut	1
 LB	Jisr El Bacha	1
+LK	Colombo	1
 LK	Vavuniya	1
 LR	Monrovia	1
 LU	Luxembourg	1
@@ -190,18 +191,18 @@ RU	Oryol	1
 RU	Petrozavodsk	1
 RU	Poselok №2	1
 RU	Rostov	1
-RU	Rostov-on-Don	1
 RU	Saratov	1
 RU	Stavropol	1
 RU	Tolyatti	1
+RU	Vladivostok	1
 RU	Vologda	1
 RU	г. Санкт-Петербург	1
 RU	№4	1
 SA	Al Badayea	1
 SA	Mecca	1
+SE	Arvika	1
 SE	Dunker	1
 SE	Farsta	1
-SE	Gothenburg	1
 SE	Norrköping	1
 SE	Sundsvall	1
 SE	Varberg	1
@@ -233,9 +234,11 @@ UA	Odessa	1
 UA	Ukrainka	1
 UA	Zhytomyr	1
 US	Cleveland	1
+US	Enterprise	1
 US	Fargo	1
 US	Helena	1
 US	Highlands Ranch	1
+US	Huntsville	1
 US	Jackson	1
 US	Lewiston	1
 US	Monroe	1
@@ -246,8 +249,8 @@ US	Red Dog Mine	1
 US	Rockville	1
 US	Rocky Mount	1
 US	Saint Cloud	1
+US	Sioux Falls	1
 US	Slidell	1
-US	Tulsa	1
 US	Wallingford	1
 US	White Marsh	1
 US	Wilmington	1
@@ -268,10 +271,14 @@ CA	Saint John	2
 CH	Zollikofen	2
 CN	Guangzhou	2
 CN	Yinchuan	2
-CO	Bogotá	2
 CZ	Hodonín	2
 CZ	Hradec Kralove	2
+CZ	Kladno	2
+DE	Bremen	2
+DE	Mainz	2
 DE	Potsdam	2
+DK	Copenhagen	2
+DO	Santo Domingo	2
 DZ	Tizi	2
 ES	Lleida	2
 ES	Málaga	2
@@ -279,9 +286,9 @@ ES	Sa	2
 FI	Helsinki	2
 FI	Raahe	2
 FI	Tampere	2
+FR	Montauban	2
 FR	Rouen	2
 GB	Bradley Stoke	2
-GB	Cardiff	2
 GB	Maidenhead	2
 GB	Rugby	2
 IL	Jerusalem	2
@@ -310,17 +317,18 @@ PH	Cebu City	2
 PK	Islamabad	2
 PL	Białystok	2
 PL	Nowy Sacz	2
-PL	Poznan	2
 RO	Galați	2
 RO	Iași	2
 RO	Pitești	2
 RS	Beograd	2
 RU	Khimki	2
+RU	Rostov-on-Don	2
 RU	Sankt-Peterburg	2
 RU	Ufa	2
 RU	Yekaterinburg	2
 RU	Москва	2
 SA	Jeddah	2
+SE	Gothenburg	2
 TH	Chiang Mai	2
 TR	Usak	2
 TZ	Dar es Salaam	2
@@ -342,15 +350,15 @@ US	Mount Laurel	2
 US	Omaha	2
 US	Overland Park	2
 US	Toledo	2
+US	Tulsa	2
 US	Williamsport	2
 UY	Montevideo	2
-AT	Wien	3
 AT	Wien-Donaustadt	3
 BA	Zenica	3
 BE	Zaventem	3
 BR	Porto Alegre	3
 CH	Sion	3
-CN	Shanghai	3
+CO	Bogotá	3
 DE	Erfurt	3
 DE	Frankfurt am Main	3
 DE	Magdeburg	3
@@ -366,6 +374,7 @@ FR	Lille	3
 FR	Nice	3
 FR	Reims	3
 FR	Toulouse	3
+GB	Cardiff	3
 GB	Whitestone	3
 GR	Marousi	3
 GR	Thessaloniki	3
@@ -387,6 +396,7 @@ NL	Alphen aan den Rijn	3
 NL	Lelystad	3
 PE	San Isidro	3
 PH	Quezon City	3
+PL	Poznan	3
 PL	Wrocław	3
 PT	Porto	3
 PY	Fernando De La Mora	3
@@ -407,13 +417,14 @@ ZA	Randburg	3
 AE	Dubai	4
 AT	Linz	4
 AT	Schwaz	4
+AT	Wien	4
 BE	Liège	4
 BE	Schaerbeek	4
 BR	Curitiba	4
 CL	Santiago	4
+CN	Shanghai	4
 DE	Köln	4
 ES	Valencia	4
-ES	Vigo	4
 FR	Blagnac	4
 GB	Belfast	4
 GB	Edinburgh	4
@@ -423,7 +434,6 @@ IN	Lucknow	4
 MA	Casa	4
 MA	Casablanca	4
 MK	Skopje	4
-MY	Kuala Lumpur	4
 MY	Petaling Jaya	4
 NG	Ikeja	4
 NZ	Wellington	4
@@ -431,13 +441,13 @@ PL	Katowice	4
 PT	Amadora	4
 RS	Belgrade	4
 RU	Kyzyl	4
-US	Beaverton	4
 US	Boise	4
 US	Hot Springs	4
 US	Little Rock	4
 US	Vienna	4
 BD	Dhaka	5
 DE	Nürnberg	5
+ES	Vigo	5
 FI	Turku	5
 FR	Nantes	5
 IN	Ahmedabad	5
@@ -448,6 +458,7 @@ IT	Catania	5
 IT	Rho	5
 MA	Meknes	5
 MX	Tijuana	5
+MY	Kuala Lumpur	5
 NL	Den Haag	5
 NL	Utrecht	5
 NZ	Auckland	5
@@ -458,16 +469,14 @@ RU	Novosibirsk	5
 RU	Saint Petersburg	5
 SE	Karlskrona	5
 SE	Malmö	5
-TH	Bangkok	5
 TN	Tunis	5
 US	Ann Arbor	5
+US	Beaverton	5
 US	Las Vegas	5
 US	Manchester	5
 US	Raleigh	5
 VN	Ho Chi Minh City	5
-ZZ		5
 AU	Melbourne	6
-AU	North Ryde	6
 BI	Bujumbura	6
 BR	Rio de Janeiro	6
 CN	Beijing	6
@@ -479,11 +488,12 @@ TR	Istanbul	6
 US	Boston	6
 US	Des Moines	6
 US	Durham	6
-US	Kansas City	6
 US	Madison	6
 US	Richardson	6
 US	Tucson	6
+ZZ		6
 AU	Brisbane	7
+AU	North Ryde	7
 BR	Brasília	7
 CA	Burnaby	7
 DE	Dresden	7
@@ -494,13 +504,14 @@ IE	Dublin	7
 IT	Rome	7
 MX	Ciudad de México	7
 MX	Mexico City	7
-NL	Rotterdam	7
 NO	Fornebu	7
 RU	Kazan	7
+TH	Bangkok	7
 US	Broomfield	7
+US	Kansas City	7
 US	Nashville	7
-DE	Darmstadt	8
 IN	New Delhi	8
+NL	Rotterdam	8
 PH	Davao City	8
 RU	Moscow	8
 UA	Kiev	8
@@ -508,56 +519,57 @@ US	Cambridge	8
 US	Pittsburgh	8
 US	St. Louis	8
 VN	Dịch Vọng	8
+DE	Darmstadt	9
 DE	Kiel	9
 FR	Bourguignon-sous-Montbavin	9
 IQ	Baghdad	9
 US	Albany	9
-US	Baltimore	9
 US	Birmingham	9
 US	Herndon	9
-US	Tampa	9
 FR	Strasbourg	10
 MY	Shah Alam	10
 NO	Oslo	10
 RO	Bucharest	10
-SE	Stockholm	10
+US	Baltimore	10
 US	Minneapolis	10
 US	Phoenix	10
+US	Tampa	10
 AU	Sydney	11
-CA	Vancouver	11
 FR	Lyon	11
 FR	Rennes	11
-US	Denver	11
+SE	Stockholm	11
 US	Louisville	11
+CA	Vancouver	12
 HR	Zagreb	12
 IN	Mumbai	12
 NG	Lagos	12
-PT	Lisbon	12
 SY	Dimashq	12
+US	Denver	12
 US	Portland	12
-US	Southfield	12
 CH	Zürich	13
 DE	Oldenburg	13
 HU	Budapest	13
+PT	Lisbon	13
 US	Oak Park	13
-US	Washington	13
+US	Southfield	13
 BE	Brussels	14
 CZ	Prague	14
 GR	Athens	14
 IN	Bangalore	14
 PH	Mandaluyong	14
-US	Atlanta	14
 US	Tustin	14
+US	Washington	14
 CH	Zurich	15
 US	Columbus	15
-US	Stillwater	15
 GB	Camden Town	16
 IT	Roma	16
-US	Indianapolis	16
+US	Atlanta	16
+US	Stillwater	16
 BR	São Paulo	17
 US	Chicago	17
+US	Indianapolis	18
 BR	São João Del Rei	19
-CA	Montreal	19
+CA	Montreal	20
 DE	Bonn	20
 GH	Accra	20
 US	Orlando	20
@@ -565,30 +577,30 @@ US	Rock Hill	22
 DE	Karlsruhe	23
 US	Philadelphia	23
 US	Salt Lake City	25
-AR	Buenos Aires	26
-RU	Moskva	27
+AR	Buenos Aires	28
+RU	Moskva	28
 DE	Leipzig	31
-DE	Stuttgart	31
-MA	Rabat	32
-PL	Warsaw	33
+DE	Stuttgart	32
 DE	Hamburg	34
-US	Seattle	34
-DE	München	35
+MA	Rabat	34
+PL	Warsaw	35
+US	Seattle	35
+DE	München	36
 FR	Issy-les-Moulineaux	36
-DE	Nuremberg	37
-AT	Vienna	38
 CA	Toronto	38
-NL	Amsterdam	39
+AT	Vienna	39
+DE	Nuremberg	39
+NL	Amsterdam	40
 US	Newark	42
 DE	Munich	49
-DE	Hanover	50
 US	Dallas	51
-IT	Milan	57
+DE	Hanover	54
 ES	Madrid	58
+IT	Milan	59
 GB	London	82
-US	Los Angeles	88
-DE	Cologne	105
+US	Los Angeles	90
+DE	Cologne	107
 FR	Paris	110
-DE	Berlin	157
+DE	Berlin	160
 US	New York	313
-DE	Frankfurt	393
+DE	Frankfurt	414

@@ -761,6 +761,10 @@ public class TrycorderService extends Service implements RecognitionListener {
             informActivity("statlist","");
             return;
         }
+        if(msg.contains("logs:")) {
+            informActivity("logslist",msg.substring(5));
+            return;
+        }
         if(msg.contains("server ok")) {
             playsound(R.raw.computerbeep_39);
             return;

@@ -14,6 +14,9 @@ sqlite3 /home/bin/tryserver.sqlite "select android,count() from trycorder group 
 
 sqlite3 /home/bin/tryserver.sqlite "select tryversion,count() from trycorder group by tryversion order by tryversion" >tryversion.txt
 
+cat tryandroid.txt
+cat tryversion.txt
+echo ""
 echo "Distinct trycorders : " `wc -l trycorders.txt`
 echo "Distinct country : " `wc -l trycountry.txt`
 echo "Distinct state : " `wc -l trystate.txt`
@@ -22,6 +25,4 @@ echo "Distinct models : " `wc -l trymodel.txt`
 echo "Distinct android : " `wc -l tryandroid.txt`
 echo "Distinct tryversion : " `wc -l tryversion.txt`
 
-cat tryandroid.txt
-cat tryversion.txt
 

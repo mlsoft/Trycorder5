@@ -3302,6 +3302,13 @@ public class TrycorderFragment extends Fragment
         }
     }
 
+    // called when the service receive a logs from network
+    public void displaylogs(String msg) {
+        mTextstatus_top.setText(msg);
+        say("Logs: " + msg);
+        saychat(msg);
+    }
+
     // ====================================================================================
     // client part
 

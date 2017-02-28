@@ -12,6 +12,7 @@ Apopa	1
 Ar-Ribat	1
 Arkhangelsk	1
 Arnhem	1
+Arvika	1
 Assen	1
 Baar	1
 Balanga	1
@@ -24,11 +25,11 @@ Berea	1
 Bilbao	1
 Bologna	1
 Borj Louizir	1
-Bremen	1
 Bremerhaven	1
 Brescia	1
 Brest	1
 Brugg	1
+Bucaramanga	1
 București	1
 Budaörs	1
 Bukoba	1
@@ -46,7 +47,7 @@ Ciudad Madero	1
 Cleveland	1
 Clonsilla	1
 Cluj-Napoca	1
-Copenhagen	1
+Colombo	1
 Dakar	1
 Dibrugarh	1
 Dnepropetrovsk	1
@@ -54,7 +55,9 @@ Dnipropetrovs  k	1
 Dunedin	1
 Dunker	1
 Edmonton	1
+Enterprise	1
 Erbil	1
+Eschborn	1
 Espoo	1
 Exeter	1
 Faisalabad	1
@@ -66,9 +69,9 @@ Fatih	1
 Fortaleza	1
 Franco	1
 Gdańsk	1
+Genoa	1
 Gera	1
 Glasgow	1
-Gothenburg	1
 Graz	1
 Groningen	1
 Guatemala City	1
@@ -77,12 +80,14 @@ Győr	1
 Halifax	1
 Halkalı	1
 Halle (Saale)	1
+Hannover	1
 Hefei	1
 Helena	1
 Hermosillo	1
 Highlands Ranch	1
 Hong Kong	1
 Huechuraba	1
+Huntsville	1
 Ibn Badis	1
 Innsbruck	1
 Isfahan	1
@@ -94,7 +99,6 @@ Kaluga	1
 Kazan  	1
 Khwaeng Huai Khwang	1
 Kingston	1
-Kladno	1
 Konya	1
 Krakow	1
 Kraków	1
@@ -111,7 +115,6 @@ Lublin	1
 Luxembourg	1
 Lübeck	1
 Maastricht	1
-Mainz	1
 Majdanek	1
 Manama	1
 Maringá	1
@@ -126,9 +129,9 @@ Middelburg	1
 Minsk	1
 Mizque	1
 Modena	1
+Moncton	1
 Monroe	1
 Monrovia	1
-Montauban	1
 Morón	1
 Munro	1
 Nador	1
@@ -174,7 +177,6 @@ Rocky Mount	1
 Roskilde	1
 Rostock	1
 Rostov	1
-Rostov-on-Don	1
 Rzeszow	1
 Saarbrücken	1
 Saint Cloud	1
@@ -189,12 +191,13 @@ Sandefjord	1
 Sandton	1
 Santa Cruz de la Sierra	1
 Santa Rosa	1
-Santo Domingo	1
 Saratov	1
 Saskatoon	1
+Schwerin	1
 Seoul	1
 Sheffield	1
 Shijiazhuang	1
+Sioux Falls	1
 Slidell	1
 Slobozia	1
 South Jakarta	1
@@ -217,7 +220,6 @@ Tolyatti	1
 Tourcoing	1
 Trieste	1
 Trondheim	1
-Tulsa	1
 Turgutlu	1
 Törökbálint	1
 Ukrainka	1
@@ -230,6 +232,7 @@ Venlo	1
 Veszprém	1
 Viciebsk	1
 Vize	1
+Vladivostok	1
 Vologda	1
 Västerås	1
 Waihi	1
@@ -258,13 +261,12 @@ Antwerpen	2
 Bengaluru	2
 Beograd	2
 Białystok	2
-Bogotá	2
 Bradley Stoke	2
+Bremen	2
 Bruxelles	2
 Cagliari	2
 Campinas	2
 Canberra	2
-Cardiff	2
 Cebu City	2
 Charlotte	2
 Chennai	2
@@ -272,12 +274,14 @@ Chiang Mai	2
 Cincinnati	2
 Coeur d  Alene	2
 Coimbatore	2
+Copenhagen	2
 Dar es Salaam	2
 Dartmouth	2
 Donetsk	2
 Eindhoven	2
 Fes	2
 Galați	2
+Gothenburg	2
 Greenville	2
 Grumolo delle Abbadesse	2
 Guadalajara	2
@@ -294,6 +298,7 @@ Jerusalem	2
 Kaunas	2
 Kharkiv	2
 Khimki	2
+Kladno	2
 Kyiv	2
 L  viv	2
 Lexington	2
@@ -302,8 +307,10 @@ Ludhiana	2
 Luxembourg District	2
 Lviv	2
 Maidenhead	2
+Mainz	2
 Milwaukee	2
 Monclova	2
+Montauban	2
 Montevideo	2
 Mount Laurel	2
 Mykolaiv	2
@@ -317,16 +324,17 @@ Pitești	2
 Podgorica	2
 Poltava	2
 Potsdam	2
-Poznan	2
 Raahe	2
 Rajkot	2
 Riga	2
 Rosh Haayin	2
+Rostov-on-Don	2
 Rouen	2
 Rugby	2
 Sa	2
 Saint John	2
 Sankt-Peterburg	2
+Santo Domingo	2
 Sarajevo	2
 Seongnam-si	2
 Sofia	2
@@ -334,6 +342,7 @@ Tampere	2
 Teulada	2
 Tizi	2
 Toledo	2
+Tulsa	2
 Ufa	2
 Usak	2
 Williamsport	2
@@ -350,10 +359,12 @@ Almere	3
 Alphen aan den Rijn	3
 Amanzimtoti	3
 Amiens	3
+Bogotá	3
 Bordeaux	3
 Bratislava	3
 Cairo	3
 Cape Town	3
+Cardiff	3
 Chiyoda	3
 Erfurt	3
 Fernando De La Mora	3
@@ -379,6 +390,7 @@ Nice	3
 Petah Tikva	3
 Porto	3
 Porto Alegre	3
+Poznan	3
 Pozuelo de Alarcón	3
 Quezon City	3
 Randburg	3
@@ -388,7 +400,6 @@ Riyadh	3
 Ružinov	3
 Samara	3
 San Isidro	3
-Shanghai	3
 Sion	3
 Tel Aviv-Yafo	3
 Thessaloniki	3
@@ -397,13 +408,11 @@ Turin	3
 València	3
 Vilnius	3
 Whitestone	3
-Wien	3
 Wien-Donaustadt	3
 Wrocław	3
 Zaventem	3
 Zenica	3
 Amadora	4
-Beaverton	4
 Belfast	4
 Belgrade	4
 Blagnac	4
@@ -418,7 +427,6 @@ Hot Springs	4
 Ikeja	4
 Katowice	4
 Kochi	4
-Kuala Lumpur	4
 Kyzyl	4
 Köln	4
 Linz	4
@@ -429,21 +437,22 @@ Petaling Jaya	4
 Santiago	4
 Schaerbeek	4
 Schwaz	4
+Shanghai	4
 Skopje	4
 Valencia	4
-Vigo	4
 Wellington	4
-	5
+Wien	4
 Ahmedabad	5
 Ann Arbor	5
 Auckland	5
-Bangkok	5
+Beaverton	5
 Catania	5
 Den Haag	5
 Dhaka	5
 Ho Chi Minh City	5
 Hyderabad	5
 Karlskrona	5
+Kuala Lumpur	5
 Las Vegas	5
 Lodz	5
 Malmö	5
@@ -462,6 +471,8 @@ Tijuana	5
 Tunis	5
 Turku	5
 Utrecht	5
+Vigo	5
+	6
 Alcobendas	6
 Barcelona	6
 Beijing	6
@@ -470,16 +481,15 @@ Bujumbura	6
 Des Moines	6
 Durham	6
 Istanbul	6
-Kansas City	6
 Madison	6
 Manchester	6
 Marseille	6
 Melbourne	6
-North Ryde	6
 Richardson	6
 Rio de Janeiro	6
 Tehran	6
 Tucson	6
+Bangkok	7
 Brasília	7
 Brisbane	7
 Broomfield	7
@@ -489,103 +499,105 @@ Dresden	7
 Dublin	7
 Düsseldorf	7
 Fornebu	7
+Kansas City	7
 Kazan	7
 Mexico City	7
 Nashville	7
+North Ryde	7
 Rochdale	7
 Rome	7
-Rotterdam	7
 Roubaix	7
 Cambridge	8
-Darmstadt	8
 Davao City	8
 Dịch Vọng	8
 Kiev	8
 Moscow	8
 New Delhi	8
 Pittsburgh	8
+Rotterdam	8
 St. Louis	8
 Albany	9
 Baghdad	9
-Baltimore	9
 Bourguignon-sous-Montbavin	9
+Darmstadt	9
 Herndon	9
 Kiel	9
-Tampa	9
+Baltimore	10
 Birmingham	10
 Bucharest	10
 Minneapolis	10
 Oslo	10
 Phoenix	10
 Shah Alam	10
-Stockholm	10
 Strasbourg	10
-Denver	11
+Tampa	10
 Louisville	11
 Lyon	11
 Rennes	11
+Stockholm	11
 Sydney	11
-Vancouver	11
+Denver	12
 Dimashq	12
 Lagos	12
-Lisbon	12
 Mumbai	12
 Portland	12
-Southfield	12
+Vancouver	12
 Zagreb	12
 Budapest	13
+Lisbon	13
 Oak Park	13
 Oldenburg	13
-Washington	13
+Southfield	13
 Zürich	13
 Athens	14
-Atlanta	14
 Bangalore	14
 Brussels	14
 Mandaluyong	14
 Prague	14
 Tustin	14
+Washington	14
 Columbus	15
-Stillwater	15
 Zurich	15
+Atlanta	16
 Camden Town	16
-Indianapolis	16
 Roma	16
+Stillwater	16
 Chicago	17
 São Paulo	17
-Montreal	19
+Indianapolis	18
 São João Del Rei	19
 Accra	20
 Bonn	20
+Montreal	20
 Orlando	20
 Rock Hill	22
 Karlsruhe	23
 Philadelphia	23
 Salt Lake City	25
-Buenos Aires	26
-Moskva	27
+Buenos Aires	28
+Moskva	28
 Leipzig	31
-Stuttgart	31
-Rabat	32
-Warsaw	33
+Stuttgart	32
 Hamburg	34
-Seattle	34
-München	35
+Rabat	34
+Seattle	35
+Warsaw	35
 Issy-les-Moulineaux	36
-Nuremberg	37
+München	36
 Toronto	38
-Amsterdam	39
+Nuremberg	39
+Amsterdam	40
 Newark	42
-Vienna	42
+Vienna	43
 Munich	49
-Hanover	50
 Dallas	51
-Milan	57
+Hanover	54
 Madrid	58
+Milan	59
 London	82
-Los Angeles	88
-Cologne	105
+Los Angeles	90
+Cologne	107
 Paris	110
-Berlin	157
+Berlin	160
 New York	313
-Frankfurt	393
+Frankfurt	414

@@ -93,6 +93,9 @@ public class TrycorderActivity extends FragmentActivity implements
             } else if (theEvent.equals("statlist")) {
                 // refresh the statistics
                 if(currentMode==1) mTrycorderFragment.askstatlist();
+            } else if (theEvent.equals("logslist")) {
+                // refresh the statistics
+                if(currentMode==1) mTrycorderFragment.displaylogs(theText);
             } else if (theEvent.equals("text")) {
                 // text received
                 if(currentMode==1) mTrycorderFragment.displaytext(theText);
