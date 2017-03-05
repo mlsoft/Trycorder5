@@ -196,6 +196,11 @@ public class TrycorderFragment extends Fragment
 
     // the walkie layout on sensor screen
     private LinearLayout mChatLayout;
+    private Button mChatDemoButton;
+    private Button mChatLogsButton;
+    private Button mChatCityButton;
+    private Button mChatVersButton;
+    private Button mChatListButton;
     private Button mChatSendButton;
     private EditText mChatText;
     private TextView mChatDisplay;
@@ -1589,7 +1594,55 @@ public class TrycorderFragment extends Fragment
             }
         });
 
+        mChatDemoButton = (Button) view.findViewById(R.id.chat_demo_button);
+        mChatDemoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendlogs("demo");
+            }
+        });
+
+        mChatLogsButton = (Button) view.findViewById(R.id.chat_logs_button);
+        mChatLogsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendlogs("logs");
+            }
+        });
+
+        mChatCityButton = (Button) view.findViewById(R.id.chat_city_button);
+        mChatCityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendlogs("citys");
+            }
+        });
+
+        mChatVersButton = (Button) view.findViewById(R.id.chat_vers_button);
+        mChatVersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendlogs("tryversions");
+                sendlogs("androids");
+            }
+        });
+
+        mChatListButton = (Button) view.findViewById(R.id.chat_list_button);
+        mChatListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendlogs("listcmds");
+            }
+        });
+
         return view;
+    }
+
+    // commands buttons demo,logs,city,vers,list
+    private void sendlogs(String text) {
+        buttonsound();
+        sendtext(text);
+        saychat(text);
     }
 
     @Override

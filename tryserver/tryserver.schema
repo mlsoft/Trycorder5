@@ -1,11 +1,8 @@
-
-CREATE TABLE dbipcity(fromip,toip,country,state,city,fromaddr,toaddr);
-CREATE INDEX fromip on dbipcity (fromip);
-CREATE TABLE trycorder(ipaddr,name,android,tryversion,localaddr,connection INTEGER,country,city);
+CREATE TABLE trycorder(ipaddr,name,android,tryversion,localaddr,connection INTEGER,country,city, state);
 CREATE INDEX ipaddr on trycorder (ipaddr);
 CREATE INDEX name on trycorder(name);
 CREATE UNIQUE INDEX ipname on trycorder (ipaddr,name);
-CREATE INDEX fromaddr on dbipcity (fromaddr);
 CREATE INDEX localaddr on trycorder (localaddr);
-CREATE INDEX country on dbipcity (country);
-CREATE INDEX city on dbipcity (city);
+CREATE TABLE dbipcity(fromip,toip,country,state,city,fromaddr,toaddr);
+CREATE INDEX fromip on dbipcity (fromip);
+CREATE INDEX fromaddr on dbipcity (fromaddr);

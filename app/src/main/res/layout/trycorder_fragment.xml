@@ -369,7 +369,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="33"
+                android:layout_weight="40"
                 android:background="@android:color/black"
                 android:orientation="vertical">
 
@@ -452,7 +452,96 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/chat_demo_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_green"
+                                    android:maxLines="1"
+                                    android:text="Demo"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal" />
+
+                                <Button
+                                    android:id="@+id/chat_logs_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_green"
+                                    android:maxLines="1"
+                                    android:text="Logs"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal" />
+
+                                <Button
+                                    android:id="@+id/chat_city_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_green"
+                                    android:maxLines="1"
+                                    android:text="City"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal" />
+
+                                <Button
+                                    android:id="@+id/chat_vers_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_green"
+                                    android:maxLines="1"
+                                    android:text="Ver."
+                                    android:textSize="18sp"
+                                    android:textStyle="normal" />
+
+                                <Button
+                                    android:id="@+id/chat_list_button"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/button_margin"
+                                    android:layout_marginEnd="@dimen/button_margin"
+                                    android:layout_marginStart="@dimen/button_margin"
+                                    android:layout_marginTop="@dimen/button_margin"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/trekbutton_indigo"
+                                    android:maxLines="1"
+                                    android:text="List"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:orientation="horizontal">
 
                                 <EditText
@@ -460,12 +549,13 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="8"
-                                    android:paddingLeft="4dp"
-                                    android:paddingRight="4dp"
                                     android:background="@android:color/white"
                                     android:gravity="top"
                                     android:hint="Command/Message"
                                     android:imeOptions="actionDone|actionSend"
+                                    android:maxLines="1"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
                                     android:textColor="@android:color/black"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
@@ -491,7 +581,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="5"
+                                android:layout_weight="4"
                                 android:orientation="horizontal">
 
                                 <ScrollView
@@ -718,7 +808,7 @@
                 android:id="@+id/buttons_layout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="17"
+                android:layout_weight="10"
                 android:background="@android:color/black"
                 android:orientation="vertical">
 
@@ -736,7 +826,7 @@
                     <Button
                         android:id="@+id/magnetic_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -748,7 +838,7 @@
                     <Button
                         android:id="@+id/orientation_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -760,7 +850,7 @@
                     <Button
                         android:id="@+id/gravity_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -772,7 +862,7 @@
                     <Button
                         android:id="@+id/temperature_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -784,7 +874,7 @@
                     <Button
                         android:id="@+id/sensoroff_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -810,7 +900,7 @@
                     <Button
                         android:id="@+id/opencomm_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -821,7 +911,7 @@
                     <Button
                         android:id="@+id/closecomm_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -832,7 +922,7 @@
                     <Button
                         android:id="@+id/intercomm_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -843,7 +933,7 @@
                     <Button
                         android:id="@+id/chatcomm_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -867,7 +957,7 @@
                     <Button
                         android:id="@+id/shield_up_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -878,7 +968,7 @@
                     <Button
                         android:id="@+id/shield_down_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -902,7 +992,7 @@
                     <Button
                         android:id="@+id/phaser_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -913,7 +1003,7 @@
                     <Button
                         android:id="@+id/yellowalert_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -924,7 +1014,7 @@
                     <Button
                         android:id="@+id/redalert_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -935,7 +1025,7 @@
                     <Button
                         android:id="@+id/torpedo_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -959,7 +1049,7 @@
                     <Button
                         android:id="@+id/transport_out_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -970,7 +1060,7 @@
                     <Button
                         android:id="@+id/transport_in_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -994,7 +1084,7 @@
                     <Button
                         android:id="@+id/tractor_push_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1005,7 +1095,7 @@
                     <Button
                         android:id="@+id/tractor_off_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1016,7 +1106,7 @@
                     <Button
                         android:id="@+id/tractor_pull_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1040,7 +1130,7 @@
                     <Button
                         android:id="@+id/motor_impulse_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1051,7 +1141,7 @@
                     <Button
                         android:id="@+id/motor_off_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1062,7 +1152,7 @@
                     <Button
                         android:id="@+id/motor_warp_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1086,7 +1176,7 @@
                     <Button
                         android:id="@+id/vieweron_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1098,7 +1188,7 @@
                     <Button
                         android:id="@+id/viewerfront_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1110,7 +1200,7 @@
                     <Button
                         android:id="@+id/vieweroff_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1122,7 +1212,7 @@
                     <Button
                         android:id="@+id/viewerphoto_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1147,7 +1237,7 @@
                     <Button
                         android:id="@+id/logsconsole_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1159,7 +1249,7 @@
                     <Button
                         android:id="@+id/logsinfo_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1171,7 +1261,7 @@
                     <Button
                         android:id="@+id/logsplans_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1183,7 +1273,7 @@
                     <Button
                         android:id="@+id/logssys_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1195,7 +1285,7 @@
                     <Button
                         android:id="@+id/logsstat_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1220,7 +1310,7 @@
                     <Button
                         android:id="@+id/mode_contact_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1232,7 +1322,7 @@
                     <Button
                         android:id="@+id/mode_product_button"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
@@ -1812,7 +1902,7 @@
                             <Button
                                 android:id="@+id/mode_photogal_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1828,7 +1918,7 @@
                             <Button
                                 android:id="@+id/mode_videogal_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1851,7 +1941,7 @@
                             <Button
                                 android:id="@+id/mode_sensor_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1867,7 +1957,7 @@
                             <Button
                                 android:id="@+id/mode_client_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1890,7 +1980,7 @@
                             <Button
                                 android:id="@+id/mode_vision_night_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1906,7 +1996,7 @@
                             <Button
                                 android:id="@+id/mode_vision_day_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1929,7 +2019,7 @@
                             <Button
                                 android:id="@+id/mode_desktop_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"
@@ -1945,7 +2035,7 @@
                             <Button
                                 android:id="@+id/mode_destruct_button"
                                 android:layout_width="0dp"
-                                android:layout_height="48dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="@dimen/button_margin"
                                 android:layout_marginEnd="@dimen/button_margin"

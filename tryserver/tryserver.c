@@ -223,6 +223,16 @@ static struct ConnClient *connclient[256];
 static int nbconnclient=0;
 
 void addconnclient(struct ConnClient *conn) {
+  // check if there is another identical connection, and replace it if true
+  for(int i=0; i<nbconnclient;++i) {
+    if(strcmp(connclient[i]->ipaddr,conn->ipaddr)==0 && strcmp(connclient[i]->tryname,conn->tryname)==0) {
+      close(connclient[i]->client_sock);
+      connclient[i]=conn;
+      publishlist();
+      return;
+    }
+  }
+  // add this connection to end of list
   if(nbconnclient>255) return;
   connclient[nbconnclient]=conn;
   nbconnclient++;
@@ -481,6 +491,17 @@ extern int getstattrycorders();
 extern int getstatcountrys();
 extern int getstatcitys();
 extern int getstatstates();
+extern int getstatmodels();
+extern int getstatandroids();
+extern int getstattryversions();
+
+extern int sendcityslist(int);
+extern int sendstateslist(int);
+extern int sendcountryslist(int);
+extern int sendtrycorderslist(int);
+extern int sendandroidslist(int);
+extern int sendtryversionslist(int);
+extern int sendlistcmdslist(int);
 
 /*
  * This will handle connection for each client
@@ -561,6 +582,9 @@ void *connection_handler(void *connvoid)
 		  int b=getstatcountrys();
 		  int c=getstatcitys();
 		  int d=getstatstates();
+		  int e=getstatmodels();
+		  int f=getstatandroids();
+		  int g=getstattryversions();
 		  sprintf(buf,"logs:nbtrycorders=%d\n",a);
 		  res=write(sock,buf,strlen(buf));
 		  sprintf(buf,"logs:nbcountrys=%d\n",b);
@@ -569,8 +593,49 @@ void *connection_handler(void *connvoid)
 		  res=write(sock,buf,strlen(buf));
 		  sprintf(buf,"logs:nbcitys=%d\n",c);
 		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"logs:nbmodels=%d\n",e);
+		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"logs:nbandroids=%d\n",f);
+		  res=write(sock,buf,strlen(buf));
+		  sprintf(buf,"logs:nbtryversions=%d\n",g);
+		  res=write(sock,buf,strlen(buf));
 		  // print to user
 		  sprintf(buf,"Sent Logs: %d,%d,%d,%d\n",a,b,c,d);
+		  say(buf);
+		} else if(strncmp(client_message,"citys",5)==0) {
+		  sendcityslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent Citys list\n");
+		  say(buf);
+		} else if(strncmp(client_message,"states",6)==0) {
+		  sendstateslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent States list\n");
+		  say(buf);
+		} else if(strncmp(client_message,"countrys",8)==0) {
+		  sendcountryslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent Countrys list\n");
+		  say(buf);
+		} else if(strncmp(client_message,"trycorders",10)==0) {
+		  sendtrycorderslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent Trycorders list\n");
+		  say(buf);
+		} else if(strncmp(client_message,"androids",8)==0) {
+		  sendandroidslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent Androids list\n");
+		  say(buf);
+		} else if(strncmp(client_message,"tryversions",11)==0) {
+		  sendtryversionslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent Tryversions list\n");
+		  say(buf);
+		} else if(strncmp(client_message,"listcmds",8)==0) {
+		  sendlistcmdslist(sock);
+		  // send statistics to same client
+		  sprintf(buf,"Sent ListCmds list\n");
 		  say(buf);
 		} else {
 		  // send command back to all clients except the sender
@@ -638,8 +703,8 @@ int i;
 int addr[4];
 char buf[128];
     strcpy(toname,fromname);
-    toaver[0]=0;
-    totver[0]=0;
+    strcpy(toaver,"4.1.0");
+    strcpy(totver,"5.0.2");
     strcpy(buf,fromname);
     s=buf;
     // name part
@@ -823,11 +888,6 @@ int res;
 static char countvalue[32];
 static int countloop=0;
 
-static int nbtry=0;
-static int nbcou=0;
-static int nbcit=0;
-static int nbsta=0;
-
 int count_callback(void *notused,int nbf, char **fields, char **names) {
     countvalue[0]=0;
     if(nbf<1) return(-1);
@@ -840,6 +900,7 @@ int count_callback(void *notused,int nbf, char **fields, char **names) {
 int getstattrycorders() {
 char *errmsg=0;
 int res;
+int nbtry;
     // try to open the database
     res=sqlite3_open(tryserverfile,&db);
     if(res!=SQLITE_OK) {
@@ -847,7 +908,6 @@ int res;
       sqlite3_close(db);
       return(-1);
     }
-
     // return nb of trycorders()
     countloop=0;
     sprintf(selectbuf,"SELECT count() from trycorder;");
@@ -858,7 +918,21 @@ int res;
     } else {
       nbtry=atoi(countvalue);
     }
-    
+    sqlite3_close(db);
+    return(nbtry);
+}
+
+int getstatcountrys() {
+char *errmsg=0;
+int res;
+int nbcou;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
     // return nb of countrys
     countloop=0;
     sprintf(selectbuf,"SELECT count() from trycorder group by country;");
@@ -869,7 +943,21 @@ int res;
     } else {
       nbcou=countloop;
     }
-    
+    sqlite3_close(db);
+    return(nbcou);
+}
+
+int getstatcitys() {
+char *errmsg=0;
+int res;
+int nbcit;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
     // return nb of citys
     countloop=0;
     sprintf(selectbuf,"SELECT count() from trycorder group by city;");
@@ -880,7 +968,21 @@ int res;
     } else {
       nbcit=countloop;
     }
-    
+    sqlite3_close(db);
+    return(nbcit);
+}
+
+int getstatstates() {
+char *errmsg=0;
+int res;
+int nbsta;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
     // return nb of states
     countloop=0;
     sprintf(selectbuf,"SELECT count() from trycorder group by state;");
@@ -891,19 +993,288 @@ int res;
     } else {
       nbsta=countloop;
     }
-    
     sqlite3_close(db);
-    return(nbtry);
-}
-
-int getstatcountrys() {
-    return(nbcou);
-}
-
-int getstatcitys() {
-    return(nbcit);
-}
-
-int getstatstates() {
     return(nbsta);
+}
+
+int getstatmodels() {
+char *errmsg=0;
+int res;
+int nbmod;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder group by name;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nbmod=countloop;
+    }
+    sqlite3_close(db);
+    return(nbmod);
+}
+
+int getstatandroids() {
+char *errmsg=0;
+int res;
+int nband;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder group by android;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nband=countloop;
+    }
+    sqlite3_close(db);
+    return(nband);
+}
+
+int getstattryversions() {
+char *errmsg=0;
+int res;
+int nbtve;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    countloop=0;
+    sprintf(selectbuf,"SELECT count() from trycorder group by tryversion;");
+    res=sqlite3_exec(db,selectbuf,count_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nbtve=countloop;
+    }
+    sqlite3_close(db);
+    return(nbtve);
+}
+
+// ===========================================================================================================
+
+static char listbuf[256];
+static int listloop=0;
+static int listsock=0;
+
+int list_callback(void *notused,int nbf, char **fields, char **names) {
+    if(nbf<2) return(-1);
+    sprintf(listbuf,"logs:%s=%s\n",fields[0],fields[1]);
+    write(listsock,listbuf,strlen(listbuf));
+    listloop++;
+    return(0);
+}
+
+int sendcityslist(int sock) {
+char *errmsg=0;
+int res;
+int nblin;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    listloop=0;
+    listsock=sock;
+    sprintf(selectbuf,"SELECT city,count() from trycorder group by city order by count();");
+    res=sqlite3_exec(db,selectbuf,list_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nblin=listloop;
+    }
+    sqlite3_close(db);
+    return(nblin);
+}
+
+int sendstateslist(int sock) {
+char *errmsg=0;
+int res;
+int nblin;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    listloop=0;
+    listsock=sock;
+    sprintf(selectbuf,"SELECT state,count() from trycorder group by state order by count();");
+    res=sqlite3_exec(db,selectbuf,list_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nblin=listloop;
+    }
+    sqlite3_close(db);
+    return(nblin);
+}
+
+int sendcountryslist(int sock) {
+char *errmsg=0;
+int res;
+int nblin;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    listloop=0;
+    listsock=sock;
+    sprintf(selectbuf,"SELECT country,count() from trycorder group by country order by count();");
+    res=sqlite3_exec(db,selectbuf,list_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nblin=listloop;
+    }
+    sqlite3_close(db);
+    return(nblin);
+}
+
+int sendtrycorderslist(int sock) {
+char *errmsg=0;
+int res;
+int nblin;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    listloop=0;
+    listsock=sock;
+    sprintf(selectbuf,"SELECT name,count() from trycorder group by name order by count();");
+    res=sqlite3_exec(db,selectbuf,list_callback,0,&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nblin=listloop;
+    }
+    sqlite3_close(db);
+    return(nblin);
+  
+  
+}
+
+int vers_callback(void *dataname,int nbf, char **fields, char **names) {
+    if(nbf<2) return(-1);
+    sprintf(listbuf,"logs:%s:%s=%s\n",(char *)dataname,fields[0],fields[1]);
+    write(listsock,listbuf,strlen(listbuf));
+    listloop++;
+    return(0);
+}
+
+int sendandroidslist(int sock) {
+char *errmsg=0;
+int res;
+int nblin;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    listloop=0;
+    listsock=sock;
+    sprintf(selectbuf,"SELECT android,count() from trycorder group by android order by android;");
+    res=sqlite3_exec(db,selectbuf,vers_callback,(void *)"Android",&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nblin=listloop;
+    }
+    sqlite3_close(db);
+    return(nblin);
+  
+  
+}
+
+int sendtryversionslist(int sock) {
+char *errmsg=0;
+int res;
+int nblin;
+    // try to open the database
+    res=sqlite3_open(tryserverfile,&db);
+    if(res!=SQLITE_OK) {
+      printf("cant open database: %s\n",sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(-1);
+    }
+    // return nb of states
+    listloop=0;
+    listsock=sock;
+    sprintf(selectbuf,"SELECT tryversion,count() from trycorder group by tryversion order by tryversion;");
+    res=sqlite3_exec(db,selectbuf,vers_callback,(void *)"Tryversion",&errmsg);
+    if( res!=SQLITE_OK ){
+      fprintf(stdout, "SQL SELECT error: %s\n", errmsg);
+      sqlite3_free(errmsg);
+    } else {
+      nblin=listloop;
+    }
+    sqlite3_close(db);
+    return(nblin);
+  
+  
+}
+
+static char writecmdbuf[256];
+
+void writecmdsock(int sock, char *cmd) {
+  sprintf(writecmdbuf,"logs:%s\n",cmd);
+  write(sock,writecmdbuf,strlen(writecmdbuf));
+}
+
+int sendlistcmdslist(int sock) {
+    writecmdsock(sock,"Command=trycorders");
+    writecmdsock(sock,"Command=tryversions");
+    writecmdsock(sock,"Command=androids");
+    writecmdsock(sock,"Command=countrys");
+    writecmdsock(sock,"Command=states");
+    writecmdsock(sock,"Command=citys");
+    writecmdsock(sock,"Command=logs");
+    writecmdsock(sock,"Command=stats");
+    // header
+    writecmdsock(sock,"== trycorders connected ==");
+    writecmdsock(sock,"==  To get stats About  ==");
+    writecmdsock(sock,"==   LIST-OF-COMMANDS   ==");
+    return(0);
 }

@@ -172,7 +172,7 @@ public class TrycorderService extends Service implements RecognitionListener {
         autoBoot = sharedPref.getBoolean("pref_key_auto_boot", false);
         autoStop = sharedPref.getBoolean("pref_key_auto_stop", true);
         debugMode = sharedPref.getBoolean("pref_key_debug_mode", false);
-        debugAddr = sharedPref.getString("pref_key_debug_addr", "192.168.0.184");
+        debugAddr = sharedPref.getString("pref_key_debug_addr", "192.168.3.101");
 
         if(deviceName.equals("Trycorder")) {
             deviceName=mFetcher.fetch_device_name();
