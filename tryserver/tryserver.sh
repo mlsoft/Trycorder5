@@ -3,7 +3,7 @@ killall tryserver
 
 while true
 do
-	tryserver || echo wait
+	/home/bin/tryserver || echo wait
 	sleep 5
 done
 

@@ -135,7 +135,7 @@ public class TrycorderFragment extends Fragment
     // ======================================================================================
 
     public static final int SERVERPORT = 1701;  // Network Common Channel - NCC-1701
-    Handler mHandler=new Handler();
+    Handler mHandler = new Handler();
 
     // handles to camera and textureview
     private Camera mCamera = null;
@@ -800,8 +800,8 @@ public class TrycorderFragment extends Fragment
         mFireDirectionButton.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
-                mFireDirectionText.setText("" + (progresValue-50));
-                mFirSensorView.setdirection(progresValue-50);
+                mFireDirectionText.setText("" + (progresValue - 50));
+                mFirSensorView.setdirection(progresValue - 50);
             }
 
             @Override
@@ -876,28 +876,28 @@ public class TrycorderFragment extends Fragment
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
                 progress = progresValue;
                 mTranspSeekTextup.setText("Transport 1: " + progress + "/" + seekBar.getMax());
-                if(mode==2) mTraSensorView.setposition(progress);
-                else mTraSensorView.setposition(255-progress);
+                if (mode == 2) mTraSensorView.setposition(progress);
+                else mTraSensorView.setposition(255 - progress);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                if(progress==0) {
+                if (progress == 0) {
                     playsound(R.raw.beam1a);
                     mTraSensorView.setmode(2);
-                    mode=2;
+                    mode = 2;
                 } else {
                     playsound(R.raw.beam1b);
                     mTraSensorView.setmode(1);
-                    mode=1;
+                    mode = 1;
                 }
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if(mode==2) mTraSensorView.setposition(progress);
-                else mTraSensorView.setposition(255-progress);
-                if(progress==0 || progress==255) {
+                if (mode == 2) mTraSensorView.setposition(progress);
+                else mTraSensorView.setposition(255 - progress);
+                if (progress == 0 || progress == 255) {
                     mTranspSeekTextdown.setText("Transport 1 Complete: " + progress + "/" + seekBar.getMax());
                 } else {
                     mTranspSeekTextdown.setText("Transport 1 Failed: " + progress + "/" + seekBar.getMax());
@@ -914,28 +914,28 @@ public class TrycorderFragment extends Fragment
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
                 progress = progresValue;
                 mTranspSeekTextup.setText("Transport 2: " + progress + "/" + seekBar.getMax());
-                if(mode==2) mTraSensorView.setposition(progress);
-                else mTraSensorView.setposition(255-progress);
+                if (mode == 2) mTraSensorView.setposition(progress);
+                else mTraSensorView.setposition(255 - progress);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                if(progress==0) {
+                if (progress == 0) {
                     playsound(R.raw.beam1a);
                     mTraSensorView.setmode(2);
-                    mode=2;
+                    mode = 2;
                 } else {
                     playsound(R.raw.beam1b);
                     mTraSensorView.setmode(1);
-                    mode=1;
+                    mode = 1;
                 }
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if(mode==2) mTraSensorView.setposition(progress);
-                else mTraSensorView.setposition(255-progress);
-                if(progress==0 || progress==255) {
+                if (mode == 2) mTraSensorView.setposition(progress);
+                else mTraSensorView.setposition(255 - progress);
+                if (progress == 0 || progress == 255) {
                     mTranspSeekTextdown.setText("Transport 2 Complete: " + progress + "/" + seekBar.getMax());
                 } else {
                     mTranspSeekTextdown.setText("Transport 2 Failed: " + progress + "/" + seekBar.getMax());
@@ -952,28 +952,28 @@ public class TrycorderFragment extends Fragment
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
                 progress = progresValue;
                 mTranspSeekTextup.setText("Transport 3: " + progress + "/" + seekBar.getMax());
-                if(mode==2) mTraSensorView.setposition(progress);
-                else mTraSensorView.setposition(255-progress);
+                if (mode == 2) mTraSensorView.setposition(progress);
+                else mTraSensorView.setposition(255 - progress);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                if(progress==0) {
+                if (progress == 0) {
                     playsound(R.raw.beam1a);
                     mTraSensorView.setmode(2);
-                    mode=2;
+                    mode = 2;
                 } else {
                     playsound(R.raw.beam1b);
                     mTraSensorView.setmode(1);
-                    mode=1;
+                    mode = 1;
                 }
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                if(mode==2) mTraSensorView.setposition(progress);
-                else mTraSensorView.setposition(255-progress);
-                if(progress==0 || progress==255) {
+                if (mode == 2) mTraSensorView.setposition(progress);
+                else mTraSensorView.setposition(255 - progress);
+                if (progress == 0 || progress == 255) {
                     mTranspSeekTextdown.setText("Transport 3 Complete: " + progress + "/" + seekBar.getMax());
                 } else {
                     mTranspSeekTextdown.setText("Transport 3 Failed: " + progress + "/" + seekBar.getMax());
@@ -1032,8 +1032,8 @@ public class TrycorderFragment extends Fragment
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // do something, the isChecked will be
                 // true if the switch is in the On position
-                if(mButtonsmode==6) mTrbSensorView.setrotate(isChecked);
-                if(mButtonsmode==3) mShiSensorView.setrotate(isChecked);
+                if (mButtonsmode == 6) mTrbSensorView.setrotate(isChecked);
+                if (mButtonsmode == 3) mShiSensorView.setrotate(isChecked);
             }
         });
 
@@ -1041,8 +1041,8 @@ public class TrycorderFragment extends Fragment
         mTractorFreqButton.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
-                if(mButtonsmode==6) mTrbSensorView.setfreq(progresValue);
-                if(mButtonsmode==3) mShiSensorView.setfreq(progresValue);
+                if (mButtonsmode == 6) mTrbSensorView.setfreq(progresValue);
+                if (mButtonsmode == 3) mShiSensorView.setfreq(progresValue);
             }
 
             @Override
@@ -1058,8 +1058,8 @@ public class TrycorderFragment extends Fragment
         mTractorForceButton.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
-                if(mButtonsmode==6) mTrbSensorView.setforce(progresValue);
-                if(mButtonsmode==3) mShiSensorView.setforce(progresValue);
+                if (mButtonsmode == 6) mTrbSensorView.setforce(progresValue);
+                if (mButtonsmode == 3) mShiSensorView.setforce(progresValue);
             }
 
             @Override
@@ -1391,7 +1391,7 @@ public class TrycorderFragment extends Fragment
         mLogsSys.setMovementMethod(new ScrollingMovementMethod());
 
         mLogsStat = new LogsStatView(getContext());
-        mViewerLayout.addView(mLogsStat,tlayoutParams);
+        mViewerLayout.addView(mLogsStat, tlayoutParams);
 
         // frame for motor animations
         mViewerAnimate = (FrameLayout) view.findViewById(R.id.viewer_animate);
@@ -1623,7 +1623,7 @@ public class TrycorderFragment extends Fragment
             @Override
             public void onClick(View view) {
                 sendlogs("tryversions");
-                sendlogs("androids");
+                //sendlogs("androids");
             }
         });
 
@@ -1746,7 +1746,7 @@ public class TrycorderFragment extends Fragment
 
     // =====================================================================================
 
-    private boolean mBound=false;
+    private boolean mBound = false;
     private TrycorderService mTrycorderService;
     private TrycorderService.TryBinder mTryBinder;
 
@@ -1767,7 +1767,7 @@ public class TrycorderFragment extends Fragment
     public void onStop() {
         super.onStop();
         unbindTrycorderService();
-        if(autoStop) stopTrycorderService();
+        if (autoStop) stopTrycorderService();
     }
 
     public void unbindTrycorderService() {
@@ -1779,7 +1779,9 @@ public class TrycorderFragment extends Fragment
     }
 
 
-    /** Defines callbacks for service binding, passed to bindService() */
+    /**
+     * Defines callbacks for service binding, passed to bindService()
+     */
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
@@ -1801,7 +1803,7 @@ public class TrycorderFragment extends Fragment
     // ask the service to give us the list of ip/names
 
     public void askscanlist() {
-        if(mBound) {
+        if (mBound) {
             mIpList = mTrycorderService.getiplist();
             mNameList = mTrycorderService.getnamelist();
             mIpRemote = mTrycorderService.getipremote();
@@ -1816,21 +1818,21 @@ public class TrycorderFragment extends Fragment
     private int mNbStates;
 
     public void askstatlist() {
-        if(mBound) {
-            mNbTrycorders=mTrycorderService.getnbtrycorders();
-            mNbCountrys=mTrycorderService.getnbcountrys();
-            mNbCitys=mTrycorderService.getnbcitys();
-            mNbStates=mTrycorderService.getnbstates();
+        if (mBound) {
+            mNbTrycorders = mTrycorderService.getnbtrycorders();
+            mNbCountrys = mTrycorderService.getnbcountrys();
+            mNbCitys = mTrycorderService.getnbcitys();
+            mNbStates = mTrycorderService.getnbstates();
             saystats();
         }
     }
 
     // todo put the stats in screen widgets
     private void saystats() {
-        saychat("Trycorders="+String.valueOf(mNbTrycorders));
-        saychat("Countrys="+String.valueOf(mNbCountrys));
-        saychat("States="+String.valueOf(mNbStates));
-        saychat("Citys="+String.valueOf(mNbCitys));
+        saychat("Trycorders=" + String.valueOf(mNbTrycorders));
+        saychat("Countrys=" + String.valueOf(mNbCountrys));
+        saychat("States=" + String.valueOf(mNbStates));
+        saychat("Citys=" + String.valueOf(mNbCitys));
     }
 
     // =====================================================================================
@@ -1857,8 +1859,8 @@ public class TrycorderFragment extends Fragment
         debugAddr = sharedPref.getString("pref_key_debug_addr", "192.168.0.184");
 
         // update device name for a device name from system
-        if(deviceName.equals("Trycorder")) {
-            deviceName=mFetcher.fetch_device_name();
+        if (deviceName.equals("Trycorder")) {
+            deviceName = mFetcher.fetch_device_name();
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString("pref_key_device_name", deviceName);
             editor.commit();
@@ -1919,17 +1921,17 @@ public class TrycorderFragment extends Fragment
         switch (planno) {
             case 0:
                 mStarshipPlans.setImageResource(R.drawable.starship_view);
-                animation = AnimationUtils.loadAnimation(getContext(),R.anim.clockwise);
+                animation = AnimationUtils.loadAnimation(getContext(), R.anim.clockwise);
                 mStarshipPlans.startAnimation(animation);
                 break;
             case 1:
                 mStarshipPlans.setImageResource(R.drawable.starship_build);
-                animation = AnimationUtils.loadAnimation(getContext(),R.anim.fadein);
+                animation = AnimationUtils.loadAnimation(getContext(), R.anim.fadein);
                 mStarshipPlans.startAnimation(animation);
                 break;
             case 2:
                 mStarshipPlans.setImageResource(R.drawable.starship_plan);
-                animation = AnimationUtils.loadAnimation(getContext(),R.anim.slidein);
+                animation = AnimationUtils.loadAnimation(getContext(), R.anim.slidein);
                 mStarshipPlans.startAnimation(animation);
                 break;
             case 3:
@@ -1939,17 +1941,17 @@ public class TrycorderFragment extends Fragment
                 break;
             case 4:
                 mStarshipPlans.setImageResource(R.drawable.starship_topview);
-                animation = AnimationUtils.loadAnimation(getContext(),R.anim.blink);
+                animation = AnimationUtils.loadAnimation(getContext(), R.anim.blink);
                 mStarshipPlans.startAnimation(animation);
                 break;
             case 5:
                 mStarshipPlans.setImageResource(R.drawable.earth_still);
-                animation = AnimationUtils.loadAnimation(getContext(),R.anim.rotateback);
+                animation = AnimationUtils.loadAnimation(getContext(), R.anim.rotateback);
                 mStarshipPlans.startAnimation(animation);
                 break;
             case 6:
                 mStarshipPlans.setImageResource(R.drawable.universe);
-                animation = AnimationUtils.loadAnimation(getContext(),R.anim.slidein);
+                animation = AnimationUtils.loadAnimation(getContext(), R.anim.slidein);
                 mStarshipPlans.startAnimation(animation);
                 break;
 
@@ -2235,10 +2237,10 @@ public class TrycorderFragment extends Fragment
 
     // =====================================================================================
 
-    private MediaPlayer soundmedia=null;
+    private MediaPlayer soundmedia = null;
 
     private void playsound(int resourceid) {
-        if(soundmedia!=null) {
+        if (soundmedia != null) {
             soundmedia.release();
         }
         soundmedia = MediaPlayer.create(getActivity().getBaseContext(), resourceid);
@@ -2898,7 +2900,7 @@ public class TrycorderFragment extends Fragment
     private void snapphoto() {
         if (mVieweron) {
             buttonsound();
-            if(mCamera!=null) {
+            if (mCamera != null) {
                 mCamera.takePicture(null, null, this);
                 say("Picture taken");
             } else {
@@ -3073,7 +3075,7 @@ public class TrycorderFragment extends Fragment
     public void say(String texte) {
         mTextstatus_bottom.setText(texte);
         logbuffer.insert(0, texte + "\n");
-        if(logbuffer.length()>1000) logbuffer.setLength(1000);
+        if (logbuffer.length() > 1000) logbuffer.setLength(1000);
         mLogsConsole.setText(logbuffer);
     }
 
@@ -3090,7 +3092,7 @@ public class TrycorderFragment extends Fragment
     }
 
     public void speak(String texte, String lng) {
-        mTrycorderService.speak(texte,lng);
+        mTrycorderService.speak(texte, lng);
     }
 
 
@@ -3106,10 +3108,10 @@ public class TrycorderFragment extends Fragment
     // receiver of the broadcast from service with understood text from mic
     public void understood(String text) {
         mTextstatus_top.setText(text);
-        if(matchvoice(text)) {
+        if (matchvoice(text)) {
             say("Said: " + text);
             sendtext(text);
-            if(autoListen) listen();
+            if (autoListen) listen();
             return;
         }
         say("Understood: " + text);
@@ -3143,7 +3145,8 @@ public class TrycorderFragment extends Fragment
             return (true);
         }
         // check if this is a trycorder command
-        if(texte.startsWith("computer ")==false && texte.startsWith("ordinateur ")==false) return(false);
+        if (texte.startsWith("computer ") == false && texte.startsWith("ordinateur ") == false)
+            return (false);
         // commons actions of the trycorder
         if (texte.contains("sensor off")) {
             switchbuttonlayout(1);
@@ -3366,7 +3369,7 @@ public class TrycorderFragment extends Fragment
     // client part
 
     private void sendcommand(String text) {
-        if(isMaster) {
+        if (isMaster) {
             saycommand(text);
             sendtext("computer " + text);
         }
@@ -3385,7 +3388,7 @@ public class TrycorderFragment extends Fragment
 
     public void saycommand(String texte) {
         cmdbuffer.insert(0, texte + "\n");
-        if(cmdbuffer.length()>1000) cmdbuffer.setLength(1000);
+        if (cmdbuffer.length() > 1000) cmdbuffer.setLength(1000);
         mLogsCommand.setText(cmdbuffer);
     }
 
@@ -3395,7 +3398,7 @@ public class TrycorderFragment extends Fragment
 
     public void saychat(String texte) {
         chatbuffer.insert(0, texte + "\n");
-        if(chatbuffer.length()>1000) chatbuffer.setLength(1000);
+        if (chatbuffer.length() > 1000) chatbuffer.setLength(1000);
         mChatDisplay.setText(chatbuffer);
     }
 

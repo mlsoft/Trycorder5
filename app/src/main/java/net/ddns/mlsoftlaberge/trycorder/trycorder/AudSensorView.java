@@ -46,8 +46,8 @@ public class AudSensorView extends TextView {
     private Paint mPaint2 = new Paint();
     private Canvas mCanvas = new Canvas();
 
-    private int mWidth;
-    private int mHeight;
+    private int mWidth=0;
+    private int mHeight=0;
 
     // initialize the 3 colors, and setup painter
     public AudSensorView(Context context) {
@@ -162,7 +162,7 @@ public class AudSensorView extends TextView {
                 int maxy;
                 int yscale;
                 maxy=mHeight/2;
-                yscale=(32768/maxy)/4;    // increase noise level by 4
+                yscale=(32768/maxy)/2;    // increase noise level by 4
                 posx=0;
                 posy=maxy;
                 for(int i=1;i<nbe;++i) {
