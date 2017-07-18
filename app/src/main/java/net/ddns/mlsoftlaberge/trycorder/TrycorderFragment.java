@@ -2463,13 +2463,13 @@ public class TrycorderFragment extends Fragment
     private void backviewer() {
         mViewerfront = false;
         switchviewer(1);
-        //switchcam(1);
+        switchcam(1);
     }
 
     private void frontviewer() {
         mViewerfront = true;
         switchviewer(1);
-        //switchcam(2);
+        switchcam(2);
     }
 
     private void vieweroff() {
