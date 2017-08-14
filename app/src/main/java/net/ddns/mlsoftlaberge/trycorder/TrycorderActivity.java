@@ -1,7 +1,7 @@
 package net.ddns.mlsoftlaberge.trycorder;
 
 /*
-*  By Martin Laberge (mlsoft), From March 2016 to november 2016.
+*  By Martin Laberge (mlsoftlaberge@gmail.com), From March 2016 to november 2016.
 *  Licence: Can be shared with anyone, for non profit, provided my name stays in the comments.
 *  This is a conglomerate of examples codes found in differents public forums on internet.
 *  I just used the public knowledge to fit a special way to use an android phone functions.
