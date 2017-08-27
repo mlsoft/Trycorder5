@@ -69,14 +69,15 @@ public class AudSensorView extends TextView {
     private Timer timer=null;
     private MyTimer myTimer;
 
-    private static final int RECORDER_SAMPLERATE = 8000;
+    //private static final int RECORDER_SAMPLERATE = 8000;
+    private static final int RECORDER_SAMPLERATE = 44100;
     private static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO;
     private static final int RECORDER_AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT;
 
     private AudioRecord mAudioRecord=null;
     private int bufferSize=0;
 
-    int BufferElements2Rec = 1024; // want to play 2048 (2K) since 2 bytes we use only 1024
+    int BufferElements2Rec = 2048; // want to play 2048 (2K) since 2 bytes we use only 1024
     int BytesPerElement = 2; // 2 bytes in 16bit format
 
     public void stop() {
@@ -121,12 +122,12 @@ public class AudSensorView extends TextView {
     // init the view state variables to initial values
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
         mBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.RGB_565);
         mCanvas.setBitmap(mBitmap);
         mCanvas.drawColor(Color.BLACK);
         mWidth = w;
         mHeight = h;
-        super.onSizeChanged(w, h, oldw, oldh);
     }
 
     // draw

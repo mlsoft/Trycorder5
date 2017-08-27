@@ -37,6 +37,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.widget.TextView;
 
 /**
@@ -86,56 +87,110 @@ public class OriSensorView extends TextView implements SensorEventListener, Loca
     }
 
     public void start() {
-        // initialize the gps service
-        boolean enabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-        // check if enabled and if not send user to the GSP settings
-        // Better solution would be to display a dialog and suggesting to
-        // go to the settings
-        //if (!enabled) {
-        //    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-        //    startActivity(intent);
-        //}
-        // Define the criteria how to select the location provider -> use
-        // default
-        Location location = null;
-        Criteria criteria = new Criteria();
-        locationProvider = mLocationManager.getBestProvider(criteria, false);
-        //locationProvider = "gps";
-        try {
-            location = mLocationManager.getLastKnownLocation(locationProvider);
-        } catch (SecurityException e) {
-            //say("No GPS available");
-        }
-        // Initialize the location fields
-        if (location != null) {
-            //say("Provider " + locationProvider + " has been selected.");
-            setLocation(location);
-        } else {
-            //say("No location available. " + locationProvider);
-        }
-
         // link a sensor to the sensorview
         mSensorManager.registerListener(this,
                 mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
                 SensorManager.SENSOR_DELAY_NORMAL);
+
+        // initialize the gps service
+        boolean enabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        // check if enabled and if not send user to the GPS settings
+        // Better solution would be to display a dialog and suggesting to
+        // go to the settings
+        if (!enabled) {
+            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+            mContext.startActivity(intent);
+        }
+        // Define the criteria how to select the location provider -> use
+        // default
+        Location loc = null;
+        Criteria criteria = new Criteria();
+        locationProvider = mLocationManager.getBestProvider(criteria, false);
+        //locationProvider = "gps";
+        Log.d("Orisensorview","Provider:"+locationProvider);
+        try {
+            Log.d("Orisensorview","Get location from "+locationProvider);
+            loc = mLocationManager.getLastKnownLocation(locationProvider);
+            if(loc==null) {
+                Log.d("Orisensorview","Get location from network");
+                loc = mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            }
+            setLocation(loc);
+        } catch (SecurityException e) {
+            Log.d("Orisensorview","No GPS available");
+        }
         // start gps location updates
         try {
-            mLocationManager.requestLocationUpdates(locationProvider, 400, 1, this);
+            //mLocationManager.requestLocationUpdates(locationProvider, 400, 1, this);
+            mLocationManager.requestLocationUpdates(locationProvider, 0, 0, this);
         } catch (SecurityException e) {
-            //say("No GPS avalaible.");
+            Log.d("Orisensorview","No GPS available");
         }
 
     }
 
     public void stop() {
+        // stop sensor orientation
         mSensorManager.unregisterListener(this);
+        // stop location updates
         try {
             if(mLocationManager!=null) mLocationManager.removeUpdates(this);
         } catch (SecurityException e) {
-            //say("Error closing GPS");
+            Log.d("Orisensorview","Error closing GPS");
         }
     }
 
+    public void setLocation(Location loc) {
+        location = loc;
+        if(location==null) Log.d("Orisensorview","Location NULL");
+        else Log.d("Orisensorview","Location:"+String.valueOf(location.getLatitude())+","+String.valueOf(location.getLongitude()));
+    }
+
+    // ================= callbacks for the orientation sensor ===========
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        // angle between the magnetic north direction
+        // 0=North, 90=East, 180=South, 270=West
+        float azimuth = event.values[0];
+        updateData(azimuth);
+    }
+
+    public void updateData(float position) {
+        this.position = position;
+        invalidate();
+    }
+
+    // ============ callbacks for the location listener ===============
+
+    @Override
+    public void onLocationChanged(Location loc) {
+        Log.d("Orisensorview","Location changed.");
+        setLocation(loc);
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+        Log.d("Orisensorview","Location Status changed. " + String.valueOf(status));
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+        Log.d("Orisensorview","Enabled new provider " + provider);
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+        Log.d("Orisensorview","Disabled new provider " + provider);
+    }
+
+    // =========================================================================
+    // handle the drawing of values
     @Override
     protected void onDraw(Canvas mCanvas) {
         int mWidth = getMeasuredWidth();
@@ -184,50 +239,6 @@ public class OriSensorView extends TextView implements SensorEventListener, Loca
             mCanvas.drawText("LAT: " + "Not avalaible", xPoint * 2.0f, 32.0f, mPaint);
             mCanvas.drawText("LON: " + "Not avalaible", xPoint * 2.0f, 64.0f, mPaint);
         }
-    }
-
-    public void updateData(float position) {
-        this.position = position;
-        invalidate();
-    }
-
-    public void setLocation(Location loc) {
-        this.location = loc;
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-    }
-
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        // angle between the magnetic north direction
-        // 0=North, 90=East, 180=South, 270=West
-        float azimuth = event.values[0];
-        updateData(azimuth);
-    }
-
-    // ============ callbacks for the location listener ===============
-
-    @Override
-    public void onLocationChanged(Location location) {
-        this.location = location;
-    }
-
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-        //say("Location Status changed. " + String.valueOf(status));
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-        //say("Enabled new provider " + provider);
-
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-        //say("Disabled new provider " + provider);
     }
 
 
